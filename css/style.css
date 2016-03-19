@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Mono Social Icons Font';
+    src: url('../fonts/MonoSocialIconsFont-1.10.eot');
+    src: url('../fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MonoSocialIconsFont-1.10.woff') format('woff'),
+         url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+         url('../fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    src: url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.symbol, a.symbol:before {
+    font-family: 'Mono Social Icons Font';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+a.symbol:before {
+    content: attr(title);
+    margin-right: 0.3em;
+    font-size: 130%;
+}
+h2{
+    font-size:30px;
+	margin:0;
+}
+h3{
+    display:inline;
+	font-size:20px;
+	margin:0;
+}
+h4{
+    font-size:13px;
+	margin:0;
+}
+.overview{
+    height:90%;
+}
+.mainimage{
+    height:200px;
+	width:200px;
+	border-radius:200px;
+	margin-top:20%;
+}
+.location-icon{
+    font-size:30px;
+}
+.quote{
+   margin-right:10px;
+   margin-left:10px;
+   margin-bottom:20%;
+}
+.contact{
+    height:66%;
+}
+.c{
+    height:5%;
+}
+.s{
+    height:3%;
+}
+.location{
+    font-size:100px;
+}
+.symbol{
+    font-size:40px;
+}
+.social{
+    margin-top:10px;
+}
+@media (min-width: 768px) {
+    h2{
+        font-size:35px;
+    }
+    h3{
+        font-size:25px;
+	}
+    h4{
+       font-size:15px;
+    }
+	.overview{
+        height:calc(100% - 55px);
+	}
+	.mainimage{
+        height:300px;
+	    width:300px;
+	    border-radius:300px;
+	    margin-top:7%;
+    }
+	.quote{
+        max-width:500px;  
+    }
+	.contact{
+       height:76%;
+    }
+	.c{
+	   height:25%;
+	}
+}
+
+@media (min-width: 992px) {
+  
+}
