@@ -50,6 +50,19 @@ h4{
 	border-radius:200px;
 	margin-top:20%;
 }
+.pr{
+    background: url("../images/ProfileReader.jpg") center/cover;
+    height: 281px;
+}
+.cp{
+    background: url("../images/CProgrammer.png") center/cover;
+    height: 281px;
+}
+.fbc{
+    background: url("../images/FacebookIdCard.jpg") center/cover;
+    height: 281px;
+    color: white;
+}
 .location-icon{
     font-size:30px;
 }
@@ -75,6 +88,16 @@ h4{
 }
 .social{
     margin-top:10px;
+}
+.plinks{
+    text-decoration: none;
+    color: black;
+}
+.plinks:hover{
+    color: #4099FF;
+}
+footer{
+    background: red;
 }
 @media (min-width: 768px) {
     h2{
