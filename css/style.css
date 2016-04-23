@@ -50,6 +50,9 @@ h4{
 	border-radius:200px;
 	margin-top:20%;
 }
+/*.mdl-layout__content{
+    background: url("../images/back.jpg") center / cover;
+}*/
 .pr{
     background: url("../images/ProfileReader.jpg") center/cover;
     height: 281px;
@@ -75,7 +78,7 @@ h4{
     height:66%;
 }
 .c{
-    height:5%;
+    height:20%;
 }
 .s{
     height:3%;
