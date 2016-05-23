@@ -99,9 +99,10 @@ h4{
 .plinks:hover{
     color: #4099FF;
 }
-footer{
-    background: red;
+.mdl-mega-footer--middle-section{
+	text-align:center;
 }
+
 @media (min-width: 768px) {
     h2{
         font-size:35px;
@@ -130,6 +131,9 @@ footer{
 	.c{
 	   height:25%;
 	}
+	.mdl-mega-footer--middle-section{
+	   text-align:left;
+    }
 }
 
 @media (min-width: 992px) {
