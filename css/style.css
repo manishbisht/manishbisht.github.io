@@ -100,7 +100,10 @@ h4{
     color: #4099FF;
 }
 .mdl-mega-footer--middle-section{
-	text-align:center;
+    text-align: center;
+}
+.mdl-mega-footer--right-section{
+    padding-top: 20px;
 }
 
 @media (min-width: 768px) {
@@ -131,8 +134,9 @@ h4{
 	.c{
 	   height:25%;
 	}
+    .mdl-mega-footer--right-section{
+    }
 	.mdl-mega-footer--middle-section{
-	   text-align:left;
     }
 }
 
