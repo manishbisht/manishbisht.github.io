@@ -120,8 +120,7 @@ hr{
 }
 
 .mdl-card__title{
-    min-height: 200px;
-    background-size: 100px 100px;
+    min-height: 170px;
 }
 @media (min-width: 768px) {
     h2{
