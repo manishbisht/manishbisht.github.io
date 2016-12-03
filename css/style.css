@@ -110,6 +110,18 @@ hr{
 .mdl-mini-footer{
     display: block;
 }
+
+.mdl-card {
+    width: 100%;
+}
+
+.mdl-card-padding{
+    padding: 5px;
+}
+
+.mdl-card__title{
+    min-height: 170px;
+}
 @media (min-width: 768px) {
     h2{
         font-size:35px;
