@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eef563ed-fc24-4158-a004-8b85e96de047" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects.html" afterPath="$PROJECT_DIR$/projects.html" />
     </list>
     <ignored path="manishbisht.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +33,7 @@
       <file leaf-file-name="projects.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="18">
               <caret line="147" column="24" lean-forward="false" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#i#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -314,16 +312,17 @@
       <workItem from="1479819538993" duration="5568000" />
       <workItem from="1482025728993" duration="316000" />
       <workItem from="1483258584780" duration="557000" />
-      <workItem from="1483871281366" duration="30000" />
+      <workItem from="1483871281366" duration="466000" />
+      <workItem from="1483885629594" duration="599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54340000" />
+    <option name="totallyTimeSpent" value="55375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22290546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -710,7 +709,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="18">
           <caret line="147" column="24" lean-forward="false" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#i#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
