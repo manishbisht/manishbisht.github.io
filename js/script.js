@@ -4,6 +4,7 @@
 $(document).ready(function () {
     loadMenu();
     loadResumeLink();
+    addEmailandNumber();
     loadYear();
 });
 
@@ -26,6 +27,13 @@ function loadMenu() {
 function loadResumeLink() {
     var resume = "http://goo.gl/Rro9Sk";
     document.getElementById('resume-link').href = resume;
+}
+
+function addEmailandNumber() {
+    var email = "manish.bisht490@gmail.com";
+    var mobileNumber = "+91-8559874393";
+    $(".email").html(email);
+    $(".mobile-number").html(mobileNumber);
 }
 
 function loadYear() {
