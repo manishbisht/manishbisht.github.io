@@ -3,10 +3,8 @@
  */
 $(document).ready(function () {
     loadMenu();
-    var resume = "http://goo.gl/Rro9Sk";
-    document.getElementById('resume-link').href = resume;
-    var currentTime = new Date()
-    $("#copyright-year").text(currentTime.getFullYear());
+    loadResumeLink();
+    loadYear();
 });
 
 function loadMenu() {
@@ -23,4 +21,14 @@ function loadMenu() {
     menuhtml += '<a class="mdl-navigation__link" href="https://www.quora.com/profile/Manish-Bisht-39" target="_blank">Questions on Quora</a>';
     menuhtml += '<a class="mdl-navigation__link" href="contact">Contact</a>';
     $('#main-menu').html(menuhtml);
+}
+
+function loadResumeLink() {
+    var resume = "http://goo.gl/Rro9Sk";
+    document.getElementById('resume-link').href = resume;
+}
+
+function loadYear() {
+    var currentTime = new Date();
+    $("#copyright-year").text(currentTime.getFullYear());
 }
