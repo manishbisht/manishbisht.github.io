@@ -122,6 +122,14 @@ hr{
 .mdl-card__title{
     min-height: 200px;
 }
+
+.mdl-card__title-cp{
+    min-height: 100px;
+}
+
+.mdl-button{
+    font-weight: bold;
+}
 @media (min-width: 768px) {
     h2{
         font-size:35px;
