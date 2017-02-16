@@ -4,7 +4,6 @@
     <list default="true" id="eef563ed-fc24-4158-a004-8b85e96de047" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/competitive-programming.html" afterPath="$PROJECT_DIR$/competitive-programming.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects.html" afterPath="$PROJECT_DIR$/projects.html" />
     </list>
     <ignored path="manishbisht.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,10 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="projects.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="projects.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
+            <state relative-caret-position="234">
               <caret line="224" column="62" lean-forward="false" selection-start-line="224" selection-start-column="62" selection-end-line="224" selection-end-column="62" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#8;n#div#1;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -53,7 +52,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="2340">
               <caret line="130" column="22" lean-forward="false" selection-start-line="130" selection-start-column="22" selection-end-line="130" selection-end-column="22" />
               <folding />
             </state>
@@ -63,19 +62,20 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
+            <state relative-caret-position="603">
               <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="competitive-programming.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="competitive-programming.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/competitive-programming.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
-              <caret line="166" column="22" lean-forward="false" selection-start-line="166" selection-start-column="22" selection-end-line="166" selection-end-column="22" />
+            <state relative-caret-position="180">
+              <caret line="47" column="75" lean-forward="false" selection-start-line="47" selection-start-column="75" selection-end-line="47" selection-end-column="75" />
               <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -115,8 +115,8 @@
         <option value="$PROJECT_DIR$/contact.html" />
         <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/competitive-programming.html" />
         <option value="$PROJECT_DIR$/projects.html" />
+        <option value="$PROJECT_DIR$/competitive-programming.html" />
       </list>
     </option>
   </component>
@@ -336,12 +336,16 @@
       <workItem from="1485403697955" duration="894000" />
       <workItem from="1485404652949" duration="3628000" />
       <workItem from="1485579032692" duration="598000" />
-      <workItem from="1485621894098" duration="3354000" />
+      <workItem from="1485621894098" duration="3943000" />
+      <workItem from="1485671847327" duration="59000" />
+      <workItem from="1486299984679" duration="3000" />
+      <workItem from="1486443220477" duration="17000" />
+      <workItem from="1487217841675" duration="1205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63849000" />
+    <option name="totallyTimeSpent" value="65722000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -688,40 +692,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="2340">
           <caret line="130" column="22" lean-forward="false" selection-start-line="130" selection-start-column="22" selection-end-line="130" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/competitive-programming.html">
+    <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="166" column="22" lean-forward="false" selection-start-line="166" selection-start-column="22" selection-end-line="166" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="603">
+          <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
+        <state relative-caret-position="234">
           <caret line="224" column="62" lean-forward="false" selection-start-line="224" selection-start-column="62" selection-end-line="224" selection-end-column="62" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#8;n#div#1;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -731,6 +720,22 @@
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#3;n#div#8;n#div#1;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#4;n#div#8;n#div#1;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#5;n#div#8;n#div#1;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/competitive-programming.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="47" column="75" lean-forward="false" selection-start-line="47" selection-start-column="75" selection-end-line="47" selection-end-column="75" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
