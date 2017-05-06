@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eef563ed-fc24-4158-a004-8b85e96de047" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/open-source.html" afterPath="$PROJECT_DIR$/open-source.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/work-experience.html" afterPath="$PROJECT_DIR$/work-experience.html" />
     </list>
     <ignored path="manishbisht.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="open-source.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="open-source.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/open-source.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="41" column="34" lean-forward="true" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+            <state relative-caret-position="420">
+              <caret line="53" column="58" lean-forward="false" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -54,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="work-experience.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="work-experience.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/work-experience.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="81" column="164" lean-forward="false" selection-start-line="81" selection-start-column="164" selection-end-line="81" selection-end-column="164" />
+            <state relative-caret-position="203">
+              <caret line="74" column="81" lean-forward="true" selection-start-line="74" selection-start-column="81" selection-end-line="74" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -91,9 +90,9 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/competitive-programming.html" />
         <option value="$PROJECT_DIR$/education.html" />
-        <option value="$PROJECT_DIR$/work-experience.html" />
         <option value="$PROJECT_DIR$/projects.html" />
         <option value="$PROJECT_DIR$/open-source.html" />
+        <option value="$PROJECT_DIR$/work-experience.html" />
       </list>
     </option>
   </component>
@@ -327,12 +326,12 @@
       <workItem from="1492444335895" duration="69000" />
       <workItem from="1493000789564" duration="1904000" />
       <workItem from="1493045838188" duration="608000" />
-      <workItem from="1494084054871" duration="431000" />
+      <workItem from="1494084054871" duration="1031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72932000" />
+    <option name="totallyTimeSpent" value="73532000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -706,18 +705,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/work-experience.html">
+    <entry file="file://$PROJECT_DIR$/open-source.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="81" column="164" lean-forward="false" selection-start-line="81" selection-start-column="164" selection-end-line="81" selection-end-column="164" />
+        <state relative-caret-position="420">
+          <caret line="53" column="58" lean-forward="false" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/open-source.html">
+    <entry file="file://$PROJECT_DIR$/work-experience.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="41" column="34" lean-forward="true" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        <state relative-caret-position="203">
+          <caret line="74" column="81" lean-forward="true" selection-start-line="74" selection-start-column="81" selection-end-line="74" selection-end-column="81" />
           <folding />
         </state>
       </provider>
