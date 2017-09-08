@@ -25,7 +25,7 @@ function loadMenu() {
 }
 
 function loadResumeLink() {
-    var resume = "https://goo.gl/NF65EH";
+    var resume = "https://goo.gl/faZzZp";
     document.getElementById('resume-link').href = resume;
 }
 
