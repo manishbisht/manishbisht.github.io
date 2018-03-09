@@ -44,6 +44,7 @@ function loadFooter() {
     html += '<span class="symbol"><a class="plinks instagram" href="https://www.instagram.com/manishbisht02" target="_blank">circleinstagram</a> </span>';
     html += ' <span class="symbol"><a class="plinks linkedin" href="https://www.linkedin.com/in/manishbisht02" target="_blank">circlelinkedin</a> </span>';
     html += '<span class="symbol"><a class="plinks github" href="https://github.com/manishbisht" target="_blank">circlegithub</a> </span>';
+    html += '<span class="symbol"><a class="plinks pinterest" href="https://www.pinterest.ca/imanishbisht/" target="_blank">circlepinterest</a> </span>';
     html += '<br><br>';
     html += '<h3>&copy; <span id="copyright-year"></span> Manish Bisht &middot; Hosted with <i class="material-icons">favorite</i> on GitHub</h3>';
     $('#footer').html(html);

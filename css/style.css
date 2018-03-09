@@ -2,9 +2,9 @@
     font-family: 'Mono Social Icons Font';
     src: url('../fonts/MonoSocialIconsFont-1.10.eot');
     src: url('../fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/MonoSocialIconsFont-1.10.woff') format('woff'),
-         url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'),
-         url('../fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    url('../fonts/MonoSocialIconsFont-1.10.woff') format('woff'),
+    url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+    url('../fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
     src: url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -23,91 +23,119 @@
     -o-font-smoothing: antialiased;
     font-smoothing: antialiased;
 }
+
 a.symbol:before {
     content: attr(title);
     margin-right: 0.3em;
     font-size: 130%;
 }
-h2{
-    font-size:30px;
-	margin:0;
+
+h2 {
+    font-size: 30px;
+    margin: 0;
 }
-h3{
-    display:inline;
-	font-size:20px;
-	margin:0;
+
+h3 {
+    display: inline;
+    font-size: 20px;
+    margin: 0;
 }
-h4{
-    font-size:13px;
-	margin:0;
+
+h4 {
+    font-size: 13px;
+    margin: 0;
 }
-hr{
+
+hr {
     width: 100%;
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
-.view{
-    min-height:calc(100% - 50px);
+
+.view {
+    min-height: calc(100% - 50px);
 }
-.mainimage{
-    height:200px;
-	width:200px;
-	border-radius:200px;
-	margin-top:20%;
+
+.mainimage {
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    margin-top: 20%;
 }
-.img-responsive{
+
+.img-responsive {
     width: 100%;
 }
-.location-icon{
-    font-size:30px;
+
+.location-icon {
+    font-size: 30px;
 }
-.quote{
-   margin-right:10px;
-   margin-left:10px;
+
+.quote {
+    margin-right: 10px;
+    margin-left: 10px;
 }
-.contact{
-    height:66%;
+
+.contact {
+    height: 66%;
 }
-.contactmargin{
-    height:10%;
+
+.contactmargin {
+    height: 10%;
 }
-.s{
-    height:3%;
+
+.s {
+    height: 3%;
 }
-.location{
-    font-size:100px;
+
+.location {
+    font-size: 100px;
 }
-.symbol{
-    font-size:40px;
+
+.symbol {
+    font-size: 40px;
     display: inline;
 }
-.social{
-    margin-top:10px;
+
+.social {
+    margin-top: 10px;
 }
-.plinks{
+
+.plinks {
     text-decoration: none;
     color: inherit;
 }
-.facebook:hover{
+
+.facebook:hover {
     color: #3b5998;
 }
-.twitter:hover{
+
+.twitter:hover {
     color: #4099FF;
 }
-.googleplus:hover{
+
+.googleplus:hover {
     color: #d34836;
 }
-.instagram:hover{
+
+.instagram:hover {
     color: #fbad50;
 }
-.linkedin:hover{
+
+.linkedin:hover {
     color: #0e76a8;
 }
-.github:hover{
+
+.github:hover {
     color: #00c853;
 }
-.mdl-mini-footer{
+
+.pinterest:hover {
+    color: #8b0000;
+}
+
+.mdl-mini-footer {
     display: block;
 }
 
@@ -115,49 +143,57 @@ hr{
     width: 100%;
 }
 
-.mdl-card-padding{
+.mdl-card-padding {
     padding: 5px;
 }
 
-.mdl-card__title{
+.mdl-card__title {
     min-height: 200px;
 }
 
-.mdl-card__title-cp{
+.mdl-card__title-cp {
     min-height: 100px;
 }
 
-.mdl-button{
+.mdl-button {
     font-weight: bold;
 }
+
 @media (min-width: 768px) {
-    h2{
-        font-size:35px;
+    h2 {
+        font-size: 35px;
     }
-    h3{
-        font-size:25px;
-	}
-    h4{
-       font-size:15px;
+
+    h3 {
+        font-size: 25px;
     }
-	.view{
-        min-height:calc(100% - 56px);
-	}
-	.mainimage{
-        height:300px;
-	    width:300px;
-	    border-radius:300px;
-	    margin-top:7%;
+
+    h4 {
+        font-size: 15px;
     }
-	.quote{
-        max-width:500px;  
+
+    .view {
+        min-height: calc(100% - 56px);
     }
-	.contact{
-       height:76%;
+
+    .mainimage {
+        height: 300px;
+        width: 300px;
+        border-radius: 300px;
+        margin-top: 7%;
     }
-	.contactmargin{
-	   height:20%;
-	}
+
+    .quote {
+        max-width: 500px;
+    }
+
+    .contact {
+        height: 76%;
+    }
+
+    .contactmargin {
+        height: 20%;
+    }
 }
 
 @media (min-width: 992px) {
