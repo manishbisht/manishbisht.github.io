@@ -5,6 +5,7 @@ $(document).ready(function () {
     loadMenu();
     loadResumeLink();
     addEmailandNumber();
+    loadFooter();
     loadYear();
 });
 
@@ -34,6 +35,18 @@ function addEmailandNumber() {
     var mobileNumber = "+91-8559874393";
     $(".email").html(email);
     $(".mobile-number").html(mobileNumber);
+}
+
+function loadFooter() {
+    var html = '<span class="symbol"><a class="plinks facebook" href="http://fb.com/imanishbisht" target="_blank">circlefacebook</a> </span>';
+    html += '<span class="symbol"><a class="plinks twitter" href="https://twitter.com/ManishBisht02" target="_blank">circletwitterbird</a> </span>';
+    html += '<span class="symbol"><a class="plinks googleplus" href="https://plus.google.com/+ManishBisht02" target="_blank">circlegoogleplus</a> </span>';
+    html += '<span class="symbol"><a class="plinks instagram" href="https://www.instagram.com/manishbisht02" target="_blank">circleinstagram</a> </span>';
+    html += ' <span class="symbol"><a class="plinks linkedin" href="https://www.linkedin.com/in/manishbisht02" target="_blank">circlelinkedin</a> </span>';
+    html += '<span class="symbol"><a class="plinks github" href="https://github.com/manishbisht" target="_blank">circlegithub</a> </span>';
+    html += '<br><br>';
+    html += '<h3>&copy; <span id="copyright-year"></span> Manish Bisht &middot; Hosted with <i class="material-icons">favorite</i> on GitHub</h3>';
+    $('#footer').html(html);
 }
 
 function loadYear() {
