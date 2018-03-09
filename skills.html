@@ -36,6 +36,56 @@
                 <h1><strong>My Skills</strong></h1>
                 <div class="mdl-grid" align="left">
                     <div class="mdl-cell mdl-cell--6-col">
+                        <h3><strong>Python</strong></h3>
+                        <img src="images/python-logo.png" align="right">
+                        <div id="Python" class="mdl-progress mdl-js-progress" style="width:auto"></div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <h3><strong>React</strong></h3>
+                        <img src="images/react-logo.png" align="right">
+                        <div id="React" class="mdl-progress mdl-js-progress" style="width:auto"></div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <h3><strong>Google Cloud</strong></h3>
+                        <img src="images/googlecloud-logo.png" align="right">
+                        <div id="Cloud" class="mdl-progress mdl-js-progress" style="width:auto"></div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <h3><strong>Flask</strong></h3>
+                        <img src="images/flask-logo.png" align="right">
+                        <div id="Flask" class="mdl-progress mdl-js-progress" style="width:auto"></div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <h3><strong>Amazon AWS</strong></h3>
+                        <img src="images/amazonaws-logo.png" align="right">
+                        <div id="AWS" class="mdl-progress mdl-js-progress" style="width:auto"></div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <h3><strong>Google Assistant</strong></h3>
+                        <img src="images/googleassistant-logo.jpg" align="right">
+                        <div id="Assistant" class="mdl-progress mdl-js-progress" style="width:auto"></div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <h3><strong>Amazon Alexa Skills</strong></h3>
+                        <img src="images/amazonalexa-logo.png" align="right">
+                        <div id="Alexa" class="mdl-progress mdl-js-progress" style="width:auto"></div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <h3><strong>Firebase</strong></h3>
+                        <img src="images/firebase-logo.png" align="right">
+                        <div id="Firebase" class="mdl-progress mdl-js-progress" style="width:auto"></div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <h3><strong>Angular</strong></h3>
+                        <img src="images/angular-logo.svg" align="right">
+                        <div id="Angular" class="mdl-progress mdl-js-progress" style="width:auto"></div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        <h3><strong>MATLAB</strong></h3>
+                        <img src="images/matlab-logo.png" align="right">
+                        <div id="MATLAB" class="mdl-progress mdl-js-progress" style="width:auto"></div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col">
                         <h3><strong>HTML</strong></h3>
                         <img src="images/html-logo.png" align="right">
                         <div id="HTML" class="mdl-progress mdl-js-progress" style="width:auto"></div>
@@ -106,47 +156,77 @@
                         <div id="Illustrator" class="mdl-progress mdl-js-progress" style="width:auto"></div>
                     </div>
                     <script>
-                        document.querySelector('#HTML').addEventListener('mdl-componentupgraded', function () {
+                        document.querySelector('#Python').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(90);
+                        });
+                        document.querySelector('#React').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(85);
+                        });
+                        document.querySelector('#Cloud').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(90);
+                        });
+                        document.querySelector('#Flask').addEventListener('mdl-componentupgraded', function () {
                             this.MaterialProgress.setProgress(70);
                         });
-                        document.querySelector('#CSS').addEventListener('mdl-componentupgraded', function () {
+                        document.querySelector('#AWS').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(85);
+                        });
+                        document.querySelector('#Assistant').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(90);
+                        });
+                        document.querySelector('#Alexa').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(90);
+                        });
+                        document.querySelector('#Firebase').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(90);
+                        });
+                        document.querySelector('#Angular').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(70);
+                        });
+                        document.querySelector('#MATLAB').addEventListener('mdl-componentupgraded', function () {
                             this.MaterialProgress.setProgress(50);
                         });
+                        document.querySelector('#HTML').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(90);
+                        });
+                        document.querySelector('#CSS').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(80);
+                        });
                         document.querySelector('#JS').addEventListener('mdl-componentupgraded', function () {
-                            this.MaterialProgress.setProgress(45);
-                        });
-                        document.querySelector('#MDL').addEventListener('mdl-componentupgraded', function () {
-                            this.MaterialProgress.setProgress(70);
-                        });
-                        document.querySelector('#PHP').addEventListener('mdl-componentupgraded', function () {
-                            this.MaterialProgress.setProgress(45);
-                        });
-                        document.querySelector('#C').addEventListener('mdl-componentupgraded', function () {
-                            this.MaterialProgress.setProgress(55);
-                        });
-                        document.querySelector('#Java').addEventListener('mdl-componentupgraded', function () {
-                            this.MaterialProgress.setProgress(30);
-                        });
-                        document.querySelector('#Bootstrap').addEventListener('mdl-componentupgraded', function () {
                             this.MaterialProgress.setProgress(75);
                         });
+                        document.querySelector('#MDL').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(90);
+                        });
+                        document.querySelector('#PHP').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(75);
+                        });
+                        document.querySelector('#C').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(60);
+                        });
+                        document.querySelector('#Java').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(50);
+                        });
+                        document.querySelector('#Bootstrap').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(90);
+                        });
                         document.querySelector('#Android').addEventListener('mdl-componentupgraded', function () {
-                            this.MaterialProgress.setProgress(30);
-                        });
-                        document.querySelector('#jQuery').addEventListener('mdl-componentupgraded', function () {
-                            this.MaterialProgress.setProgress(35);
-                        });
-                        document.querySelector('#sql').addEventListener('mdl-componentupgraded', function () {
-                            this.MaterialProgress.setProgress(33);
-                        });
-                        document.querySelector('#cp').addEventListener('mdl-componentupgraded', function () {
-                            this.MaterialProgress.setProgress(52);
-                        });
-                        document.querySelector('#Photoshop').addEventListener('mdl-componentupgraded', function () {
                             this.MaterialProgress.setProgress(40);
                         });
+                        document.querySelector('#jQuery').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(65);
+                        });
+                        document.querySelector('#sql').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(80);
+                        });
+                        document.querySelector('#cp').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(80);
+                        });
+                        document.querySelector('#Photoshop').addEventListener('mdl-componentupgraded', function () {
+                            this.MaterialProgress.setProgress(75);
+                        });
                         document.querySelector('#Illustrator').addEventListener('mdl-componentupgraded', function () {
-                            this.MaterialProgress.setProgress(35);
+                            this.MaterialProgress.setProgress(65);
                         });
                     </script>
                 </div>
