@@ -10,19 +10,19 @@ $(document).ready(function () {
 });
 
 function loadMenu() {
-    var menuhtml = '<a class="mdl-navigation__link" href="index">Overview</a>';
-    menuhtml += '<a class="mdl-navigation__link" href="skills">Skills</a>';
-    menuhtml += '<a class="mdl-navigation__link" href="work-experience">Work Experience</a>';
-    menuhtml += '<a class="mdl-navigation__link" href="competitive-programming">Competitive Programming</a>';
-    menuhtml += '<a class="mdl-navigation__link" href="open-source">Open Source</a>';
-    menuhtml += '<a class="mdl-navigation__link" href="education">Education</a>';
-    menuhtml += '<a class="mdl-navigation__link" href="projects">Projects</a>';
-    menuhtml += '<a class="mdl-navigation__link" id="resume-link" target="_blank">Resume</a>';
-    menuhtml += '<a class="mdl-navigation__link" href="https://github.com/manishbisht" target="_blank">Code on Github</a>';
-    menuhtml += '<a class="mdl-navigation__link" href="https://medium.com/@manishbisht" target="_blank">Blog on Medium</a>';
-    menuhtml += '<a class="mdl-navigation__link" href="https://www.quora.com/profile/Manish-Bisht-39" target="_blank">Questions on Quora</a>';
-    menuhtml += '<a class="mdl-navigation__link" href="contact">Contact</a>';
-    $('#main-menu').html(menuhtml);
+    var html = '<a class="mdl-navigation__link" href="index">Overview</a>';
+    html += '<a class="mdl-navigation__link" href="skills">Skills</a>';
+    html += '<a class="mdl-navigation__link" href="work-experience">Work Experience</a>';
+    html += '<a class="mdl-navigation__link" href="competitive-programming">Competitive Programming</a>';
+    html += '<a class="mdl-navigation__link" href="open-source">Open Source</a>';
+    html += '<a class="mdl-navigation__link" href="education">Education</a>';
+    html += '<a class="mdl-navigation__link" href="projects">Projects</a>';
+    html += '<a class="mdl-navigation__link" id="resume-link" target="_blank">Resume</a>';
+    html += '<a class="mdl-navigation__link" href="https://github.com/manishbisht" target="_blank">Code on Github</a>';
+    html += '<a class="mdl-navigation__link" href="https://medium.com/@manishbisht" target="_blank">Blog on Medium</a>';
+    html += '<a class="mdl-navigation__link" href="https://www.quora.com/profile/Manish-Bisht-39" target="_blank">Questions on Quora</a>';
+    html += '<a class="mdl-navigation__link" href="contact">Contact</a>';
+    $('#main-menu').html(html);
 }
 
 function loadResumeLink() {
