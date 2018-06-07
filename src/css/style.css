@@ -136,6 +136,11 @@ h4 {
         min-height: calc(100% - 56px);
     }
 
+    .header-icon {
+        font-size: 16px;
+        padding-left: 5px;
+    }
+
     .mainimage {
         height: 300px;
         width: 300px;
@@ -145,6 +150,18 @@ h4 {
 
     .quote {
         max-width: 500px;
+    }
+
+    .grid {
+        padding: 0 25px;
+    }
+
+    .grid-large-box {
+        margin-bottom: 25px;
+    }
+
+    .grid-large-box-details {
+        padding: 5px;
     }
 }
 

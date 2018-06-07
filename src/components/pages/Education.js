@@ -17,7 +17,7 @@ class Education extends Component {
         return (
             <div>
                 <h1 align="center"><strong>Education</strong></h1>
-                <div className="mdl-grid">
+                <div className="mdl-grid grid">
                     {this.getEducationData()}
                 </div>
             </div>

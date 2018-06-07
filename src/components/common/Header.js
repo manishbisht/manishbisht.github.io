@@ -14,9 +14,9 @@ class Header extends Component {
                     </span>
                     <div className="mdl-layout-spacer"></div>
                     <nav className="mdl-navigation mdl-layout--large-screen-only">
-                        <i className="material-icons">contact mail</i>
+                        <i className="material-icons header-icon">contact mail</i>
                         <span className="email">&nbsp;{ProfileData.email}</span>
-                        <i className="material-icons">call</i>
+                        <i className="material-icons header-icon">call</i>
                         <span className="mobile-number">&nbsp;{ProfileData.telephone}</span>
                     </nav>
                 </div>

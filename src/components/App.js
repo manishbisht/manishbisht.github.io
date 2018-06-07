@@ -18,6 +18,7 @@ class App extends Component {
                 <main className="mdl-layout__content">
                     <div className="page-content">
                         <Route exact path="/" render={() => <Home />} />
+                        <Route exact path="/open-source" render={() => <OpenSource />} />
                         <Route exact path="/education" render={() => <Education />} />
                         <Route exact path="/contact" render={() => <Contact />} />
                         <Footer/>

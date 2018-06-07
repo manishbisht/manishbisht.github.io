@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import UdacityImage from '../images/udacity-logo.png'
 import DPSImage from '../images/dps-logo.jpg'
 import SKITImage from '../images/skit-logo.jpg'
+import FBOpenSourceImage from '../images/fbopensource-logo.jpg'
+import GSOCImage from '../images/gsoc2016-logo.jpg'
+import PhpMyAdminImage from '../images/phpmyadmin-logo.png'
+import OpenCloudImage from '../images/owncloud-logo.png'
+import NextCloudImage from '../images/nextcloud-logo.jpg'
 
 class BigBox extends Component {
     constructor(props) {
@@ -15,6 +20,16 @@ class BigBox extends Component {
             return SKITImage
         } else if(this.props.data.image === "DPS") {
             return DPSImage
+        } else if(this.props.data.image === "FBOpenSource") {
+            return FBOpenSourceImage
+        } else if(this.props.data.image === "GSOC") {
+            return GSOCImage
+        } else if(this.props.data.image === "PhpMyAdmin") {
+            return PhpMyAdminImage
+        } else if(this.props.data.image === "OpenCloud") {
+            return OpenCloudImage
+        } else if(this.props.data.image === "NextCloud") {
+            return NextCloudImage
         }
     }
 
@@ -42,24 +57,26 @@ class BigBox extends Component {
     }
 
     getButtonsHTML() {
-        return this.props.data.links.map((link, index) => {
-            return (
-                <a key={'box' + index} className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect"
-                   href={link.url} target="_blank">
-                    <strong>{link.title}</strong>
-                </a>
-            )
-        })
+        if (this.props.data.links) {
+            return this.props.data.links.map((link, index) => {
+                return (
+                    <a key={'box' + index} className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect"
+                       href={link.url} target="_blank">
+                        <strong>{link.title}</strong>
+                    </a>
+                )
+            });
+        }
     }
 
     render() {
         return (
-            <div className="mdl-cell--12-col mdl-shadow--4dp" style={{margin: 5}}>
+            <div className="mdl-cell--12-col mdl-shadow--4dp grid-large-box">
                 <div className="mdl-grid">
                     <div className="mdl-cell--6-col">
-                        <img src={this.getImageLink()} className="img-responsive" />
+                        <img src={this.getImageLink()} className="img-responsive" alt={this.props.data.image} />
                     </div>
-                    <div className="mdl-cell--6-col">
+                    <div className="mdl-cell--6-col grid-large-box-details">
                         <h3>{this.props.data.title}</h3><br />
                         <h4><strong>{this.props.data.subTitle}</strong></h4>
                         {this.getDescriptionHTML()}
