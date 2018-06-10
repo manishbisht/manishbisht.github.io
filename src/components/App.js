@@ -5,6 +5,7 @@ import Sidebar from "./common/Sidebar";
 import Footer from "./common/Footer";
 import Home from './pages/Home';
 import WorkExperience from './pages/WorkExperience';
+import CompetitiveProgramming from './pages/CompetitiveProgramming';
 import OpenSource from './pages/OpenSource';
 import Education from './pages/Education';
 import Projects from './pages/Projects';
@@ -21,6 +22,7 @@ class App extends Component {
                     <div className="page-content">
                         <Route exact path="/" render={() => <Home />} />
                         <Route exact path="/work-experience" render={() => <WorkExperience />} />
+                        <Route exact path="/competitive-programming" render={() => <CompetitiveProgramming />} />
                         <Route exact path="/open-source" render={() => <OpenSource />} />
                         <Route exact path="/education" render={() => <Education />} />
                         <Route exact path="/projects" render={() => <Projects />} />

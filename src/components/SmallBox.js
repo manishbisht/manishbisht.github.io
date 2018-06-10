@@ -14,6 +14,12 @@ import FEND6Image from '../images/fd-project6.png'
 import ProfileReaderImage from '../images/ProfileReader.jpg'
 import CProgrammerImage from '../images/CProgrammer.png'
 import FacebookIDCardImage from '../images/FacebookIdCard.jpg'
+import CodeforcesImage from '../images/codeforces-small-logo.png'
+import HackerrankImage from '../images/hackerrank-small-logo.jpg'
+import TopcoderImage from '../images/topcoder-small-logo.png'
+import HackerearthImage from '../images/hackerearth-small-logo.jpg'
+import SpojImage from '../images/spoj-small-logo.jpg'
+import CodechefImage from '../images/codechef-small-logo.jpg'
 
 class SmallBox extends Component {
     getImageLink(){
@@ -47,6 +53,18 @@ class SmallBox extends Component {
             return FacebookIDCardImage
         } else if(this.props.data.image === "CProgrammer") {
             return CProgrammerImage
+        } else if(this.props.data.image === "Codeforces") {
+            return CodeforcesImage
+        } else if(this.props.data.image === "Hackerrank") {
+            return HackerrankImage
+        } else if(this.props.data.image === "Topcoder") {
+            return TopcoderImage
+        } else if(this.props.data.image === "Hackerearth") {
+            return HackerearthImage
+        } else if(this.props.data.image === "Spoj") {
+            return SpojImage
+        } else if(this.props.data.image === "Codechef") {
+            return CodechefImage
         }
     }
 

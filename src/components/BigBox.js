@@ -12,6 +12,7 @@ import ngDownloaderImage from '../images/angular-attack-2017.png'
 import Run4OffersImage from '../images/run4offers-logo.jpg'
 import BlueCubeNetworkImage from '../images/bluecubenetwork-logo.jpg'
 import CovalentCapitalImage from '../images/covalent-capital.png'
+import GCJImage from '../images/googlecodejam-logo.jpg'
 
 class BigBox extends Component {
     getImageLink(){
@@ -41,6 +42,8 @@ class BigBox extends Component {
             return BlueCubeNetworkImage
         } else if(this.props.data.image === "Run4Offers") {
             return Run4OffersImage
+        } else if(this.props.data.image === "GCJ") {
+            return GCJImage
         }
     }
 
