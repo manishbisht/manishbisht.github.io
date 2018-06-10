@@ -88,6 +88,9 @@ class Skills extends Component {
                 </div>
             );
         })
+        /*.sort(function(a, b){
+            return b.value - a.value
+            })*/
     }
 
     componentDidMount() {
