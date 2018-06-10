@@ -4,6 +4,7 @@ import Header from './common/Header.js'
 import Sidebar from "./common/Sidebar";
 import Footer from "./common/Footer";
 import Home from './pages/Home';
+import Skills from './pages/Skills';
 import WorkExperience from './pages/WorkExperience';
 import CompetitiveProgramming from './pages/CompetitiveProgramming';
 import OpenSource from './pages/OpenSource';
@@ -21,6 +22,7 @@ class App extends Component {
                 <main className="mdl-layout__content">
                     <div className="page-content">
                         <Route exact path="/" render={() => <Home />} />
+                        <Route exact path="/skills" render={() => <Skills />} />
                         <Route exact path="/work-experience" render={() => <WorkExperience />} />
                         <Route exact path="/competitive-programming" render={() => <CompetitiveProgramming />} />
                         <Route exact path="/open-source" render={() => <OpenSource />} />
