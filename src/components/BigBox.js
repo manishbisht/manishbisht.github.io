@@ -9,6 +9,9 @@ import OpenCloudImage from '../images/owncloud-logo.png'
 import NextCloudImage from '../images/nextcloud-logo.jpg'
 import SaveTheLinkImage from '../images/save-the-link.png'
 import ngDownloaderImage from '../images/angular-attack-2017.png'
+import Run4OffersImage from '../images/run4offers-logo.jpg'
+import BlueCubeNetworkImage from '../images/bluecubenetwork-logo.jpg'
+import CovalentCapitalImage from '../images/covalent-capital.png'
 
 class BigBox extends Component {
     getImageLink(){
@@ -32,6 +35,12 @@ class BigBox extends Component {
             return SaveTheLinkImage
         } else if(this.props.data.image === "ngDownloader") {
             return ngDownloaderImage
+        } else if(this.props.data.image === "CovalentCapital") {
+            return CovalentCapitalImage
+        } else if(this.props.data.image === "BlueCubeNetwork") {
+            return BlueCubeNetworkImage
+        } else if(this.props.data.image === "Run4Offers") {
+            return Run4OffersImage
         }
     }
 
