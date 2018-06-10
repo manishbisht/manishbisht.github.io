@@ -119,6 +119,10 @@ h4 {
     width: 100%;
 }
 
+.width100 {
+    width: 100%;
+}
+
 @media (min-width: 768px) {
     h2 {
         font-size: 35px;
@@ -161,7 +165,12 @@ h4 {
     }
 
     .grid-large-box-details {
-        padding: 5px;
+        padding: 5px 0 5px 20px;
+    }
+
+    .grid-small-box {
+        width: 30.33%;
+        padding: 0 3% 3% 0px;
     }
 }
 

@@ -7,12 +7,10 @@ import GSOCImage from '../images/gsoc2016-logo.jpg'
 import PhpMyAdminImage from '../images/phpmyadmin-logo.png'
 import OpenCloudImage from '../images/owncloud-logo.png'
 import NextCloudImage from '../images/nextcloud-logo.jpg'
+import SaveTheLinkImage from '../images/save-the-link.png'
+import ngDownloaderImage from '../images/angular-attack-2017.png'
 
 class BigBox extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     getImageLink(){
         if(this.props.data.image === "Udacity") {
             return UdacityImage
@@ -30,6 +28,10 @@ class BigBox extends Component {
             return OpenCloudImage
         } else if(this.props.data.image === "NextCloud") {
             return NextCloudImage
+        } else if(this.props.data.image === "SaveTheLink") {
+            return SaveTheLinkImage
+        } else if(this.props.data.image === "ngDownloader") {
+            return ngDownloaderImage
         }
     }
 
@@ -60,7 +62,7 @@ class BigBox extends Component {
         if (this.props.data.links) {
             return this.props.data.links.map((link, index) => {
                 return (
-                    <a key={'box' + index} className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect"
+                    <a key={'big-box' + index} className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect"
                        href={link.url} target="_blank">
                         <strong>{link.title}</strong>
                     </a>

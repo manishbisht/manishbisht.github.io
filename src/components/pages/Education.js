@@ -3,10 +3,6 @@ import EducationData from '../../data/education'
 import BigBox from '../BigBox'
 
 class Education extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     getEducationData() {
         return EducationData.map((education, index) => {
             return <BigBox key={'education' + index} data={education} />
