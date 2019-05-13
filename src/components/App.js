@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route} from 'react-router-dom'
+import { HashRouter, Route} from 'react-router-dom'
 import Header from './common/Header.js'
 import Sidebar from "./common/Sidebar";
 import Footer from "./common/Footer";
@@ -15,7 +15,7 @@ import Contact from './pages/Contact';
 class App extends Component {
   render() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <div className="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
                 <Header/>
                 <Sidebar/>
@@ -33,7 +33,7 @@ class App extends Component {
                     </div>
                 </main>
             </div>
-        </BrowserRouter>
+        </HashRouter>
     );
   }
 }

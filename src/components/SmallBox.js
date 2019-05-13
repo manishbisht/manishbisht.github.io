@@ -100,8 +100,11 @@ class SmallBox extends Component {
         if (this.props.data.links) {
             return this.props.data.links.map((link, index) => {
                 return (
-                    <a key={'small-box' + index} className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-                       href={link.url} target="_blank">
+                    <a key={'small-box' + index}
+                       className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                       href={link.url}
+                       target="_blank"
+                       rel="noopener noreferrer">
                         <strong>{link.title}</strong>
                     </a>
                 )

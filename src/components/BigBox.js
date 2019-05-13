@@ -74,8 +74,11 @@ class BigBox extends Component {
         if (this.props.data.links) {
             return this.props.data.links.map((link, index) => {
                 return (
-                    <a key={'big-box' + index} className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect"
-                       href={link.url} target="_blank">
+                    <a key={'big-box' + index}
+                       className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect"
+                       href={link.url}
+                       target="_blank"
+                       rel="noopener noreferrer">
                         <strong>{link.title}</strong>
                     </a>
                 )
