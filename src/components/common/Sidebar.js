@@ -13,7 +13,7 @@ class Sidebar extends Component {
                     <Link className="mdl-navigation__link" to="/open-source">Open Source</Link>
                     <Link className="mdl-navigation__link" to="/education">Education</Link>
                     <Link className="mdl-navigation__link" to="/projects">Projects</Link>
-                    <a className="mdl-navigation__link" href="https://goo.gl/gEzHnD" target="_blank" rel="noopener noreferrer">Resume</a>
+                    <a className="mdl-navigation__link" href="http://bit.ly/201905ManishBishtResume" target="_blank" rel="noopener noreferrer">Resume</a>
                     <a className="mdl-navigation__link" href="https://github.com/manishbisht" target="_blank" rel="noopener noreferrer">Code on Github</a>
                     <a className="mdl-navigation__link" href="https://medium.com/@manishbisht" target="_blank" rel="noopener noreferrer">Blog on Medium</a>
                     <Link className="mdl-navigation__link" to="/contact">Contact</Link>

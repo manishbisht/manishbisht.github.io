@@ -22,6 +22,34 @@
     ]
   },
   {
+    "title": "Mentor, Code Reviewer and Beta Tester - Udacity",
+    "subTitle": "February 2018 - Present",
+    "image": "Udacity",
+    "descriptionLinks": [
+      {
+        "data": "Beta Tester for new Courses and Nanodegrees."
+      },
+      {
+        "data": "Project Reviewer for Blockchain Nanodegree projects."
+      },
+      {
+        "data": "Classroom Mentor for FrontEnd Web Developer Nanodegree."
+      },
+      {
+        "data": "Study Group Mentor for FrontEnd Web Developer Nanodegree."
+      },
+      {
+        "data": "Project Reviewer for FrontEnd Web Developer Nanodegree projects."
+      }
+    ],
+    "links": [
+      {
+        "title": "Company Website",
+        "url": "https://www.udacity.com/"
+      }
+    ]
+  },
+  {
     "title": "Student Developer - Facebook Open Source Mentorship Program (2018)",
     "subTitle": "February 2018 - May 2018",
     "image": "FBOpenSource",
