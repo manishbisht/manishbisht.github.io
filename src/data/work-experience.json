@@ -5,13 +5,40 @@
     "image": "CovalentCapital",
     "descriptionLinks": [
       {
-        "data": "Working on Desktop Version of Order Management and Allocation System(OMAS)"
+        "data": "Build development and staging servers."
       },
       {
-        "data": "Working on Mobile Version of Order Management and Allocation System(OMAS)"
+        "data": "Built Native App for both iOS and Android using React Native."
       },
       {
-        "data": "Languages and Technologies: React, Scala, Oracle, Amazon AWS"
+        "data": "Converted the Web/Mobile versions to PWA(Progressive Web App)."
+      },
+      {
+        "data": "Added Push Notifications and Add to Home Screen functionality to PWA App."
+      },
+      {
+        "data": "Built Web Version of Order Management and Allocation System(OMAS)."
+      },
+      {
+        "data": "Built Mobile Version of Order Management and Allocation System(OMAS)."
+      },
+      {
+        "data": "Built web components like Input, Table, Select, AutoComplete, SVG etc from scratch."
+      },
+      {
+        "data": "Updated webpack from v1 to v4 that helped to reduce the production build size by 85%."
+      },
+      {
+        "data": "Updated ReactJS from v15.4 to v16.5 to v16.8 and in parallel updated other libraries."
+      },
+      {
+        "data": "Revamped the FrontEnd Code and File Structure of Order Management and Allocation System(OMAS)"
+      },
+      {
+        "data": "Technology Stack: ReactJS, React Native, Javascript, Webpack, Amazon AWS, HTML, CSS."
+      },
+      {
+        "data": "For Referrals email me at manish@covacap.com"
       }
     ],
     "links": [
@@ -30,16 +57,19 @@
         "data": "Beta Tester for new Courses and Nanodegrees."
       },
       {
-        "data": "Project Reviewer for Blockchain Nanodegree projects."
+        "data": "Project Reviewer and Mentor for Blockchain Nanodegree."
       },
       {
-        "data": "Classroom Mentor for FrontEnd Web Developer Nanodegree."
+        "data": "Project Reviewer and Mentor for Cloud Engineer Nanodegree."
       },
       {
-        "data": "Study Group Mentor for FrontEnd Web Developer Nanodegree."
+        "data": "Project Reviewer and Mentor for Cloud DevOps Engineer Nanodegree."
       },
       {
-        "data": "Project Reviewer for FrontEnd Web Developer Nanodegree projects."
+        "data": "Project Reviewer and Mentor for FrontEnd Web Developer Nanodegree."
+      },
+      {
+        "data": "Project Reviewer and Mentor for Data Structures and Algorithms Nanodegree."
       }
     ],
     "links": [
@@ -56,13 +86,22 @@
     "description": "Selected in Facebook Open Source 6-week mentorship program. Working on Facebook Instant Articles.",
     "descriptionLinks": [
       {
-        "data": "Fixed bugs in Facebook instant Articles SDK."
+        "data": "Selected in Facebook Open Source 6-week mentorship program."
       },
       {
-        "data": "Fixed bugs in Facebook Instant Articles Rules Editor."
+        "data": "Worked on Facebook Instant Articles (https://instantarticles.fb.com)"
       },
       {
-        "data": "Created a project using Facebook Docusaurus."
+        "data": "Contributed to Facebook Instant Articles SDK (https://github.com/facebook/facebook-instant-articles-sdk-php)"
+      },
+      {
+        "data": "Contributed to Facebook Instant Articles Rules Editor (https://github.com/facebook/facebook-instant-articles-rules-editor)"
+      },
+      {
+        "data": "Pull Requests: https://github.com/facebook/facebook-instant-articles-sdk-php/pulls?q=is%3Apr+author%3Amanishbisht"
+      },
+      {
+        "data": "Pull Requests: https://github.com/facebook/facebook-instant-articles-rules-editor/pulls?q=is%3Apr+author%3Amanishbisht "
       }
     ],
     "links": [
@@ -77,11 +116,21 @@
     "subTitle": "May 2017 - August 2017",
     "image": "GSOC",
     "description": "phpmyadmin currently has a large number of open issues (~210 at time of writing this). To maintain and improve phpmyadmin core project the numbers of issues should be lower down. This project aims to resolving the major issues and improvements to be done in phpmyadmin.",
-    "links": [
+    "descriptionLinks": [
       {
-        "title": "Pull Requests",
-        "url": "https://github.com/phpmyadmin/phpmyadmin/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Amanishbisht%20"
+        "data": "Pull Requests: https://github.com/phpmyadmin/phpmyadmin/pulls?q=author%3Amanishbisht"
       },
+      {
+        "data": "Issues: https://github.com/phpmyadmin/phpmyadmin/issues?q=author%3Amanishbisht"
+      },
+      {
+        "data": "Issues: https://github.com/phpmyadmin/phpmyadmin/issues?q=mentions%3Amanishbisht"
+      },
+      {
+        "data": "Project Summary: https://goo.gl/wHfQjS"
+      }
+    ],
+    "links": [
       {
         "title": "Project Details",
         "url": "https://summerofcode.withgoogle.com/organizations/6278617928564736/#5565068713394176"
@@ -95,20 +144,16 @@
     "description": "Worked on various projects with other 2 interns.",
     "descriptionLinks": [
       {
-        "data": "Developed the admin dashboard for https://www.perfmon.io/"
+        "data": "Developed the admin dashboard with other 2 interns so that company can check three types of stats: user stats, website stats and system stats for https://www.perfmon.io/ website and then use the data for making profits and decreasing cost of their product."
       },
       {
-        "data": "Developed a one page on Drone Buying Guide in HTML, CSS and JavaScript"
+        "data": "Developed a one page on Drone Buying Guide in HTML, CSS and JavaScript."
       }
     ],
     "links": [
       {
         "title": "Company Website",
         "url": "http://www.bluecubenetwork.com/"
-      },
-      {
-        "title": "Source Code",
-        "url": "https://github.com/manishbisht/ngDownloader"
       }
     ]
   },
@@ -121,10 +166,16 @@
         "data": "Created the online shopping portal with 2 friends to provide a free recharge on all shopping orders made on partner sites Amazon, Flipkart, Snapdeal, Jabong, Paytm and many more."
       },
       {
+        "data": "This website has reached 15k views per month in 2 months after launching."
+      },
+      {
+        "data": "Successfully done one stall promotion inside my college with the team."
+      },
+      {
         "data": "Developed the complete website for it."
       },
       {
-        "data": "This website has reached 15k views in just 2 months after launching."
+        "data": "Closed in no profit no loss condition."
       }
     ],
     "links": [
