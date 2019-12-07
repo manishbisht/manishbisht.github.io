@@ -113,11 +113,6 @@ h4 {
     border-radius: 200px;
 }
 
-.quote {
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
 .img-responsive {
     width: 100%;
 }
@@ -152,10 +147,6 @@ h4 {
         height: 300px;
         width: 300px;
         border-radius: 300px;
-    }
-
-    .quote {
-        max-width: 500px;
     }
 
     .grid {

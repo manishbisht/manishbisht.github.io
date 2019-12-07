@@ -22,7 +22,7 @@ class Home extends Component {
                         <div className="material-icons location-icon">place</div>
                         <h3> Mumbai, Maharashtra (India)</h3>
                     </div>
-                    <div className="quote">
+                    <div>
                         <h4><strong>
                             <i className="material-icons">work</i> {ProfileData.jobTitle} at {ProfileData.worksFor}
                         </strong>
