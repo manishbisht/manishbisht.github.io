@@ -23,9 +23,10 @@ class Home extends Component {
                         <h3> Mumbai, Maharashtra (India)</h3>
                     </div>
                     <div>
-                        <h4><strong>
-                            <i className="material-icons">work</i> {ProfileData.jobTitle} at {ProfileData.worksFor}
-                        </strong>
+                        <h4>
+                            <strong>
+                                <i className="material-icons">work</i> {ProfileData.jobTitle} at {ProfileData.worksFor}
+                            </strong>
                         </h4>
                     </div>
             </div>
