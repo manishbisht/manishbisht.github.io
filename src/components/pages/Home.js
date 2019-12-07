@@ -18,8 +18,10 @@ class Home extends Component {
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAAi0lEQVQokWNgQAYyQFzGsIJBnwED8DNcBpK+DM8YfjMUokqxMRxg+A9m8TJsBLLSEFKMDCuBAv/hCncxfGWQhUn2gaVAktkMXkBSHmh0OwNU8D9csoHhO4MikN7BcAGb5H+GYiDdCTQYq2QubkkkY/E6CLtXdiJ7BTMQMnAHXxFm6IICvhwY8AYQLgCw2U9d90B8BAAAAABJRU5ErkJggg=="
                             height="14" type="image" width="14" onClick={() => this.playSound()} alt="name-sound" />
                     </h2>
-                    <span className="material-icons location-icon">place</span>
-                    <h3> Jaipur, Rajasthan (India)</h3>
+                    <div>
+                        <div className="material-icons location-icon">place</div>
+                        <h3> Mumbai, Maharashtra (India)</h3>
+                    </div>
                     <div className="quote">
                         <h4><strong>
                             <i className="material-icons">work</i> {ProfileData.jobTitle} at {ProfileData.worksFor}
