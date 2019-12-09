@@ -100,7 +100,7 @@ h4 {
 }
 
 .view {
-    min-height: calc(100vh - 247px);
+    min-height: calc(100vh - 56px);
     display: flex;
     flex-direction: column;
     align-items: center;
