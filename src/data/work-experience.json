@@ -1,7 +1,41 @@
 [
   {
+    "title": "Software Development Engineer - BookMyShow",
+    "subTitle": "September 2019 - Present",
+    "image": "BookMyShow",
+    "descriptionLinks": [
+      {
+        "data": "Web Platform Team"
+      },
+      {
+        "data": "Reduced server error logs by 94% in mobile website."
+      },
+      {
+        "data": "Added PhonePe Integration including SSO Login in mobile website."
+      },
+      {
+        "data": "Added OTP login in mobile website."
+      },
+      {
+        "data": "Developed new header and footer component for mobile website."
+      },
+      {
+        "data": "Secured user specific cookies to improve security."
+      },
+      {
+        "data": "For Referrals email at manish.bisht@bookmyshow.com"
+      }
+    ],
+    "links": [
+      {
+        "title": "Company Website",
+        "url": "https://in.bookmyshow.com"
+      }
+    ]
+  },
+  {
     "title": "Software Engineer - Covalent Capital",
-    "subTitle": "May 2018 - Present",
+    "subTitle": "May 2018 - August 2019",
     "image": "CovalentCapital",
     "descriptionLinks": [
       {
