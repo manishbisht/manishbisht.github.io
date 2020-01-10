@@ -1,18 +1,63 @@
 [
   {
-    "title": "Python",
-    "value": 90,
-    "image": "Python"
+    "title": "Android",
+    "value": 40,
+    "image": "Android"
   },
   {
-    "title": "React",
-    "value": 85,
-    "image": "React"
+    "title": "Java",
+    "value": 41,
+    "image": "Java"
   },
   {
-    "title": "Google Cloud",
-    "value": 90,
-    "image": "GoogleCloud"
+    "title": "MATLAB",
+    "value": 42,
+    "image": "MATLAB"
+  },
+  {
+    "title": "C/C++",
+    "value": 43,
+    "image": "C"
+  },
+  {
+    "title": "SQL",
+    "value": 44,
+    "image": "SQL"
+  },
+  {
+    "title": "PHP",
+    "value": 45,
+    "image": "PHP"
+  },
+  {
+    "title": "Adobe Illustrator",
+    "value": 50,
+    "image": "Illustrator"
+  },
+  {
+    "title": "Adobe Photoshop",
+    "value": 51,
+    "image": "Photoshop"
+  },
+  {
+    "title": "Angular",
+    "value": 60,
+    "image": "Angular"
+  },
+  {
+    "title": "jQuery",
+    "value": 61,
+    "image": "jQuery"
+  },
+  {
+    "title": "Google Assistant",
+    "value": 68,
+    "image": "Assistant"
+  },
+  {
+    "title": "Amazon Alexa",
+    "value": 69,
+    "image": "Alexa"
   },
   {
     "title": "Flask",
@@ -20,103 +65,58 @@
     "image": "Flask"
   },
   {
-    "title": "Amazon AWS",
-    "value": 85,
-    "image": "AWS"
-  },
-  {
-    "title": "Google Assistant",
-    "value": 90,
-    "image": "Assistant"
-  },
-  {
-    "title": "Amazon Alexa",
-    "value": 90,
-    "image": "Alexa"
-  },
-  {
-    "title": "Google Firebase",
-    "value": 90,
-    "image": "Firebase"
-  },
-  {
-    "title": "Angular",
-    "value": 70,
-    "image": "Angular"
-  },
-  {
-    "title": "MATLAB",
-    "value": 50,
-    "image": "MATLAB"
-  },
-  {
-    "title": "HTML",
-    "value": 90,
-    "image": "HTML"
-  },
-  {
-    "title": "CSS",
-    "value": 85,
-    "image": "CSS"
-  },
-  {
-    "title": "JS",
-    "value": 85,
-    "image": "JS"
-  },
-  {
-    "title": "Material Design Lite",
-    "value": 90,
-    "image": "MDL"
-  },
-  {
-    "title": "PHP",
-    "value": 70,
-    "image": "PHP"
-  },
-  {
-    "title": "C/C++",
-    "value": 70,
-    "image": "C"
-  },
-  {
-    "title": "Java",
-    "value": 50,
-    "image": "Java"
-  },
-  {
-    "title": "Bootstrap",
-    "value": 90,
-    "image": "Bootstrap"
-  },
-  {
-    "title": "Android",
-    "value": 40,
-    "image": "Android"
-  },
-  {
-    "title": "jQuery",
-    "value": 70,
-    "image": "jQuery"
-  },
-  {
-    "title": "SQL",
-    "value": 70,
-    "image": "SQL"
+    "title": "Python",
+    "value": 71,
+    "image": "Python"
   },
   {
     "title": "Competitive Programming",
-    "value": 80,
+    "value": 71,
     "image": "CP"
   },
   {
-    "title": "Adobe Photoshop",
-    "value": 75,
-    "image": "Photoshop"
+    "title": "Google Cloud",
+    "value": 71,
+    "image": "GoogleCloud"
   },
   {
-    "title": "Adobe Illustrator",
-    "value": 65,
-    "image": "Illustrator"
+    "title": "Google Firebase",
+    "value": 71,
+    "image": "Firebase"
+  },
+  {
+    "title": "Amazon AWS",
+    "value": 71,
+    "image": "AWS"
+  },
+  {
+    "title": "Bootstrap",
+    "value": 75,
+    "image": "Bootstrap"
+  },
+  {
+    "title": "Material Design Lite",
+    "value": 76,
+    "image": "MDL"
+  },
+  {
+    "title": "CSS",
+    "value": 77,
+    "image": "CSS"
+  },
+  {
+    "title": "HTML",
+    "value": 78,
+    "image": "HTML"
+  },
+  {
+    "title": "React",
+    "value": 79,
+    "image": "React"
+  },
+  {
+    "title": "JavaScript",
+    "value": 80,
+    "image": "JS"
   }
 ]
