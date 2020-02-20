@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FlipkartProductSearchImage from '../images/flipkart-product-search.png'
 import ToDoListImage from '../images/hackerearth-internship-online-round.jpg'
 import FileExplorerImage from '../images/file-explorer.png'
@@ -21,71 +21,71 @@ import HackerearthImage from '../images/hackerearth-small-logo.jpg'
 import SpojImage from '../images/spoj-small-logo.jpg'
 import CodechefImage from '../images/codechef-small-logo.jpg'
 
-class SmallBox extends Component {
-    getImageLink(){
-        if(this.props.data.image === "FlipkartProductSearch") {
+const SmallBox = (props) => {
+    const getImageLink = () => {
+        if(props.data.image === "FlipkartProductSearch") {
             return FlipkartProductSearchImage
-        } else if(this.props.data.image === "FileExplorer") {
+        } else if(props.data.image === "FileExplorer") {
             return FileExplorerImage
-        } else if(this.props.data.image === "ContestNotify") {
+        } else if(props.data.image === "ContestNotify") {
             return ContestNotifyImage
-        } else if(this.props.data.image === "ToDoList") {
+        } else if(props.data.image === "ToDoList") {
             return ToDoListImage
-        } else if(this.props.data.image === "FoodHelper") {
+        } else if(props.data.image === "FoodHelper") {
             return FoodHelperImage
-        } else if(this.props.data.image === "ContentSearch") {
+        } else if(props.data.image === "ContentSearch") {
             return ContentSearchImage
-        } else if(this.props.data.image === "FEND1") {
+        } else if(props.data.image === "FEND1") {
             return FEND1Image
-        } else if(this.props.data.image === "FEND2") {
+        } else if(props.data.image === "FEND2") {
             return FEND2Image
-        } else if(this.props.data.image === "FEND3") {
+        } else if(props.data.image === "FEND3") {
             return FEND3Image
-        } else if(this.props.data.image === "FEND4") {
+        } else if(props.data.image === "FEND4") {
             return FEND4Image
-        } else if(this.props.data.image === "FEND5") {
+        } else if(props.data.image === "FEND5") {
             return FEND5Image
-        } else if(this.props.data.image === "FEND6") {
+        } else if(props.data.image === "FEND6") {
             return FEND6Image
-        } else if(this.props.data.image === "ProfileReader") {
+        } else if(props.data.image === "ProfileReader") {
             return ProfileReaderImage
-        } else if(this.props.data.image === "FacebookIDCard") {
+        } else if(props.data.image === "FacebookIDCard") {
             return FacebookIDCardImage
-        } else if(this.props.data.image === "CProgrammer") {
+        } else if(props.data.image === "CProgrammer") {
             return CProgrammerImage
-        } else if(this.props.data.image === "Codeforces") {
+        } else if(props.data.image === "Codeforces") {
             return CodeforcesImage
-        } else if(this.props.data.image === "Hackerrank") {
+        } else if(props.data.image === "Hackerrank") {
             return HackerrankImage
-        } else if(this.props.data.image === "Topcoder") {
+        } else if(props.data.image === "Topcoder") {
             return TopcoderImage
-        } else if(this.props.data.image === "Hackerearth") {
+        } else if(props.data.image === "Hackerearth") {
             return HackerearthImage
-        } else if(this.props.data.image === "Spoj") {
+        } else if(props.data.image === "Spoj") {
             return SpojImage
-        } else if(this.props.data.image === "Codechef") {
+        } else if(props.data.image === "Codechef") {
             return CodechefImage
         }
     }
 
-    getTitleColor() {
-        if(this.props.data.titleColor) {
-            return this.props.data.titleColor
+    const getTitleColor = () => {
+        if(props.data.titleColor) {
+            return props.data.titleColor
         }
         return "black";
     }
 
-    getDescriptionHTML() {
-        if (this.props.data.description) {
+    const getDescriptionHTML = () => {
+        if (props.data.description) {
             return (
-                this.props.data.description
+                props.data.description
             )
         }
     }
 
-    getDescriptionLinksHTML() {
-        if (this.props.data.descriptionLinks) {
-            let listitems = this.props.data.descriptionLinks.map((item, index) => {
+    const getDescriptionLinksHTML = () => {
+        if (props.data.descriptionLinks) {
+            let listitems = props.data.descriptionLinks.map((item, index) => {
                 return <li key={'boxItem' + index}>{item.data}</li>
             });
             return (
@@ -96,9 +96,9 @@ class SmallBox extends Component {
         }
     }
 
-    getButtonsHTML() {
-        if (this.props.data.links) {
-            return this.props.data.links.map((link, index) => {
+    const getButtonsHTML = () => {
+        if (props.data.links) {
+            return props.data.links.map((link, index) => {
                 return (
                     <a key={'small-box' + index}
                        className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
@@ -112,24 +112,22 @@ class SmallBox extends Component {
         }
     }
 
-    render() {
-        return (
-            <div className="mdl-cell--4-col mdl-card-padding grid-small-box">
-                <div className="mdl-card mdl-shadow--4dp width100">
-                    <div className="mdl-card__title mdl-card--expand" style={{backgroundImage: `url(${this.getImageLink()})`, backgroundPosition: "center", backgroundSize: "cover", height: 200}}>
-                        <h2 className="mdl-card__title-text" style={{color: `${this.getTitleColor()}`}}>{this.props.data.title}</h2>
-                    </div>
-                    <div className="mdl-card__supporting-text">
-                        {this.getDescriptionHTML()}
-                    {this.getDescriptionLinksHTML()}
-                    </div>
-                    <div className="mdl-card__actions mdl-card--border">
-                        {this.getButtonsHTML()}
-                    </div>
+    return (
+        <div className="mdl-cell--4-col mdl-card-padding grid-small-box">
+            <div className="mdl-card mdl-shadow--4dp width100">
+                <div className="mdl-card__title mdl-card--expand" style={{backgroundImage: `url(${getImageLink()})`, backgroundPosition: "center", backgroundSize: "cover", height: 200}}>
+                    <h2 className="mdl-card__title-text" style={{color: `${getTitleColor()}`}}>{props.data.title}</h2>
+                </div>
+                <div className="mdl-card__supporting-text">
+                    {getDescriptionHTML()}
+                    {getDescriptionLinksHTML()}
+                </div>
+                <div className="mdl-card__actions mdl-card--border">
+                    {getButtonsHTML()}
                 </div>
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
 
 export default SmallBox;

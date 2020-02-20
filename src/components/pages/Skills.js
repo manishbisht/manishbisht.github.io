@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {useEffect} from 'react';
 import SkillsData from '../../data/skills'
 import PythonImage from '../../images/python-logo.png'
 import GoogleCloudImage from '../../images/googlecloud-logo.png'
@@ -25,65 +25,73 @@ import CSSImage from '../../images/css-logo.png'
 import JSImage from '../../images/js-logo.jpg'
 import ReactImage from '../../images/react-logo.png'
 
-class Skills extends Component {
-    getSkillImage(name) {
-        if(name === "Python") {
+const Skills = () => {
+    useEffect(() => {
+        for (let index in SkillsData) {
+            document.getElementById(SkillsData[index].image).addEventListener('mdl-componentupgraded', function () {
+                this.MaterialProgress.setProgress(SkillsData[index].value);
+            });
+        }
+    });
+
+    const getSkillImage = (name) => {
+        if (name === "Python") {
             return PythonImage
-        } else if(name === "React") {
+        } else if (name === "React") {
             return ReactImage
-        } else if(name === "GoogleCloud") {
+        } else if (name === "GoogleCloud") {
             return GoogleCloudImage
-        } else if(name === "MATLAB") {
+        } else if (name === "MATLAB") {
             return MATLABImage
-        } else if(name === "AWS") {
+        } else if (name === "AWS") {
             return AWSImage
-        } else if(name === "Firebase") {
+        } else if (name === "Firebase") {
             return FirebaseImage
-        } else if(name === "HTML") {
+        } else if (name === "HTML") {
             return HTMLImage
-        } else if(name === "CSS") {
+        } else if (name === "CSS") {
             return CSSImage
-        } else if(name === "JS") {
+        } else if (name === "JS") {
             return JSImage
-        } else if(name === "Flask") {
+        } else if (name === "Flask") {
             return FlaskImage
-        } else if(name === "Android") {
+        } else if (name === "Android") {
             return AndroidImage
-        } else if(name === "MDL") {
+        } else if (name === "MDL") {
             return MDLImage
-        } else if(name === "Angular") {
+        } else if (name === "Angular") {
             return AngularImage
-        } else if(name === "Illustrator") {
+        } else if (name === "Illustrator") {
             return IllustratorImage
-        } else if(name === "Photoshop") {
+        } else if (name === "Photoshop") {
             return PhotoshopImage
-        } else if(name === "Java") {
+        } else if (name === "Java") {
             return JavaImage
-        } else if(name === "PHP") {
+        } else if (name === "PHP") {
             return PHPImage
-        } else if(name === "Assistant") {
+        } else if (name === "Assistant") {
             return AssistantImage
-        } else if(name === "C") {
+        } else if (name === "C") {
             return CImage
-        } else if(name === "CP") {
+        } else if (name === "CP") {
             return CPImage
-        } else if(name === "SQL") {
+        } else if (name === "SQL") {
             return SQLImage
-        } else if(name === "Bootstrap") {
+        } else if (name === "Bootstrap") {
             return BootstrapImage
-        } else if(name === "jQuery") {
+        } else if (name === "jQuery") {
             return jQueryImage
-        } else if(name === "Alexa") {
+        } else if (name === "Alexa") {
             return AlexaImage
         }
-    }
+    };
 
-    getSkillsData() {
+    const getSkillsData = () => {
         return SkillsData.map((skill, index) => {
             return (
                 <div key={'skill' + index} className="mdl-cell mdl-cell--6-col">
                     <h3><strong>{skill.title}</strong></h3>
-                    <img src={this.getSkillImage(skill.image)} align="right" alt={skill.title} />
+                    <img src={getSkillImage(skill.image)} align="right" alt={skill.title}/>
                     <div id={skill.image} className="mdl-progress mdl-js-progress"></div>
                 </div>
             );
@@ -91,26 +99,16 @@ class Skills extends Component {
         /*.sort(function(a, b){
             return b.value - a.value
             })*/
-    }
+    };
 
-    componentDidMount() {
-        for(let index in SkillsData) {
-            document.getElementById(SkillsData[index].image).addEventListener('mdl-componentupgraded', function () {
-                this.MaterialProgress.setProgress(SkillsData[index].value);
-            });
-        }
-    }
-
-    render() {
-        return (
-            <div>
-                <h1 align="center"><strong>My Skills</strong></h1>
-                <div className="mdl-grid grid">
-                    {this.getSkillsData()}
-                </div>
+    return (
+        <div>
+            <h1 align="center"><strong>My Skills</strong></h1>
+            <div className="mdl-grid grid">
+                {getSkillsData()}
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
 
 export default Skills;

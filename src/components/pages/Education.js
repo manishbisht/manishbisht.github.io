@@ -1,24 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import EducationData from '../../data/education'
 import BigBox from '../BigBox'
 
-class Education extends Component {
-    getEducationData() {
+const Education = () => {
+    const getEducationData = () => {
         return EducationData.map((education, index) => {
-            return <BigBox key={'education' + index} data={education} />
+            return <BigBox key={'education' + index} data={education}/>
         })
-    }
+    };
 
-    render() {
-        return (
-            <div>
-                <h1 align="center"><strong>Education</strong></h1>
-                <div className="mdl-grid grid">
-                    {this.getEducationData()}
-                </div>
+    return (
+        <div>
+            <h1 align="center"><strong>Education</strong></h1>
+            <div className="mdl-grid grid">
+                {getEducationData()}
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
 
 export default Education;
