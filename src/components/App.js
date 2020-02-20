@@ -14,6 +14,12 @@ const Education = React.lazy(() => import("./pages/Education"));
 const Projects = React.lazy(() => import("./pages/Projects"));
 const Contact = React.lazy(() => import("./pages/Contact"));
 
+const Loader = () => (
+    <div className="view">
+        <div className="mdl-spinner mdl-js-spinner is-active"></div>
+    </div>
+);
+
 const App = () => (
     <HashRouter>
         <div className="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
@@ -25,7 +31,7 @@ const App = () => (
                         exact
                         path="/"
                         render={() => (
-                            <Suspense fallback={<div>Loading...</div>}>
+                            <Suspense fallback={<Loader />}>
                                 <Home />
                             </Suspense>
                         )}
@@ -34,7 +40,7 @@ const App = () => (
                         exact
                         path="/skills"
                         render={() => (
-                            <Suspense fallback={<div>Loading...</div>}>
+                            <Suspense fallback={<Loader />}>
                                 <Skills />
                             </Suspense>
                         )}
@@ -43,7 +49,7 @@ const App = () => (
                         exact
                         path="/work-experience"
                         render={() => (
-                            <Suspense fallback={<div>Loading...</div>}>
+                            <Suspense fallback={<Loader />}>
                                 <WorkExperience />
                             </Suspense>
                         )}
@@ -52,7 +58,7 @@ const App = () => (
                         exact
                         path="/competitive-programming"
                         render={() => (
-                            <Suspense fallback={<div>Loading...</div>}>
+                            <Suspense fallback={<Loader />}>
                                 <CompetitiveProgramming />
                             </Suspense>
                         )}
@@ -61,7 +67,7 @@ const App = () => (
                         exact
                         path="/open-source"
                         render={() => (
-                            <Suspense fallback={<div>Loading...</div>}>
+                            <Suspense fallback={<Loader />}>
                                 <OpenSource />
                             </Suspense>
                         )}
@@ -70,7 +76,7 @@ const App = () => (
                         exact
                         path="/education"
                         render={() => (
-                            <Suspense fallback={<div>Loading...</div>}>
+                            <Suspense fallback={<Loader />}>
                                 <Education />
                             </Suspense>
                         )}
@@ -79,7 +85,7 @@ const App = () => (
                         exact
                         path="/projects"
                         render={() => (
-                            <Suspense fallback={<div>Loading...</div>}>
+                            <Suspense fallback={<Loader />}>
                                 <Projects />
                             </Suspense>
                         )}
@@ -88,7 +94,7 @@ const App = () => (
                         exact
                         path="/contact"
                         render={() => (
-                            <Suspense fallback={<div>Loading...</div>}>
+                            <Suspense fallback={<Loader />}>
                                 <Contact />
                             </Suspense>
                         )}
