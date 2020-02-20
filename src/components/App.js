@@ -1,16 +1,18 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { HashRouter, Route } from "react-router-dom";
 import Header from "./common/Header.js";
 import Sidebar from "./common/Sidebar";
 import Footer from "./common/Footer";
-import Home from "./pages/Home";
-import Skills from "./pages/Skills";
-import WorkExperience from "./pages/WorkExperience";
-import CompetitiveProgramming from "./pages/CompetitiveProgramming";
-import OpenSource from "./pages/OpenSource";
-import Education from "./pages/Education";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
+const Home = React.lazy(() => import("./pages/Home"));
+const Skills = React.lazy(() => import("./pages/Skills"));
+const WorkExperience = React.lazy(() => import("./pages/WorkExperience"));
+const CompetitiveProgramming = React.lazy(() =>
+    import("./pages/CompetitiveProgramming")
+);
+const OpenSource = React.lazy(() => import("./pages/OpenSource"));
+const Education = React.lazy(() => import("./pages/Education"));
+const Projects = React.lazy(() => import("./pages/Projects"));
+const Contact = React.lazy(() => import("./pages/Contact"));
 
 const App = () => (
     <HashRouter>
@@ -19,30 +21,78 @@ const App = () => (
             <Sidebar />
             <main className="mdl-layout__content">
                 <div className="page-content">
-                    <Route exact path="/" render={() => <Home />} />
-                    <Route exact path="/skills" render={() => <Skills />} />
+                    <Route
+                        exact
+                        path="/"
+                        render={() => (
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <Home />
+                            </Suspense>
+                        )}
+                    />
+                    <Route
+                        exact
+                        path="/skills"
+                        render={() => (
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <Skills />
+                            </Suspense>
+                        )}
+                    />
                     <Route
                         exact
                         path="/work-experience"
-                        render={() => <WorkExperience />}
+                        render={() => (
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <WorkExperience />
+                            </Suspense>
+                        )}
                     />
                     <Route
                         exact
                         path="/competitive-programming"
-                        render={() => <CompetitiveProgramming />}
+                        render={() => (
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <CompetitiveProgramming />
+                            </Suspense>
+                        )}
                     />
                     <Route
                         exact
                         path="/open-source"
-                        render={() => <OpenSource />}
+                        render={() => (
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <OpenSource />
+                            </Suspense>
+                        )}
                     />
                     <Route
                         exact
                         path="/education"
-                        render={() => <Education />}
+                        render={() => (
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <Education />
+                            </Suspense>
+                        )}
                     />
-                    <Route exact path="/projects" render={() => <Projects />} />
-                    <Route exact path="/contact" render={() => <Contact />} />
+                    <Route
+                        exact
+                        path="/projects"
+                        render={() => (
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <Projects />
+                            </Suspense>
+                        )}
+                    />
+                    <Route
+                        exact
+                        path="/contact"
+                        render={() => (
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <Contact />
+                            </Suspense>
+                        )}
+                    />
                     <Footer />
                 </div>
             </main>
