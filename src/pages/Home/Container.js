@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import NameSound from "../../audio/Manish_Bisht.mp3";
 import ProfileImage from "../../images/manish_bisht.png";
 import { ResponsiveImage } from "../../components/commonStyle";
 import {
@@ -7,7 +8,6 @@ import {
     ProfileImageContainer,
     ProfileInfoDetailsContainer,
 } from "./style";
-import NameSound from "../../audio/Manish_Bisht.mp3";
 
 const HomePage = () => {
     const sound = useRef(null);
