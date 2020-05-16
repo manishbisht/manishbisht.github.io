@@ -5,16 +5,25 @@
     "image": "Udacity",
     "descriptionLinks": [
       {
-        "data": "Data Structures and Algorithms Nanodegree (Beta Tester - In Progress)"
+        "data": "React Nanodegree Program - https://confirm.udacity.com/AAS2CLRG"
       },
       {
-        "data": "Blockchain Developer Nanodegree (Beta Tester - Completed)"
+        "data": "Data Structures & Algorithms Nanodegree Program - https://confirm.udacity.com/GEK4KCC"
       },
       {
-        "data": "Front-End Web Developer Nanodegree (Completed)"
+        "data": "Data Structures & Algorithms Beta Nanodegree Program - https://confirm.udacity.com/F433SRNA"
       },
       {
-        "data": "Intro to Programming Nanodegree (Completed)"
+        "data": "Cloud Developer Beta Nanodegree Program - https://confirm.udacity.com/P7556F4C"
+      },
+      {
+        "data": "Blockchain Developer Nanodegree - https://confirm.udacity.com/L2A449FJ"
+      },
+      {
+        "data": "Front-End Web Developer Nanodegree - https://confirm.udacity.com/2D3UMXPP"
+      },
+      {
+        "data": "Intro to Programming Nanodegree - https://confirm.udacity.com/7ZHG57KX"
       }
     ],
     "links": [
@@ -28,7 +37,14 @@
     "title": "Swami Keshvanand Institute of Technology Management & Gramothan, Jaipur",
     "subTitle": "August 2014 - May 2018",
     "image": "SKIT",
-    "description": "B.Tech in Information Technology",
+    "descriptionLinks": [
+      {
+        "data": "B.Tech in Information Technology"
+      },
+      {
+        "data": "Member of Technical Team of E-Cell SKIT in E-Week 2015, E-Week 2016"
+      }
+    ],
     "links": [
       {
         "title": "College Website",
@@ -40,7 +56,17 @@
     "title": "Defence Public School, Jaipur",
     "subTitle": "April 2010 - March 2014",
     "image": "DPS",
-    "description": "Class IX-XII",
+    "descriptionLinks": [
+      {
+        "data": "Class IX-XII"
+      },
+      {
+        "data": "Higher Secondary Education - 82.6%"
+      },
+      {
+        "data": "Secondary Education - 7.8 CGPA"
+      }
+    ],
     "links": [
       {
         "title": "School Website",

@@ -5,7 +5,7 @@
     "image": "BookMyShow",
     "descriptionLinks": [
       {
-        "data": "Web Platform/Members Team"
+        "data": "Working on a fully API driven home page and listings pages for both mobile and desktop."
       },
       {
         "data": "Reduced server error logs by 94% in mobile website."
@@ -14,13 +14,22 @@
         "data": "Added PhonePe Integration including SSO Login in mobile website."
       },
       {
-        "data": "Added OTP login in mobile website."
+        "data": "Developed one-time password (OTP) login module in mobile website."
       },
       {
-        "data": "Developed new header and footer component for mobile website."
+        "data": "Scaled mobile website login pages for desktop to remove PHP codebase."
+      },
+      {
+        "data": "Developed new header and footer components for mobile website."
+      },
+      {
+        "data": "Migrated mobile website redirection logics from Nginx to HAProxy."
       },
       {
         "data": "Secured user specific cookies to improve security."
+      },
+      {
+        "data": "Part of Web Platform, Members and Discovery Team."
       },
       {
         "data": "For Referrals email at manish.bisht@bookmyshow.com"
@@ -91,19 +100,7 @@
         "data": "Beta Tester for new Courses and Nanodegrees."
       },
       {
-        "data": "Project Reviewer and Mentor for Blockchain Nanodegree."
-      },
-      {
-        "data": "Project Reviewer and Mentor for Cloud Engineer Nanodegree."
-      },
-      {
-        "data": "Project Reviewer and Mentor for Cloud DevOps Engineer Nanodegree."
-      },
-      {
-        "data": "Project Reviewer and Mentor for FrontEnd Web Developer Nanodegree."
-      },
-      {
-        "data": "Project Reviewer and Mentor for Data Structures and Algorithms Nanodegree."
+        "data": "Project Reviewer and Mentor for Blockchain, Cloud Engineer, Cloud DevOps Engineer, Cloud Security Engineer, FrontEnd Web Developer and Data Structures and Algorithms Nanodegree."
       }
     ],
     "links": [
