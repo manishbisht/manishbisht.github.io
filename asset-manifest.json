@@ -1,21 +1,19 @@
 {
   "files": {
-    "main.js": "/static/js/main.85ddc91c.chunk.js",
-    "main.js.map": "/static/js/main.85ddc91c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.89d0720c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.89d0720c.js.map",
-    "static/js/2.c00fa6ce.chunk.js": "/static/js/2.c00fa6ce.chunk.js",
-    "static/js/2.c00fa6ce.chunk.js.map": "/static/js/2.c00fa6ce.chunk.js.map",
-    "static/js/3.0ae07783.chunk.js": "/static/js/3.0ae07783.chunk.js",
-    "static/js/3.0ae07783.chunk.js.map": "/static/js/3.0ae07783.chunk.js.map",
-    "static/js/4.afe04849.chunk.js": "/static/js/4.afe04849.chunk.js",
-    "static/js/4.afe04849.chunk.js.map": "/static/js/4.afe04849.chunk.js.map",
-    "static/js/5.a4467c6a.chunk.js": "/static/js/5.a4467c6a.chunk.js",
-    "static/js/5.a4467c6a.chunk.js.map": "/static/js/5.a4467c6a.chunk.js.map",
+    "main.js": "/static/js/main.79e24cb5.chunk.js",
+    "main.js.map": "/static/js/main.79e24cb5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.12b5eed4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.12b5eed4.js.map",
+    "static/js/2.8a1b0d9a.chunk.js": "/static/js/2.8a1b0d9a.chunk.js",
+    "static/js/2.8a1b0d9a.chunk.js.map": "/static/js/2.8a1b0d9a.chunk.js.map",
+    "static/js/3.e857f168.chunk.js": "/static/js/3.e857f168.chunk.js",
+    "static/js/3.e857f168.chunk.js.map": "/static/js/3.e857f168.chunk.js.map",
+    "static/js/4.8279efb3.chunk.js": "/static/js/4.8279efb3.chunk.js",
+    "static/js/4.8279efb3.chunk.js.map": "/static/js/4.8279efb3.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.d94ae9284ae701db75959c9e4ac9a4cd.js": "/precache-manifest.d94ae9284ae701db75959c9e4ac9a4cd.js",
+    "precache-manifest.66f44fa423fb47a015964789bac596fd.js": "/precache-manifest.66f44fa423fb47a015964789bac596fd.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.c00fa6ce.chunk.js.LICENSE.txt": "/static/js/2.c00fa6ce.chunk.js.LICENSE.txt",
+    "static/js/2.8a1b0d9a.chunk.js.LICENSE.txt": "/static/js/2.8a1b0d9a.chunk.js.LICENSE.txt",
     "static/media/Manish_Bisht.mp3": "/static/media/Manish_Bisht.6454ea0c.mp3",
     "static/media/bluecubenetwork-logo.jpg": "/static/media/bluecubenetwork-logo.6690d7cd.jpg",
     "static/media/covalent-capital.png": "/static/media/covalent-capital.8a20d344.png",
@@ -27,8 +25,8 @@
     "static/media/skit-logo.jpg": "/static/media/skit-logo.7e3add3e.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.89d0720c.js",
-    "static/js/2.c00fa6ce.chunk.js",
-    "static/js/main.85ddc91c.chunk.js"
+    "static/js/runtime-main.12b5eed4.js",
+    "static/js/2.8a1b0d9a.chunk.js",
+    "static/js/main.79e24cb5.chunk.js"
   ]
 }
