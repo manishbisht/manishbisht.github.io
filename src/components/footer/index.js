@@ -26,7 +26,7 @@ const Footer = () => {
                 <Title1>Hire me !!</Title1>
                 <Title4>
                     I'm currently open for new opportunities. Would you like to
-                    discuss yours ?
+                    discuss any new opportunity ?
                 </Title4>
                 <FooterSupportingContainerContact href="tel:+918559874393">
                     +91-8559874393
@@ -40,50 +40,57 @@ const Footer = () => {
             </FooterSupportingContainer>
             <SocialMediaIconsWrapper>
                 <SocialMediaIconWrapper
+                    aria-label="Facebook"
                     href="http://fb.com/imanishbisht"
-                    rel="noopener noreferrer"
+                    rel="noopener"
                     target="_blank"
                 >
                     <FacebookIcon />
                 </SocialMediaIconWrapper>
                 <SocialMediaIconWrapper
+                    aria-label="Twitter"
                     href="https://twitter.com/ManishBisht02"
-                    rel="noopener noreferrer"
+                    rel="noopener"
                     target="_blank"
                 >
                     <TwitterIcon />
                 </SocialMediaIconWrapper>
                 <SocialMediaIconWrapper
+                    aria-label="Instagram"
                     href="https://www.instagram.com/manishbisht02"
-                    rel="noopener noreferrer"
+                    rel="noopener"
                     target="_blank"
                 >
                     <InstagramIcon />
                 </SocialMediaIconWrapper>
                 <SocialMediaIconWrapper
+                    aria-label="LinkedIn"
                     href="https://www.linkedin.com/in/manishbisht02"
-                    rel="noopener noreferrer"
+                    rel="noopener"
                     target="_blank"
                 >
                     <LinkedInIcon />
                 </SocialMediaIconWrapper>
                 <SocialMediaIconWrapper
+                    aria-label="Github"
                     href="https://github.com/manishbisht"
-                    rel="noopener noreferrer"
+                    rel="noopener"
                     target="_blank"
                 >
                     <GithubIcon />
                 </SocialMediaIconWrapper>
                 <SocialMediaIconWrapper
+                    aria-label="Pinterest"
                     href="https://www.pinterest.com/imanishbisht"
-                    rel="noopener noreferrer"
+                    rel="noopener"
                     target="_blank"
                 >
                     <PinterestIcon />
                 </SocialMediaIconWrapper>
                 <SocialMediaIconWrapper
+                    aria-label="Medium"
                     href="https://medium.com/@manishbisht"
-                    rel="noopener noreferrer"
+                    rel="noopener"
                     target="_blank"
                 >
                     <MediumIcon />

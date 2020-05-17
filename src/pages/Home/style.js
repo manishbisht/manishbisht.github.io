@@ -21,7 +21,7 @@ export const MainViewWrapper = styled(MainView)`
 
 export const ProfileInfoDetailsContainer = styled(HorizontalFlexBox)`
     font-weight: bold;
-    color: ${COLORS.WHITE};
+    color: ${COLORS.PRIMARY_TEXT_COLOR};
     font-size: 28px;
     line-height: 40px;
     min-height: calc(100% - 100vw + 4px);

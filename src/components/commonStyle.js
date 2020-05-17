@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { COLORS, VIEWPORT_WIDTHS } from "../utills/Constants";
 
 export const Title1 = styled.h1`
@@ -72,10 +72,16 @@ export const HorizontalFlexBox = styled.div`
     justify-content: center;
 `;
 
-export const AppContainer = styled.div`
-    color: ${COLORS.TEXT_COLOR};
-    margin-top: 64px;
+export const GlobalStyle = createGlobalStyle`
+    body {
+        font-family: "Open Sans", sans-serif;
+        color: ${COLORS.TEXT_COLOR};
+        margin: 64px 0 0;
+        padding: 0;
+    }
 `;
+
+export const AppContainer = styled.div``;
 
 export const MainView = styled(HorizontalFlexBox)`
     height: calc(100vh - 64px);

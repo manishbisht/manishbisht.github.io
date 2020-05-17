@@ -1,8 +1,13 @@
 import React from "react";
 import { ResponsiveImage } from "../commonStyle";
-import ProfileImage from "../../images/manish_bisht.png";
+
+import ProfileData from "../../data/personal-details.json";
+
+import ProfileImage from "../../images/manish_bisht.webp";
+
 import BookMyShowIcon from "./BookMyShow";
 import UdacityLogo from "./Udacity";
+
 import CovalentCapitalImage from "../../images/covalent-capital.png";
 import FBOpenSourceImage from "../../images/fbopensource-logo.jpg";
 import GSOCImage from "../../images/gsoc2016-logo.jpg";
@@ -28,14 +33,24 @@ export const ManTechnologystEmoji = () => (
 );
 
 export const LogoMap = {
-    ProfileImage: () => <ResponsiveImage src={ProfileImage} />,
+    ProfileImage: () => (
+        <ResponsiveImage src={ProfileImage} alt={ProfileData.name} />
+    ),
     BookMyShow: BookMyShowIcon,
-    CovalentCapital: () => <ResponsiveImage src={CovalentCapitalImage} />,
+    CovalentCapital: () => (
+        <ResponsiveImage src={CovalentCapitalImage} alt="CovalentCapital" />
+    ),
     Udacity: () => <UdacityLogo width="50%" />,
-    FBOpenSource: () => <ResponsiveImage src={FBOpenSourceImage} />,
-    GSOC: () => <ResponsiveImage src={GSOCImage} />,
-    BlueCubeNetwork: () => <ResponsiveImage src={BlueCubeNetworkImage} />,
-    Run4Offers: () => <ResponsiveImage src={Run4OffersImage} />,
-    SKIT: () => <ResponsiveImage src={SKITImage} />,
-    DPS: () => <ResponsiveImage src={DPSImage} />,
+    FBOpenSource: () => (
+        <ResponsiveImage src={FBOpenSourceImage} alt="FBOpenSource" />
+    ),
+    GSOC: () => <ResponsiveImage src={GSOCImage} alt="FBOpenSource" />,
+    BlueCubeNetwork: () => (
+        <ResponsiveImage src={BlueCubeNetworkImage} alt="Facebook OpenSource" />
+    ),
+    Run4Offers: () => (
+        <ResponsiveImage src={Run4OffersImage} alt="Run4Offers" />
+    ),
+    SKIT: () => <ResponsiveImage src={SKITImage} alt={ProfileData.alumniOf} />,
+    DPS: () => <ResponsiveImage src={DPSImage} alt="Defence Public School" />,
 };

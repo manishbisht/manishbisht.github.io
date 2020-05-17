@@ -25,8 +25,8 @@ export const HeaderIconWrapper = styled(MobileOnlyContainer)`
 `;
 
 export const Hamburger = styled(HorizontalFlexBox)`
-    width: 40px;
-    height: 30px;
+    width: 36px;
+    height: 24px;
     position: relative;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -42,10 +42,10 @@ export const Hamburger = styled(HorizontalFlexBox)`
 export const Bar = styled.div`
     display: block;
     position: absolute;
-    height: 6px;
+    height: 4px;
     width: 100%;
     background: ${COLORS.TEXT_COLOR};
-    border-radius: 6px;
+    border-radius: 4px;
     opacity: 1;
     left: 0;
     -webkit-transform: rotate(0deg);
@@ -63,11 +63,11 @@ export const Bar = styled.div`
 
     &:nth-child(2),
     &:nth-child(3) {
-        top: 12px;
+        top: 10px;
     }
 
     &:nth-child(4) {
-        top: 24px;
+        top: 20px;
     }
 
     ${({ open = false }) =>

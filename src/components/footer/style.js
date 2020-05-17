@@ -17,7 +17,7 @@ export const FooterSupportingContainer = styled(HorizontalFlexBox)`
 export const FooterSupportingContainerContact = styled.a`
     font-size: 16px;
     font-weight: bold;
-    margin-top: 4px;
+    margin-top: 8px;
     text-decoration: none;
     color: ${COLORS.TEXT_COLOR};
 `;
@@ -41,7 +41,7 @@ export const FooterTextContainer = styled(VerticalFlexBox)`
     justify-content: center;
     font-size: 24px;
     font-weight: bold;
-    margin-top: 16px;
+    margin-top: 24px;
 
     svg {
         width: 27px;

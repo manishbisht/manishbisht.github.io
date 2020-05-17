@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { HashRouter, Route } from "react-router-dom";
-import { AppContainer } from "./components/commonStyle";
+import { GlobalStyle, AppContainer } from "./components/commonStyle";
 import { Header, Footer } from "./components";
 const Home = React.lazy(() => import("./pages/Home/Container"));
 const Experience = React.lazy(() => import("./pages/Experience/Container"));
@@ -10,6 +10,7 @@ const Loader = () => null;
 
 const App = () => (
     <AppContainer>
+        <GlobalStyle />
         <HashRouter>
             <Header />
             <Route

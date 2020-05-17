@@ -38,6 +38,7 @@ const Header = () => {
                 <MenuItem
                     onClick={() => setShowNavigationItems(false)}
                     href="http://bit.ly/202001ManishBishtResume"
+                    rel="noopener"
                     target="_blank"
                 >
                     Resume
