@@ -8,10 +8,12 @@ export const Title1 = styled.h1`
 
 export const Title2 = styled.h2`
     font-size: 28px;
+    margin: 0;
 `;
 
 export const Title3 = styled.h3`
     font-size: 24px;
+    margin: 0;
 `;
 
 export const Title4 = styled.h4`
