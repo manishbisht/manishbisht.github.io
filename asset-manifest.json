@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.79e24cb5.chunk.js",
-    "main.js.map": "/static/js/main.79e24cb5.chunk.js.map",
+    "main.js": "/static/js/main.cbcddb58.chunk.js",
+    "main.js.map": "/static/js/main.cbcddb58.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.12b5eed4.js",
     "runtime-main.js.map": "/static/js/runtime-main.12b5eed4.js.map",
     "static/js/2.8a1b0d9a.chunk.js": "/static/js/2.8a1b0d9a.chunk.js",
@@ -11,7 +11,7 @@
     "static/js/4.8279efb3.chunk.js": "/static/js/4.8279efb3.chunk.js",
     "static/js/4.8279efb3.chunk.js.map": "/static/js/4.8279efb3.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.66f44fa423fb47a015964789bac596fd.js": "/precache-manifest.66f44fa423fb47a015964789bac596fd.js",
+    "precache-manifest.3eb56262bf49a9ab55af112d55e66dd1.js": "/precache-manifest.3eb56262bf49a9ab55af112d55e66dd1.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.8a1b0d9a.chunk.js.LICENSE.txt": "/static/js/2.8a1b0d9a.chunk.js.LICENSE.txt",
     "static/media/Manish_Bisht.mp3": "/static/media/Manish_Bisht.6454ea0c.mp3",
@@ -27,6 +27,6 @@
   "entrypoints": [
     "static/js/runtime-main.12b5eed4.js",
     "static/js/2.8a1b0d9a.chunk.js",
-    "static/js/main.79e24cb5.chunk.js"
+    "static/js/main.cbcddb58.chunk.js"
   ]
 }
