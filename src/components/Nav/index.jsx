@@ -21,20 +21,21 @@ export default function Nav() {
     useEffect(() => {
         if (!isHome) return;
         const ids = NAV.map((n) => n.id);
-        const observers = [];
-        ids.forEach((id) => {
-            const el = document.getElementById(id);
-            if (!el) return;
-            const obs = new IntersectionObserver(
-                ([entry]) => {
-                    if (entry.isIntersecting) setActive(id);
-                },
-                { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
-            );
-            obs.observe(el);
-            observers.push(obs);
-        });
-        return () => observers.forEach((obs) => obs.disconnect());
+        const handleScroll = () => {
+            const trigger = window.innerHeight * 0.3;
+            let current = ids[0];
+            for (const id of ids) {
+                const el = document.getElementById(id);
+                if (!el) continue;
+                if (el.getBoundingClientRect().top <= trigger) {
+                    current = id;
+                }
+            }
+            setActive(current);
+        };
+        handleScroll();
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
     }, [isHome]);
 
     // Once we've navigated home, fire the deferred scroll
@@ -73,8 +74,10 @@ export default function Nav() {
             >
                 <Link to="/" className={styles.brand}>
                     <img
-                        src="/logo.png"
+                        src="/logo.webp"
                         alt="Manish Bisht"
+                        width="32"
+                        height="32"
                         className={styles.brandImg}
                     />
                     Manish Bisht

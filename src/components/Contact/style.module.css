@@ -17,9 +17,9 @@
 
 .links {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
-    max-width: 720px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 32px;
+    max-width: 1080px;
     border-top: 1px solid var(--border-subtle);
 }
 
@@ -27,8 +27,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
-    padding: 20px 8px;
+    gap: 12px;
+    padding: 14px 8px;
     border-bottom: 1px solid var(--border-subtle);
     cursor: pointer;
     transition:
@@ -38,7 +38,7 @@
 }
 
 .row:hover {
-    padding-left: 18px;
+    padding-left: 14px;
 }
 
 .label {

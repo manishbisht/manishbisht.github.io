@@ -10,7 +10,7 @@ export default function ConsultingPage() {
                     ← Back to portfolio
                 </Link>
                 <div className={styles.eyebrow}>
-                    <span className={styles.idx}>07</span> · ENGAGEMENTS
+                    ENGAGEMENTS
                 </div>
                 <h1 className={styles.title}>
                     Engagements,

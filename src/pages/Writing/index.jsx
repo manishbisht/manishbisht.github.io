@@ -11,7 +11,7 @@ export default function WritingPage() {
                     portfolio
                 </Link>
                 <div className={styles.eyebrow}>
-                    <span className={styles.idx}>05</span> · WRITING
+                    WRITING
                 </div>
                 <h1 className={styles.title}>
                     Things I&apos;ve thought

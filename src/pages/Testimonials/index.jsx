@@ -10,7 +10,7 @@ export default function TestimonialsPage() {
                     ← Back to portfolio
                 </Link>
                 <div className={styles.eyebrow}>
-                    <span className={styles.idx}>06</span> · WHAT LEADERS SAY
+                    TESTIMONIALS
                 </div>
                 <h1 className={styles.title}>
                     People who&apos;ve

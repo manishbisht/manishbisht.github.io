@@ -48,9 +48,7 @@ export default function Testimonials({ standalone = false }) {
         <section id="testimonials">
             <div className="section-head">
                 <div>
-                    <div className="eyebrow">
-                        <span className="idx">06</span> · WHAT LEADERS SAY
-                    </div>
+                    <div className="eyebrow">TESTIMONIALS</div>
                     <h2>People who&apos;ve shipped with me.</h2>
                 </div>
                 <p className="lede">

@@ -31,7 +31,7 @@
     font-size: var(--fs-xs);
     letter-spacing: var(--tracking-eyebrow);
     text-transform: uppercase;
-    color: var(--fg-3);
+    color: var(--accent);
     display: flex;
     align-items: center;
     gap: 10px;

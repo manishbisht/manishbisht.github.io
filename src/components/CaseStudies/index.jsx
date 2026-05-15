@@ -53,9 +53,7 @@ export default function CaseStudies({ standalone = false }) {
         <section id="work">
             <div className="section-head">
                 <div>
-                    <div className="eyebrow">
-                        <span className="idx">01</span> · SELECTED WORK
-                    </div>
+                    <div className="eyebrow">SELECTED WORK</div>
                     <h2>
                         Architecture, performance, and the slow art of shipping
                         at scale.

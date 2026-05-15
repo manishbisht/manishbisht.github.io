@@ -32,7 +32,7 @@
     font-family: var(--font-mono);
     font-size: 11px;
     letter-spacing: 0.14em;
-    color: var(--fg-3);
+    color: var(--accent);
     text-transform: uppercase;
     margin-bottom: 10px;
     display: flex;

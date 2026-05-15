@@ -137,6 +137,20 @@
     padding-top: 2px;
 }
 
+.bulletLink {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    word-break: break-word;
+    transition: opacity 160ms var(--ease-out);
+}
+
+.bulletLink:hover {
+    color: var(--accent);
+    opacity: 0.75;
+}
+
 .footer {
     display: flex;
     align-items: center;

@@ -131,6 +131,7 @@
 
 .cta:hover {
     background: var(--fg-2);
+    color: var(--bg-0);
 }
 
 .ctaArrow {

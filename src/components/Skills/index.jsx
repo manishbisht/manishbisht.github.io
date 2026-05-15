@@ -8,9 +8,7 @@ export default function Skills() {
         <section id="skills">
             <div className="section-head">
                 <div>
-                    <div className="eyebrow">
-                        <span className="idx">04</span> · SKILLS & SYSTEMS
-                    </div>
+                    <div className="eyebrow">SKILLS</div>
                     <h2>The stack I think in.</h2>
                 </div>
                 <p className="lede">

@@ -6,9 +6,7 @@ export default function Writing() {
         <section id="writing">
             <div className="section-head">
                 <div>
-                    <div className="eyebrow">
-                        <span className="idx">05</span> · WRITING
-                    </div>
+                    <div className="eyebrow">WRITING</div>
                     <h2>Things I&apos;ve thought hard about.</h2>
                 </div>
                 <p className="lede">

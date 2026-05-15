@@ -6,10 +6,6 @@ import { CLARITY_PROJECT_ID } from "./config/env";
 import "./styles/global.css";
 import App from "./App.jsx";
 
-if (CLARITY_PROJECT_ID) {
-    clarity.init(CLARITY_PROJECT_ID);
-}
-
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <HashRouter>
@@ -17,3 +13,12 @@ createRoot(document.getElementById("root")).render(
         </HashRouter>
     </StrictMode>
 );
+
+if (CLARITY_PROJECT_ID) {
+    const initClarity = () => clarity.init(CLARITY_PROJECT_ID);
+    if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(initClarity, { timeout: 2000 });
+    } else {
+        setTimeout(initClarity, 1500);
+    }
+}

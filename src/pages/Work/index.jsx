@@ -10,7 +10,7 @@ export default function WorkPage() {
                     ← Back to portfolio
                 </Link>
                 <div className={styles.eyebrow}>
-                    <span className={styles.idx}>01</span> · SELECTED WORK
+                    SELECTED WORK
                 </div>
                 <h1 className={styles.title}>
                     Architecture, performance,

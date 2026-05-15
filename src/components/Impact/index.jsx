@@ -81,9 +81,7 @@ export default function Impact({ standalone = false }) {
         <section id="impact">
             <div className="section-head">
                 <div>
-                    <div className="eyebrow">
-                        <span className="idx">02</span> · ENGINEERING IMPACT
-                    </div>
+                    <div className="eyebrow">ENGINEERING IMPACT</div>
                     <h2>Numbers that survived a postmortem.</h2>
                 </div>
                 <p className="lede">

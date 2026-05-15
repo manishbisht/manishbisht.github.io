@@ -10,7 +10,7 @@ export default function ImpactPage() {
                     ← Back to portfolio
                 </Link>
                 <div className={styles.eyebrow}>
-                    <span className={styles.idx}>02</span> · ENGINEERING IMPACT
+                    ENGINEERING IMPACT
                 </div>
                 <h1 className={styles.title}>
                     Numbers that survived

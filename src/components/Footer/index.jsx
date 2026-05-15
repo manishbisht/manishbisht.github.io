@@ -6,8 +6,12 @@ export default function Footer() {
         <footer className={styles.wrap}>
             <div className={styles.brand}>
                 <img
-                    src="/logo.png"
+                    src="/logo.webp"
                     alt="Manish Bisht"
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    decoding="async"
                     className={styles.brandImg}
                 />
                 <div className={styles.brandText}>Manish Bisht</div>

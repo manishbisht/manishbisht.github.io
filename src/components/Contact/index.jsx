@@ -14,14 +14,20 @@ const LINKS = [
         arrow: "→",
     },
     {
+        label: "WhatsApp",
+        handle: "+91 8559874393",
+        href: "https://api.whatsapp.com/send?phone=918559874393&text=Hi%20Manish%2C%20let%27s%20build%20something%20together",
+        arrow: "→",
+    },
+    {
         label: "GitHub",
-        handle: "github.com/manishbisht",
+        handle: "@manishbisht",
         href: "https://github.com/manishbisht",
         arrow: "↗",
     },
     {
         label: "LinkedIn",
-        handle: "linkedin.com/in/manishbisht02",
+        handle: "@manishbisht02",
         href: "https://www.linkedin.com/in/manishbisht02",
         arrow: "↗",
     },
@@ -33,26 +39,32 @@ const LINKS = [
     },
     {
         label: "Instagram",
-        handle: "instagram.com/manishbisht02",
+        handle: "@manishbisht02",
         href: "https://www.instagram.com/manishbisht02",
         arrow: "↗",
     },
     {
         label: "Facebook",
-        handle: "fb.com/imanishbisht",
+        handle: "@imanishbisht",
         href: "https://fb.com/imanishbisht",
         arrow: "↗",
     },
     {
         label: "Pinterest",
-        handle: "pinterest.com/imanishbisht",
+        handle: "@imanishbisht",
         href: "https://www.pinterest.com/imanishbisht",
         arrow: "↗",
     },
     {
         label: "Medium",
-        handle: "medium.com/@manishbisht",
+        handle: "@manishbisht",
         href: "https://medium.com/@manishbisht",
+        arrow: "↗",
+    },
+    {
+        label: "Quora",
+        handle: "@Manish-Bisht-39",
+        href: "https://www.quora.com/profile/Manish-Bisht-39",
         arrow: "↗",
     },
 ];
@@ -62,15 +74,13 @@ export default function Contact() {
         <section id="contact" style={{ paddingBottom: 80 }}>
             <div className="section-head" style={{ marginBottom: 56 }}>
                 <div>
-                    <div className="eyebrow">
-                        <span className="idx">08</span> · GET IN TOUCH
-                    </div>
+                    <div className="eyebrow">GET IN TOUCH</div>
                 </div>
             </div>
             <h2 className={styles.big}>
-                Building something hard?
+                Have a real problem to solve?
                 <br />
-                <span className={styles.accent}>Let&apos;s talk.</span>
+                <span className={styles.accent}>Let&apos;s chat.</span>
             </h2>
             <div className={styles.links}>
                 {LINKS.map((l) => (

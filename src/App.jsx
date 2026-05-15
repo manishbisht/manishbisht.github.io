@@ -1,14 +1,16 @@
+import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import WritingPage from "./pages/Writing";
-import ImpactPage from "./pages/Impact";
-import WorkPage from "./pages/Work";
-import TestimonialsPage from "./pages/Testimonials";
-import ConsultingPage from "./pages/Consulting";
 import styles from "./App.module.css";
+
+const WritingPage = lazy(() => import("./pages/Writing"));
+const ImpactPage = lazy(() => import("./pages/Impact"));
+const WorkPage = lazy(() => import("./pages/Work"));
+const TestimonialsPage = lazy(() => import("./pages/Testimonials"));
+const ConsultingPage = lazy(() => import("./pages/Consulting"));
 
 export default function App() {
     return (
@@ -20,17 +22,22 @@ export default function App() {
             </div>
             <Nav />
             <main className={styles.main}>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/writing" element={<WritingPage />} />
-                    <Route path="/impact" element={<ImpactPage />} />
-                    <Route path="/work" element={<WorkPage />} />
-                    <Route
-                        path="/testimonials"
-                        element={<TestimonialsPage />}
-                    />
-                    <Route path="/consulting" element={<ConsultingPage />} />
-                </Routes>
+                <Suspense fallback={null}>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/writing" element={<WritingPage />} />
+                        <Route path="/impact" element={<ImpactPage />} />
+                        <Route path="/work" element={<WorkPage />} />
+                        <Route
+                            path="/testimonials"
+                            element={<TestimonialsPage />}
+                        />
+                        <Route
+                            path="/consulting"
+                            element={<ConsultingPage />}
+                        />
+                    </Routes>
+                </Suspense>
                 <Contact />
                 <Footer />
             </main>

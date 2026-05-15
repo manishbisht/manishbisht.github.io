@@ -31,14 +31,15 @@ export default function Hero() {
                     &lt; 24h
                 </div>
                 <h1 className={styles.title}>
-                    Engineering systems
+                    Engineering that
                     <br />
-                    that{" "}
-                    <span className={styles.titleAccent}>scale quietly.</span>
+                    starts with{" "}
+                    <span className={styles.titleAccent}>the customer.</span>
                 </h1>
                 <p className={styles.lede}>
-                    I build performant, scalable, developer-friendly product
-                    systems — and the engineering culture that ships them.
+                    I work backwards from the customer problem, ship the
+                    smallest thing that solves it, and build the engineering
+                    rigour to make it last.
                 </p>
                 <div className={styles.roleRow}>
                     <span>STAFF ENGINEER</span>
@@ -60,7 +61,7 @@ export default function Hero() {
                         rel="noreferrer"
                         className={styles.btnSec}
                     >
-                        View résumé{" "}
+                        View Resume{" "}
                         <span className={styles.btnArrowMuted}>→</span>
                     </a>
                     <a

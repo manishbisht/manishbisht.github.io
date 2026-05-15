@@ -7,7 +7,7 @@ function ConsultingContent() {
             <div className={styles.halo} />
             <div className={styles.top}>
                 <div>
-                    <div className={styles.eyebrow}>07 · ENGAGEMENTS</div>
+                    <div className={styles.eyebrow}>ENGAGEMENTS</div>
                     <h2 className={styles.heading}>
                         Engagements,
                         <br />
