@@ -1,0 +1,134 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.card {
+    background: var(--bg-1);
+    border: 1px solid var(--border-default);
+    border-radius: 16px;
+    padding: 26px 28px;
+    box-shadow: var(--shadow-sm);
+    transition: all 240ms var(--ease-out);
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 40px;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.card:hover {
+    background: var(--bg-2);
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--fg-3);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.company {
+    color: var(--accent);
+}
+.dot {
+    color: var(--fg-5);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: var(--fg-1);
+    line-height: 1.25;
+    margin: 0 0 12px 0;
+}
+
+.summary {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--fg-3);
+    margin: 0 0 16px 0;
+    max-width: 540px;
+}
+
+.tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.metrics {
+    background: var(--bg-0);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.metric {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.metricK {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--fg-4);
+    text-transform: uppercase;
+}
+
+.metricV {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    color: var(--fg-1);
+}
+
+.readMore {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--fg-3);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 240ms var(--ease-out);
+}
+
+.card:hover .readMore {
+    color: var(--accent);
+}
+
+.arrow {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    font-family: var(--font-mono);
+    font-size: 16px;
+    color: var(--fg-4);
+    transition: all 240ms var(--ease-out);
+}
+
+.card:hover .arrow {
+    color: var(--accent);
+    transform: translate(3px, -3px);
+}

@@ -1,0 +1,58 @@
+.wrap {
+    border-top: 1px solid var(--border-subtle);
+    padding: 32px 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brandImg {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid var(--border-strong);
+    box-shadow:
+        0 0 0 2px var(--bg-1),
+        0 0 10px oklch(72% 0.2 252 / 0.12);
+}
+
+.brandText {
+    font-size: 13px;
+    color: var(--fg-2);
+    letter-spacing: -0.01em;
+}
+
+.meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--fg-4);
+    letter-spacing: 0.06em;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.metaDot {
+    width: 3px;
+    height: 3px;
+    background: var(--fg-5);
+    border-radius: 50%;
+}
+
+.hash {
+    color: var(--fg-3);
+}
+
+.legal {
+    font-size: 12px;
+    color: var(--fg-4);
+}

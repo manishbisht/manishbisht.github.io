@@ -1,0 +1,73 @@
+.big {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+    font-weight: 500;
+    color: var(--fg-1);
+    margin: 0 0 40px 0;
+}
+
+.accent {
+    background: linear-gradient(120deg, var(--accent), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    max-width: 720px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 8px;
+    border-bottom: 1px solid var(--border-subtle);
+    cursor: pointer;
+    transition:
+        padding-left 200ms var(--ease-out),
+        color 200ms var(--ease-out);
+    text-decoration: none;
+}
+
+.row:hover {
+    padding-left: 18px;
+}
+
+.label {
+    font-size: 16px;
+    color: var(--fg-1);
+    font-weight: 500;
+    transition: color 200ms var(--ease-out);
+}
+
+.row:hover .label {
+    color: var(--accent);
+}
+
+.handle {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--fg-3);
+    letter-spacing: 0.01em;
+    margin-top: 4px;
+}
+
+.arrow {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--fg-4);
+    transition: all 200ms var(--ease-out);
+}
+
+.row:hover .arrow {
+    color: var(--accent);
+    transform: translate(3px, -3px);
+}

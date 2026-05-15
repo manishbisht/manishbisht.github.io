@@ -1,37 +1,39 @@
 {
-  "name": "manishbisht",
-  "version": "1.0.0",
-  "private": true,
-  "homepage": "https://manishbisht.me",
-  "dependencies": {
-    "gh-pages": "^2.2.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "styled-components": "^5.1.0"
-  },
-  "devDependencies": {
-    "prettier": "^2.0.5",
-    "react-scripts": "^3.4.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -b master"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "manishbisht.github.io",
+    "private": true,
+    "version": "2.0.0",
+    "type": "module",
+    "scripts": {
+        "preinstall": "node -e \"if(!/yarn/.test(process.env.npm_execpath||'')){console.error('\\n\\u2716  This project uses yarn. Please run: yarn install\\n');process.exit(1)}\"",
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "format": "prettier --write ."
+    },
+    "engines": {
+        "node": "26.x",
+        "npm": "please-use-yarn",
+        "yarn": "1.x"
+    },
+    "dependencies": {
+        "@microsoft/clarity": "^1.0.2",
+        "react": "^19.2.6",
+        "react-dom": "^19.2.6",
+        "react-router-dom": "^7.15.1"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9",
+        "@vitejs/plugin-react": "^6.0.2",
+        "eslint": "^9",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-prettier": "^5.5.5",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-plugin-react-hooks": "^7.1.1",
+        "eslint-plugin-react-refresh": "^0.5.2",
+        "globals": "^17.6.0",
+        "prettier": "^3.8.3",
+        "vite": "^8.0.13"
+    }
 }

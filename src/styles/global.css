@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap");
+
+:root {
+    /* Type families */
+    --font-sans:
+        "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    --font-mono:
+        "Geist Mono", "JetBrains Mono", "SF Mono", ui-monospace, Menlo,
+        monospace;
+    --font-display: "Geist", "Inter", sans-serif;
+
+    /* Type scale */
+    --fs-xs: 11px;
+    --fs-sm: 13px;
+    --fs-base: 15px;
+    --fs-md: 17px;
+    --fs-lg: 20px;
+    --fs-xl: 24px;
+    --fs-2xl: 32px;
+    --fs-3xl: 44px;
+    --fs-4xl: 64px;
+    --fs-5xl: 88px;
+
+    --lh-tight: 1.05;
+    --lh-snug: 1.2;
+    --lh-base: 1.55;
+    --lh-loose: 1.7;
+
+    --tracking-tight: -0.03em;
+    --tracking-snug: -0.015em;
+    --tracking-base: 0;
+    --tracking-wide: 0.02em;
+    --tracking-eyebrow: 0.14em;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* Surfaces */
+    --bg-0: oklch(14% 0.005 260);
+    --bg-1: oklch(17% 0.006 260);
+    --bg-2: oklch(20% 0.007 260);
+    --bg-3: oklch(24% 0.008 260);
+    --bg-4: oklch(29% 0.009 260);
+
+    /* Borders */
+    --border-subtle: oklch(100% 0 0 / 0.06);
+    --border-default: oklch(100% 0 0 / 0.1);
+    --border-strong: oklch(100% 0 0 / 0.16);
+    --border-focus: oklch(78% 0.18 252 / 0.6);
+
+    /* Foreground */
+    --fg-1: oklch(98% 0.002 260);
+    --fg-2: oklch(78% 0.008 260);
+    --fg-3: oklch(60% 0.01 260);
+    --fg-4: oklch(45% 0.012 260);
+    --fg-5: oklch(35% 0.012 260);
+
+    /* Accent — electric blue */
+    --accent: oklch(72% 0.2 252);
+    --accent-hover: oklch(78% 0.19 252);
+    --accent-pressed: oklch(66% 0.21 252);
+    --accent-soft: oklch(72% 0.2 252 / 0.12);
+    --accent-glow: oklch(72% 0.2 252 / 0.35);
+
+    --indigo: oklch(68% 0.22 280);
+    --purple: oklch(70% 0.22 305);
+    --cyan: oklch(82% 0.14 200);
+    --teal: oklch(78% 0.13 185);
+
+    /* Semantic status */
+    --success: oklch(78% 0.16 155);
+    --success-soft: oklch(78% 0.16 155 / 0.14);
+    --warning: oklch(82% 0.15 80);
+    --warning-soft: oklch(82% 0.15 80 / 0.14);
+    --danger: oklch(70% 0.21 25);
+    --danger-soft: oklch(70% 0.21 25 / 0.14);
+    --info: oklch(78% 0.13 230);
+    --info-soft: oklch(78% 0.13 230 / 0.14);
+    --live: oklch(80% 0.18 145);
+
+    /* Radii */
+    --radius-xs: 4px;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 20px;
+    --radius-2xl: 28px;
+    --radius-pill: 999px;
+
+    /* Shadows */
+    --shadow-xs:
+        0 1px 0 0 oklch(100% 0 0 / 0.04) inset, 0 1px 2px 0 oklch(0% 0 0 / 0.4);
+    --shadow-sm:
+        0 1px 0 0 oklch(100% 0 0 / 0.05) inset,
+        0 2px 4px -1px oklch(0% 0 0 / 0.5), 0 4px 8px -2px oklch(0% 0 0 / 0.3);
+    --shadow-md:
+        0 1px 0 0 oklch(100% 0 0 / 0.06) inset,
+        0 4px 12px -2px oklch(0% 0 0 / 0.5),
+        0 10px 24px -6px oklch(0% 0 0 / 0.35);
+    --shadow-lg:
+        0 1px 0 0 oklch(100% 0 0 / 0.07) inset,
+        0 12px 32px -8px oklch(0% 0 0 / 0.55),
+        0 24px 48px -12px oklch(0% 0 0 / 0.4);
+    --shadow-glow:
+        0 0 0 1px oklch(72% 0.2 252 / 0.4),
+        0 0 32px -4px oklch(72% 0.2 252 / 0.35);
+
+    /* Spacing (4px base) */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-20: 80px;
+    --space-24: 96px;
+    --space-32: 128px;
+
+    /* Motion */
+    --ease-out: cubic-bezier(0.2, 0.6, 0.2, 1);
+    --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+    --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+    --ease-spring: cubic-bezier(0.34, 1.4, 0.4, 1);
+
+    --dur-instant: 80ms;
+    --dur-fast: 160ms;
+    --dur-base: 240ms;
+    --dur-slow: 400ms;
+    --dur-glacial: 800ms;
+
+    /* Layout */
+    --container: 1180px;
+    --container-narrow: 720px;
+    --gutter: clamp(20px, 4vw, 48px);
+}
+
+/* ── Reset ──────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-0);
+    color: var(--fg-2);
+    font-family: var(--font-sans);
+    font-size: var(--fs-base);
+    line-height: var(--lh-base);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ── Typography ─────────────────────────────────────── */
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--fs-3xl);
+    line-height: var(--lh-snug);
+    letter-spacing: var(--tracking-snug);
+    font-weight: var(--fw-medium);
+    color: var(--fg-1);
+}
+
+h2 {
+    font-size: var(--fs-2xl);
+    line-height: var(--lh-snug);
+    letter-spacing: var(--tracking-snug);
+    font-weight: var(--fw-medium);
+    color: var(--fg-1);
+}
+
+h3 {
+    font-size: var(--fs-xl);
+    line-height: 1.3;
+    letter-spacing: var(--tracking-snug);
+    font-weight: var(--fw-medium);
+    color: var(--fg-1);
+}
+
+h4 {
+    font-size: var(--fs-lg);
+    line-height: 1.35;
+    font-weight: var(--fw-medium);
+    color: var(--fg-1);
+}
+
+p {
+    margin: 0;
+    font-size: var(--fs-base);
+    line-height: var(--lh-base);
+    color: var(--fg-2);
+}
+
+a {
+    color: var(--fg-1);
+    text-decoration: none;
+    transition: color var(--dur-fast) var(--ease-out);
+}
+a:hover {
+    color: var(--accent);
+}
+
+code {
+    font-family: var(--font-mono);
+    font-size: 0.92em;
+    color: var(--cyan);
+    background: var(--bg-2);
+    padding: 0.1em 0.4em;
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--border-subtle);
+}
+
+::selection {
+    background: var(--accent-soft);
+    color: var(--fg-1);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--bg-3);
+    border-radius: var(--radius-pill);
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-4);
+    background-clip: content-box;
+}
+
+/* ── Keyframes ──────────────────────────────────────── */
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 0.55;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* ── Section layout ─────────────────────────────────── */
+section {
+    padding: var(--space-32) 0;
+    position: relative;
+}
+
+section + section {
+    border-top: 1px solid var(--border-subtle);
+}
+section:first-of-type {
+    border-top: none;
+}
+
+/* ── Shared utility classes ─────────────────────────── */
+.section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-bottom: var(--space-16);
+}
+
+.section-head h2 {
+    margin: 8px 0 0 0;
+    max-width: 600px;
+}
+
+.section-head .eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--fg-3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-head .lede {
+    max-width: 380px;
+    color: var(--fg-3);
+    font-size: var(--fs-base);
+    line-height: 1.6;
+}
+
+.eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--fg-3);
+}
+
+.idx {
+    color: var(--accent);
+}
+
+.lede {
+    max-width: 380px;
+    color: var(--fg-3);
+    font-size: var(--fs-base);
+    line-height: 1.6;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.05em;
+    color: var(--fg-3);
+    background: var(--bg-2);
+    border: 1px solid var(--border-subtle);
+    border-radius: 5px;
+}
+
+.hairline {
+    height: 1px;
+    background: var(--border-subtle);
+    border: none;
+    margin: 0;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+        opacity 600ms var(--ease-out),
+        transform 600ms var(--ease-out);
+}
+.reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+}
