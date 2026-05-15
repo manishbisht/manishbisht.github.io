@@ -18,8 +18,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: github-pages
+    outputs:
+      version: ${{ steps.version.outputs.version }}
     steps:
       - uses: actions/checkout@v6
+
+      - name: Compute CalVer
+        id: version
+        run: echo "version=$(date -u +'%Y.%m.%d.%H%M')" >> "$GITHUB_OUTPUT"
 
       - uses: actions/setup-node@v6
         with:
@@ -30,6 +36,7 @@ jobs:
 
       - run: yarn build
         env:
+          VITE_BUILD_VERSION: ${{ steps.version.outputs.version }}
           VITE_COMMIT_SHA: ${{ github.sha }}
           VITE_CLARITY_PROJECT_ID: ${{ secrets.CLARITY_PROJECT_ID }}
 
@@ -48,3 +55,23 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  release:
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: v${{ needs.build.outputs.version }}
+        run: |
+          gh release create "$TAG" \
+            --target "$GITHUB_SHA" \
+            --title "$TAG" \
+            --generate-notes
