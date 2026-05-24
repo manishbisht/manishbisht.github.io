@@ -1,27 +1,57 @@
 import styles from "./style.module.css";
 
-function shortUrl(url) {
-    try {
-        const u = new URL(url);
-        return (u.hostname.replace(/^www\./, "") + u.pathname).replace(
-            /\/$/,
-            ""
-        );
-    } catch {
-        return url;
+const MARKDOWN_LINK_RE = /\[([^\]]+)]\(([^)\s]+)\)/g;
+
+function isAllowedLink(href) {
+    return /^(https?:\/\/|mailto:)/i.test(href);
+}
+
+function renderMarkdownLinks(text) {
+    const parts = [];
+    let lastIndex = 0;
+
+    for (const match of text.matchAll(MARKDOWN_LINK_RE)) {
+        const [raw, label, href] = match;
+        const index = match.index ?? 0;
+
+        if (index > lastIndex) {
+            parts.push(text.slice(lastIndex, index));
+        }
+
+        if (isAllowedLink(href)) {
+            parts.push(
+                <a
+                    key={`${href}-${index}`}
+                    href={href}
+                    target={href.startsWith("mailto:") ? undefined : "_blank"}
+                    rel={href.startsWith("mailto:") ? undefined : "noreferrer"}
+                    className={styles.bulletLink}
+                >
+                    {label}
+                </a>
+            );
+        } else {
+            parts.push(raw);
+        }
+
+        lastIndex = index + raw.length;
     }
+
+    if (lastIndex < text.length) {
+        parts.push(text.slice(lastIndex));
+    }
+
+    return parts.length ? parts : text;
 }
 
 function renderBullet(text) {
-    // "Label: URL" at end → render as a single CTA-style link
-    const cta = text.match(/^(.+?):\s+(https?:\/\/\S+)$/);
+    const cta = text.match(/^\[([^\]]+)]\((https?:\/\/[^)\s]+)\)$/);
+
     if (cta) {
-        const [, label, rawUrl] = cta;
-        const trail = rawUrl.match(/[.,;:!?)\]]+$/);
-        const url = trail ? rawUrl.slice(0, -trail[0].length) : rawUrl;
+        const [, label, href] = cta;
         return (
             <a
-                href={url}
+                href={href}
                 target="_blank"
                 rel="noreferrer"
                 className={styles.bulletLink}
@@ -31,27 +61,7 @@ function renderBullet(text) {
         );
     }
 
-    // Otherwise, split the text and inline-linkify any URLs found
-    const parts = text.split(/(https?:\/\/\S+)/g);
-    return parts.map((part, i) => {
-        if (!/^https?:\/\//.test(part)) return part;
-        const trail = part.match(/[.,;:!?)\]]+$/);
-        const url = trail ? part.slice(0, -trail[0].length) : part;
-        const tail = trail ? trail[0] : "";
-        return (
-            <span key={i}>
-                <a
-                    href={url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.bulletLink}
-                >
-                    {shortUrl(url)} ↗
-                </a>
-                {tail}
-            </span>
-        );
-    });
+    return renderMarkdownLinks(text);
 }
 
 function TimelineItem({ item }) {

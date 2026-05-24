@@ -17,7 +17,7 @@ The main page contains three sections, accessible via the navigation bar:
 | Anchor        | Content                                                               |
 | ------------- | --------------------------------------------------------------------- |
 | `#experience`  | Career timeline — roles, companies, bullets, and metrics              |
-| `#open-source` | Open source work — Google Summer of Code (Systers), Facebook F8 Scholar |
+| `#open-source` | Open source work — Google Summer of Code 2017 (phpmyadmin), Facebook Open Source mentorship 2018 (Facebook Instant Articles) |
 | `#skills`      | Skill clusters: Frontend Systems, Backend, Infrastructure, Leadership |
 | `#contact`     | Contact links — email, GitHub, LinkedIn, X, Instagram, Facebook, Pinterest, Medium, Quora |
 

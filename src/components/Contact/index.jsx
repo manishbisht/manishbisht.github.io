@@ -16,7 +16,7 @@ const LINKS = [
     {
         label: "WhatsApp",
         handle: "+91 8559874393",
-        href: "https://api.whatsapp.com/send?phone=918559874393&text=Hi%20Manish%2C%20let%27s%20build%20something%20together",
+        href: "https://api.whatsapp.com/send?phone=918559874393&text=Hi%20Manish%2C%20let%27s%20work%20together",
         arrow: "→",
     },
     {
@@ -78,9 +78,9 @@ export default function Contact() {
                 </div>
             </div>
             <h2 className={styles.big}>
-                Have a real problem to solve?
+                Let&apos;s Work
                 <br />
-                <span className={styles.accent}>Let&apos;s chat.</span>
+                <span className={styles.accent}>Together ?</span>
             </h2>
             <div className={styles.links}>
                 {LINKS.map((l) => (

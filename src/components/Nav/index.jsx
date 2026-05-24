@@ -99,7 +99,7 @@ export default function Nav() {
                     available
                 </div>
                 <a
-                    href="mailto:hi@manishbisht.me?subject=Let%27s%20build%20something%20together"
+                    href="mailto:hi@manishbisht.me?subject=Let%27s%20Work%20Together"
                     className={styles.cta}
                 >
                     Get in touch <span className={styles.ctaArrow}>↗</span>
