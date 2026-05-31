@@ -125,7 +125,10 @@ export default function Timeline({ id, eyebrow, title, lede, items }) {
             <div className={styles.wrap}>
                 <div className={styles.rail} />
                 {items.map((item) => (
-                    <TimelineItem key={item.company} item={item} />
+                    <TimelineItem
+                        key={`${item.company}-${item.role}-${item.period}`}
+                        item={item}
+                    />
                 ))}
             </div>
         </section>

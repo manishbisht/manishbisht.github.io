@@ -198,3 +198,60 @@
 .ctaArrow {
     font-family: var(--font-mono);
 }
+
+@media (max-width: 900px) {
+    .wrap {
+        padding: 40px;
+    }
+
+    .top {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+@media (max-width: 720px) {
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .ctaRow {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .cta {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .wrap {
+        border-radius: 16px;
+        padding: 26px 18px;
+    }
+
+    .halo {
+        width: 320px;
+        height: 320px;
+    }
+
+    .heading {
+        font-size: clamp(32px, 10vw, 42px);
+    }
+
+    .pill {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .service {
+        padding: 16px;
+    }
+
+    .sFoot {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+}

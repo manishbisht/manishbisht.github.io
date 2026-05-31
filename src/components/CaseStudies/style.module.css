@@ -132,3 +132,43 @@
     color: var(--accent);
     transform: translate(3px, -3px);
 }
+
+@media (max-width: 900px) {
+    .card {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+}
+
+@media (max-width: 640px) {
+    .card {
+        border-radius: 12px;
+        padding: 20px 18px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .eyebrow,
+    .summary {
+        overflow-wrap: anywhere;
+    }
+
+    .metrics {
+        padding: 14px 16px;
+    }
+
+    .metric {
+        gap: 16px;
+    }
+
+    .metricV {
+        font-size: 24px;
+    }
+
+    .arrow {
+        top: 18px;
+        right: 18px;
+    }
+}

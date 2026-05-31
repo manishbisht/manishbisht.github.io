@@ -56,7 +56,7 @@ The main page contains three sections, accessible via the navigation bar:
 - Email: hi@manishbisht.me
 - Email: manish.bisht490@gmail.com
 - WhatsApp: +91 85598 74393 (https://wa.me/918559874393)
-- Résumé: https://bit.ly/202001ManishBishtResume
+- Résumé: https://resume.manishbisht.me
 
 ## Crawling guidance
 

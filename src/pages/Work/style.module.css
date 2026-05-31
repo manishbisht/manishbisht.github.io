@@ -62,3 +62,24 @@
     max-width: 560px;
     margin: 0;
 }
+
+@media (max-width: 640px) {
+    .hero {
+        padding-top: 170px;
+        padding-bottom: 44px;
+    }
+
+    .back {
+        margin-bottom: 28px;
+    }
+
+    .title {
+        font-size: clamp(38px, 12vw, 54px);
+        line-height: 1.04;
+    }
+
+    .lede {
+        font-size: 16px;
+        max-width: none;
+    }
+}

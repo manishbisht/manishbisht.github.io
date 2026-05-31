@@ -56,3 +56,20 @@
     font-size: 12px;
     color: var(--fg-4);
 }
+
+@media (max-width: 640px) {
+    .wrap {
+        align-items: flex-start;
+        padding: 28px 0 36px;
+    }
+
+    .brand,
+    .meta {
+        width: 100%;
+    }
+
+    .meta {
+        flex-wrap: wrap;
+        gap: 8px 12px;
+    }
+}

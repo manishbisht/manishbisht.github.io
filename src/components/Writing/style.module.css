@@ -91,3 +91,40 @@
 .allLink a:hover {
     color: var(--accent);
 }
+
+@media (max-width: 760px) {
+    .row {
+        grid-template-columns: 1fr auto;
+        gap: 8px 14px;
+        padding: 18px 0;
+    }
+
+    .date {
+        grid-column: 1 / -1;
+    }
+
+    .tag {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .arrow {
+        grid-column: 2;
+        grid-row: 2 / 4;
+        align-self: center;
+    }
+
+    .row:hover {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .titleText {
+        font-size: 16px;
+    }
+
+    .meta {
+        overflow-wrap: anywhere;
+    }
+}

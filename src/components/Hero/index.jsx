@@ -56,7 +56,7 @@ export default function Hero() {
                         Get in touch <span className={styles.btnArrow}>↗</span>
                     </a>
                     <a
-                        href="https://bit.ly/202001ManishBishtResume"
+                        href="https://resume.manishbisht.me"
                         target="_blank"
                         rel="noreferrer"
                         className={styles.btnSec}

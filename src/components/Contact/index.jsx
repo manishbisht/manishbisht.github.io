@@ -85,7 +85,7 @@ export default function Contact() {
             <div className={styles.links}>
                 {LINKS.map((l) => (
                     <a
-                        key={l.label}
+                        key={l.href}
                         href={l.href}
                         target={
                             l.href.startsWith("http") ? "_blank" : undefined

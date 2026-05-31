@@ -187,3 +187,77 @@
     text-transform: uppercase;
     margin-left: 10px;
 }
+
+@media (max-width: 720px) {
+    .wrap {
+        padding-left: 18px;
+    }
+
+    .rail {
+        left: 5px;
+    }
+
+    .node {
+        left: -18px;
+        width: 11px;
+        height: 11px;
+    }
+
+    .card {
+        border-radius: 12px;
+        padding: 16px;
+    }
+
+    .topRow {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .topRow > div {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .company {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        overflow-wrap: anywhere;
+    }
+
+    .currentPill {
+        margin-left: 0;
+    }
+
+    .period,
+    .metricRow {
+        text-align: left;
+        white-space: normal;
+    }
+
+    .loc {
+        overflow-wrap: anywhere;
+    }
+
+    .details {
+        margin-top: 14px;
+        padding-top: 14px;
+    }
+
+    .bullet {
+        gap: 8px;
+        font-size: 13.5px;
+        line-height: 1.55;
+    }
+}
+
+@media (max-width: 420px) {
+    .card {
+        padding: 14px;
+    }
+
+    .stack {
+        gap: 5px;
+    }
+}

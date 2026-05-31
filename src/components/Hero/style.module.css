@@ -252,3 +252,101 @@
     margin-left: 2px;
     animation: blink 1.1s steps(2) infinite;
 }
+
+@media (max-width: 1040px) {
+    .section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        min-height: auto;
+        padding-top: 150px;
+    }
+
+    .terminal {
+        max-width: 640px;
+    }
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding-top: 170px;
+        padding-bottom: 56px;
+        gap: 32px;
+    }
+
+    .statusPill {
+        max-width: 100%;
+        align-items: flex-start;
+        border-radius: 14px;
+        margin-bottom: 24px;
+        white-space: normal;
+    }
+
+    .statusDot {
+        margin-top: 5px;
+        flex-shrink: 0;
+    }
+
+    .title {
+        font-size: clamp(40px, 12vw, 54px);
+        line-height: 1.02;
+        margin-bottom: 24px;
+    }
+
+    .lede {
+        font-size: 16px;
+        max-width: none;
+    }
+
+    .roleRow {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 28px;
+        font-size: 11px;
+    }
+
+    .ctas {
+        align-items: stretch;
+    }
+
+    .btnPrimary,
+    .btnSec {
+        flex: 1 1 145px;
+        justify-content: center;
+        padding-inline: 14px;
+    }
+
+    .btnGhost {
+        height: 38px;
+        padding-inline: 8px;
+    }
+
+    .terminal {
+        border-radius: 12px;
+    }
+
+    .termTitle {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .termBody {
+        min-height: 220px;
+        padding: 16px;
+        overflow-x: auto;
+        font-size: 11.5px;
+    }
+}
+
+@media (max-width: 380px) {
+    .section {
+        padding-top: 190px;
+    }
+
+    .btnPrimary,
+    .btnSec,
+    .btnGhost {
+        flex-basis: 100%;
+    }
+}

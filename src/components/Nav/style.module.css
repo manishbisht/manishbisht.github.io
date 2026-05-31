@@ -137,3 +137,90 @@
 .ctaArrow {
     font-family: var(--font-mono);
 }
+
+@media (max-width: 960px) {
+    .wrap {
+        left: var(--gutter);
+        right: var(--gutter);
+        transform: none;
+    }
+
+    .pill {
+        width: 100%;
+        gap: 10px;
+        padding: 8px;
+    }
+
+    .brand {
+        padding-right: 10px;
+    }
+
+    .links {
+        flex: 1;
+        min-width: 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .status {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .wrap {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .pill {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-radius: 18px;
+        padding: 8px;
+    }
+
+    .brand {
+        border-right: none;
+        padding-right: 0;
+        font-size: 13px;
+    }
+
+    .brandImg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .cta {
+        padding: 7px 11px;
+        font-size: 12px;
+    }
+
+    .links {
+        order: 3;
+        flex-basis: 100%;
+        padding-top: 4px;
+    }
+
+    .link {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .brand {
+        max-width: 148px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .cta {
+        padding-inline: 10px;
+    }
+}

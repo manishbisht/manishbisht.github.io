@@ -379,3 +379,58 @@ section:first-of-type {
     opacity: 1;
     transform: translateY(0);
 }
+
+@media (max-width: 900px) {
+    :root {
+        --gutter: clamp(16px, 5vw, 32px);
+    }
+
+    section {
+        padding: var(--space-20) 0;
+    }
+
+    .section-head {
+        margin-bottom: var(--space-10);
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --fs-base: 14px;
+        --fs-lg: 18px;
+        --fs-xl: 22px;
+        --fs-2xl: 28px;
+        --fs-3xl: 38px;
+        --gutter: 16px;
+    }
+
+    html,
+    body {
+        min-width: 320px;
+    }
+
+    section {
+        padding: var(--space-16) 0;
+    }
+
+    h1,
+    h2 {
+        overflow-wrap: anywhere;
+    }
+
+    .section-head {
+        gap: 10px;
+        margin-bottom: var(--space-8);
+    }
+
+    .section-head h2,
+    .section-head .lede,
+    .lede {
+        max-width: none;
+    }
+
+    .tag {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+}

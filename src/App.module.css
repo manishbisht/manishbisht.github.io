@@ -52,3 +52,32 @@
     margin: 0 auto;
     padding: 0 var(--gutter);
 }
+
+@media (max-width: 900px) {
+    .haloA {
+        width: min(760px, 130vw);
+        height: 420px;
+    }
+
+    .haloB {
+        right: -260px;
+        width: 520px;
+        height: 520px;
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        background-size: 24px 24px;
+    }
+
+    .haloA {
+        top: -160px;
+        width: 150vw;
+        height: 360px;
+    }
+
+    .haloB {
+        display: none;
+    }
+}
