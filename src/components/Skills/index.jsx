@@ -1,40 +1,55 @@
+import Card from "../primitives/Card";
+import CornerMark from "../primitives/CornerMark";
+import SectionHead from "../primitives/SectionHead";
 import { SKILLS } from "./constants";
 import styles from "./style.module.css";
 
-const GLYPHS = ["▮▮▮", "{ }", "◐", "≋", "⧗", "⇄", "◉", "⌖", "△"];
+const PALETTE = [
+    "teal",
+    "raised",
+    "purple",
+    "raised",
+    "yellow",
+    "raised",
+    "dark",
+    "raised",
+    "blue",
+];
 
 export default function Skills() {
     return (
-        <section id="skills">
-            <div className="section-head">
-                <div>
-                    <div className="eyebrow">SKILLS</div>
-                    <h2>The stack I think in.</h2>
-                </div>
-                <p className="lede">
-                    Categorized by how I actually use them — not by popularity.
-                    Depth over breadth.
-                </p>
-            </div>
+        <Card
+            as="section"
+            id="skills"
+            radius="section"
+            className={`${styles.section} sectionReveal`}
+        >
+            <SectionHead
+                eyebrow="SKILLS"
+                title="Applied AI, frontend, and backend — and the infra between."
+            />
+
             <div className={styles.grid}>
-                {SKILLS.map((c, i) => (
-                    <div key={c.title} className={styles.cluster}>
-                        <div className={styles.head}>
-                            <span className={styles.ord}>0{i + 1}</span>
-                            <h3 className={styles.title}>{c.title}</h3>
-                            <span className={styles.glyph}>{GLYPHS[i]}</span>
+                {SKILLS.map((cluster, i) => (
+                    <Card
+                        key={cluster.title}
+                        tone={PALETTE[i % PALETTE.length]}
+                        radius="card"
+                        className={styles.cluster}
+                    >
+                        <div className={styles.ord}>
+                            {String(i + 1).padStart(2, "0")}
                         </div>
-                        <div className={styles.items}>
-                            {c.items.map((it) => (
-                                <div key={it} className={styles.item}>
-                                    <span className={styles.bullet} />
-                                    <span>{it}</span>
-                                </div>
+                        <div className={styles.title}>{cluster.title}</div>
+                        <ul className={styles.items}>
+                            {cluster.items.map((item) => (
+                                <li key={item}>{item}</li>
                             ))}
-                        </div>
-                    </div>
+                        </ul>
+                        <CornerMark size={12} />
+                    </Card>
                 ))}
             </div>
-        </section>
+        </Card>
     );
 }

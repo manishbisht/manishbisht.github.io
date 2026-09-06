@@ -1,5 +1,15 @@
 export const SKILLS = [
     {
+        title: "AI-Assisted Engineering",
+        items: [
+            "GitHub Copilot / Cursor / Codex",
+            "Claude Code",
+            "AI-Assisted Code Review",
+            "Developer Workflows",
+            "Agentic Engineering Systems",
+        ],
+    },
+    {
         title: "Languages & Frameworks",
         items: [
             "JavaScript (ES6+)",
@@ -72,15 +82,5 @@ export const SKILLS = [
     {
         title: "Data & Tooling",
         items: ["PostgreSQL", "MongoDB", "BigQuery", "Airbyte", "Metabase"],
-    },
-    {
-        title: "AI-Assisted Engineering",
-        items: [
-            "GitHub Copilot / Cursor / Codex",
-            "Claude Code",
-            "AI-Assisted Code Review",
-            "Developer Workflows",
-            "Agentic Engineering Systems",
-        ],
     },
 ];
