@@ -9,14 +9,10 @@ function prefersReducedMotion() {
 
 export function useCountUp(enabled = true) {
     const skip = !enabled || prefersReducedMotion();
-    const [progress, setProgress] = useState(skip ? 1 : 0);
+    const [progress, setProgress] = useState(0);
 
     useEffect(() => {
-        if (skip) {
-            // eslint-disable-next-line react-hooks/set-state-in-effect
-            setProgress(1);
-            return undefined;
-        }
+        if (skip) return undefined;
 
         let frame = 0;
         const start = performance.now();
@@ -31,5 +27,5 @@ export function useCountUp(enabled = true) {
         return () => cancelAnimationFrame(frame);
     }, [skip]);
 
-    return progress;
+    return skip ? 1 : progress;
 }
