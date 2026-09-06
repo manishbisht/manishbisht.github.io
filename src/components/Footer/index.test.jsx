@@ -17,7 +17,7 @@ describe("Footer", () => {
     it("shows the current year", () => {
         render(<Footer />);
         const year = String(new Date().getFullYear());
-        expect(screen.getByText(new RegExp(year))).toBeVisible();
+        expect(screen.getByText(new RegExp("© " + year))).toBeVisible();
     });
 
     it("retains the build metadata", () => {
