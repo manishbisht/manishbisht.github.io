@@ -1,0 +1,59 @@
+.card {
+    position: relative;
+}
+
+.section {
+    border-radius: var(--r-section);
+}
+.card_ {
+    border-radius: var(--r-card);
+}
+.tile {
+    border-radius: var(--r-tile);
+}
+.link {
+    border-radius: var(--r-link);
+}
+
+.surface {
+    background: var(--card);
+    color: var(--ink);
+}
+
+.raised {
+    background: var(--card2);
+    color: var(--ink);
+    border: 1px solid var(--line);
+}
+
+.dark {
+    background: var(--dark);
+    color: #f1f1f3;
+    border: 1px solid var(--line);
+}
+
+.oss {
+    background: var(--ossCard);
+    color: #f1f1f3;
+    border: 1px solid var(--line);
+}
+
+.blue {
+    background: var(--blue);
+    color: #fff;
+}
+
+.teal {
+    background: var(--teal);
+    color: var(--tealInk);
+}
+
+.purple {
+    background: var(--purple);
+    color: var(--purpleInk);
+}
+
+.yellow {
+    background: var(--yellow);
+    color: var(--yellowInk);
+}
