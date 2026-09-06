@@ -1,0 +1,47 @@
+.head {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.end {
+    align-items: end;
+}
+
+.start {
+    align-items: start;
+}
+
+.eyebrow {
+    margin-bottom: 14px;
+    color: var(--accentInk);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+}
+
+.title {
+    margin: 0;
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    font-weight: 700;
+    text-wrap: balance;
+}
+
+.default {
+    font-size: clamp(30px, 3.6vw, 48px);
+}
+
+.display {
+    font-size: clamp(36px, 5vw, 72px);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+}
+
+.lede {
+    margin: 0;
+    color: var(--ink3);
+    font-size: 17px;
+    line-height: 1.55;
+    text-wrap: pretty;
+}
