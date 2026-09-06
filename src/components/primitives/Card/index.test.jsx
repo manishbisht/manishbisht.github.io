@@ -48,15 +48,13 @@ describe("Card", () => {
         );
     });
 
-    it("applies distinct className for different radius values", () => {
+    it("applies distinct className for default vs explicit radius", () => {
+        const { container: defaultContainer } = render(<Card>x</Card>);
         const { container: sectionContainer } = render(
             <Card radius="section">x</Card>
         );
-        const { container: tileContainer } = render(
-            <Card radius="tile">x</Card>
-        );
-        expect(sectionContainer.firstChild.className).not.toBe(
-            tileContainer.firstChild.className
+        expect(defaultContainer.firstChild.className).not.toBe(
+            sectionContainer.firstChild.className
         );
     });
 
