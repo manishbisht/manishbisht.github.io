@@ -20,7 +20,15 @@ describe("CornerMark", () => {
         expect(container.firstChild).toHaveStyle({
             width: "18px",
             height: "18px",
+            borderColor: "#fff",
             opacity: "0.4",
         });
+    });
+
+    it("composes component class with caller's className", () => {
+        const { container } = render(<CornerMark className="custom-class" />);
+        const element = container.firstChild;
+        expect(element.className).toContain("custom-class");
+        expect(element.className).toMatch(/mark/);
     });
 });
