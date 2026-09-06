@@ -47,4 +47,28 @@ describe("Card", () => {
             "#consulting"
         );
     });
+
+    it("applies distinct className for different radius values", () => {
+        const { container: sectionContainer } = render(
+            <Card radius="section">x</Card>
+        );
+        const { container: tileContainer } = render(
+            <Card radius="tile">x</Card>
+        );
+        expect(sectionContainer.firstChild.className).not.toBe(
+            tileContainer.firstChild.className
+        );
+    });
+
+    it("applies distinct className for different tone values", () => {
+        const { container: surfaceContainer } = render(
+            <Card tone="surface">x</Card>
+        );
+        const { container: raisedContainer } = render(
+            <Card tone="raised">x</Card>
+        );
+        expect(surfaceContainer.firstChild.className).not.toBe(
+            raisedContainer.firstChild.className
+        );
+    });
 });
