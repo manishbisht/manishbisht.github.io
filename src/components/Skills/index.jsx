@@ -40,7 +40,7 @@ export default function Skills() {
                         <div className={styles.ord}>
                             {String(i + 1).padStart(2, "0")}
                         </div>
-                        <div className={styles.title}>{cluster.title}</div>
+                        <h3 className={styles.title}>{cluster.title}</h3>
                         <ul className={styles.items}>
                             {cluster.items.map((item) => (
                                 <li key={item}>{item}</li>

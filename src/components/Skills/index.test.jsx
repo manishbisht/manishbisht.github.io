@@ -25,11 +25,23 @@ describe("Skills", () => {
     it("renders every cluster title and item", () => {
         render(<Skills />);
         for (const cluster of SKILLS) {
-            expect(screen.getAllByText(cluster.title)[0]).toBeVisible();
+            const titleEl = screen
+                .getAllByText(cluster.title)
+                .find((el) => el.tagName !== "LI");
+            expect(titleEl).toBeVisible();
             for (const item of cluster.items) {
                 expect(screen.getAllByText(item)[0]).toBeVisible();
             }
         }
+    });
+
+    it("exposes each cluster title as a level-3 heading", () => {
+        render(<Skills />);
+        const headings = screen.getAllByRole("heading", { level: 3 });
+        expect(headings).toHaveLength(SKILLS.length);
+        expect(
+            headings.some((h) => h.textContent === "AI-Assisted Engineering")
+        ).toBe(true);
     });
 
     it("numbers the clusters 01 through 09", () => {
