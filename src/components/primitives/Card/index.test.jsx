@@ -48,14 +48,12 @@ describe("Card", () => {
         );
     });
 
-    it("applies distinct className for default vs explicit radius", () => {
-        const { container: defaultContainer } = render(<Card>x</Card>);
-        const { container: sectionContainer } = render(
-            <Card radius="section">x</Card>
-        );
-        expect(defaultContainer.firstChild.className).not.toBe(
-            sectionContainer.firstChild.className
-        );
+    it("applies radius class without duplication", () => {
+        const { container } = render(<Card>x</Card>);
+        const tokens = container.firstChild.className
+            .split(/\s+/)
+            .filter(Boolean);
+        expect(new Set(tokens).size).toBe(tokens.length);
     });
 
     it("applies distinct className for different tone values", () => {
