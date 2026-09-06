@@ -1,0 +1,73 @@
+.term {
+    flex: 2 1 320px;
+    min-height: 260px;
+    padding: clamp(16px, 2.5vw, 22px) clamp(16px, 2.5vw, 24px);
+    color: var(--termInk);
+    font-family: var(--font-mono);
+    font-size: clamp(12px, 1.4vw, 13.5px);
+    line-height: 1.65;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.light {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.red {
+    background: #ff5f57;
+}
+.amber {
+    background: #febc2e;
+}
+.green {
+    background: #28c840;
+}
+
+.title {
+    margin-left: auto;
+    color: #8a8a93;
+    font-size: 11px;
+}
+
+.prompt {
+    color: var(--blue);
+}
+
+.key {
+    color: var(--termKey);
+}
+
+.str {
+    color: var(--termStr);
+}
+
+.num {
+    color: var(--termNum);
+}
+
+.ok {
+    color: var(--green);
+}
+
+.spaced {
+    margin-top: 10px;
+}
+
+.caret {
+    display: inline-block;
+    width: 9px;
+    height: 15px;
+    vertical-align: -2px;
+    background: var(--termInk);
+    animation: blink 1s steps(1) infinite;
+}
