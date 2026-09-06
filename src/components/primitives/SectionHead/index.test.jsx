@@ -83,4 +83,20 @@ describe("SectionHead", () => {
         const eyebrow = screen.getByText("NoAccent");
         expect(eyebrow).not.toHaveAttribute("style");
     });
+
+    it("still defaults to a level-2 heading when no heading level is passed", () => {
+        render(<SectionHead eyebrow="E" title="Default level" />);
+        expect(
+            screen.getByRole("heading", { level: 2, name: "Default level" })
+        ).toBeVisible();
+    });
+
+    it("renders the title at the requested heading level when overridden", () => {
+        render(
+            <SectionHead eyebrow="E" title="Page title" headingLevel="h1" />
+        );
+        expect(
+            screen.getByRole("heading", { level: 1, name: "Page title" })
+        ).toBeVisible();
+    });
 });

@@ -7,6 +7,7 @@ export default function SectionHead({
     align = "end",
     size = "default",
     accent,
+    headingLevel: HeadingTag = "h2",
 }) {
     return (
         <div className={`${styles.head} ${styles[align]}`}>
@@ -17,7 +18,9 @@ export default function SectionHead({
                 >
                     {eyebrow}
                 </div>
-                <h2 className={`${styles.title} ${styles[size]}`}>{title}</h2>
+                <HeadingTag className={`${styles.title} ${styles[size]}`}>
+                    {title}
+                </HeadingTag>
             </div>
             {lede ? <p className={styles.lede}>{lede}</p> : null}
         </div>
