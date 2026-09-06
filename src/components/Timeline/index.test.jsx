@@ -117,4 +117,15 @@ describe("Timeline", () => {
         );
         expect(screen.queryByText("Remote, Earth")).not.toBeInTheDocument();
     });
+
+    it("exposes each job's company name as a level-3 heading", () => {
+        render(
+            <Timeline id="experience" eyebrow="E" title="T" items={TIMELINE} />
+        );
+        const headings = screen.getAllByRole("heading", { level: 3 });
+        expect(headings).toHaveLength(TIMELINE.length);
+        expect(headings.some((h) => /VideoVerse/.test(h.textContent))).toBe(
+            true
+        );
+    });
 });

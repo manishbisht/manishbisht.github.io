@@ -80,12 +80,12 @@ export default function Timeline({
                     >
                         <div className={styles.top}>
                             <div>
-                                <div className={styles.company}>
+                                <h3 className={styles.company}>
                                     {item.company}
                                     {item.current && (
                                         <span className={styles.now}>NOW</span>
                                     )}
-                                </div>
+                                </h3>
                                 <div className={styles.role}>{item.role}</div>
                                 {item.location && !oss && (
                                     <div className={styles.loc}>

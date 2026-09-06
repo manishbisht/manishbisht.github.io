@@ -52,6 +52,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    margin: 0;
     font-size: 24px;
     font-weight: 700;
     letter-spacing: -0.02em;
