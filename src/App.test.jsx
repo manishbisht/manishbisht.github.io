@@ -43,10 +43,17 @@ describe("App", () => {
         expect(screen.getByRole("contentinfo")).toBeInTheDocument();
     });
 
-    it("no longer routes /consulting to a page", () => {
-        renderAt("/consulting");
+    it("resolves a lazy route's content once awaited", async () => {
+        renderAt("/writing");
         expect(
-            screen.queryByRole("link", { name: /Back to portfolio/ })
-        ).toBeNull();
+            await screen.findByRole("heading", { level: 1 })
+        ).toHaveTextContent(/Things I.ve thought/);
+    });
+
+    it("no longer routes /consulting to a page, even once lazy routes have had a chance to resolve", async () => {
+        renderAt("/consulting");
+        await expect(
+            screen.findByRole("link", { name: /Back to portfolio/ })
+        ).rejects.toThrow();
     });
 });
