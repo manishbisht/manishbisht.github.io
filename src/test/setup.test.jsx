@@ -14,4 +14,23 @@ describe("test harness", () => {
     it("stubs matchMedia", () => {
         expect(window.matchMedia("(min-width: 701px)").matches).toBe(true);
     });
+
+    it("allows a test to override matchMedia with vi.stubGlobal", () => {
+        vi.stubGlobal(
+            "matchMedia",
+            vi.fn().mockImplementation((query) => ({
+                matches: false,
+                media: query,
+                onchange: null,
+                addEventListener: vi.fn(),
+                removeEventListener: vi.fn(),
+                dispatchEvent: vi.fn(),
+            }))
+        );
+        expect(window.matchMedia("(min-width: 701px)").matches).toBe(false);
+    });
+
+    it("does not leak a prior test's vi.stubGlobal matchMedia override", () => {
+        expect(window.matchMedia("(min-width: 701px)").matches).toBe(true);
+    });
 });
