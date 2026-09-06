@@ -3,7 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#0a0a0a" />
+        <meta
+            name="theme-color"
+            content="#e9e9ec"
+            media="(prefers-color-scheme: light)"
+        />
+        <meta
+            name="theme-color"
+            content="#0e0e11"
+            media="(prefers-color-scheme: dark)"
+        />
         <title>
             Manish Bisht — Staff Engineer, Product & Platform Engineering
         </title>
@@ -63,7 +72,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
         />
 
         <script type="application/ld+json">
@@ -94,6 +103,35 @@
                     "https://www.pinterest.com/imanishbisht",
                     "https://medium.com/@manishbisht"
                 ]
+            }
+        </script>
+
+        <script>
+            window.__setTheme = function (next) {
+                var root = document.documentElement;
+                if (next === "light" || next === "dark") {
+                    root.setAttribute("data-theme", next);
+                    try {
+                        localStorage.setItem("theme", next);
+                    } catch (e) {
+                        /* private mode — fall through to auto */
+                    }
+                } else {
+                    root.removeAttribute("data-theme");
+                    try {
+                        localStorage.removeItem("theme");
+                    } catch (e) {
+                        /* nothing to clear */
+                    }
+                }
+            };
+            try {
+                var stored = localStorage.getItem("theme");
+                if (stored) {
+                    document.documentElement.setAttribute("data-theme", stored);
+                }
+            } catch (e) {
+                /* private mode — stay on auto */
             }
         </script>
     </head>
