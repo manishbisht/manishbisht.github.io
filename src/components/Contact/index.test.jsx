@@ -31,6 +31,15 @@ describe("Contact", () => {
         );
     });
 
+    it("renders each link with its exact href", () => {
+        const { container } = render(<Contact />);
+        const renderedHrefs = [...container.querySelectorAll("a")]
+            .map((a) => a.getAttribute("href"))
+            .sort();
+        const expectedHrefs = LINKS.map((link) => link.href).sort();
+        expect(renderedHrefs).toEqual(expectedHrefs);
+    });
+
     it("anchors at #contact", () => {
         const { container } = render(<Contact />);
         expect(container.querySelector("#contact")).not.toBeNull();
