@@ -40,6 +40,9 @@ describe("App", () => {
 
     it("renders contact and footer on every route", () => {
         renderAt("/writing");
+        expect(
+            screen.getByRole("heading", { level: 2, name: /Let's Work/ })
+        ).toBeInTheDocument();
         expect(screen.getByRole("contentinfo")).toBeInTheDocument();
     });
 
