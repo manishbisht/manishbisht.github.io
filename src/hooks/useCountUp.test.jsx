@@ -2,8 +2,11 @@ import { describe, it, expect, beforeEach, vi } from "vitest";
 import { render, screen, act } from "@testing-library/react";
 import { useCountUp } from "./useCountUp";
 
+let renderValues = [];
+
 function Probe({ enabled = true }) {
     const p = useCountUp(enabled);
+    renderValues.push(p);
     return <span data-testid="p">{Math.round(10 * p)}</span>;
 }
 
@@ -18,6 +21,7 @@ function prefersReducedMotion(reduced) {
 }
 
 beforeEach(() => {
+    renderValues = [];
     prefersReducedMotion(false);
 });
 
@@ -57,17 +61,20 @@ describe("useCountUp", () => {
         act(() => {
             vi.advanceTimersByTime(800);
         });
-        // Verify we are mid-flight
-        const midFlightText = screen.getByTestId("p").textContent;
-        expect(midFlightText).not.toBe("0");
-        expect(midFlightText).not.toBe("10");
+        // Verify we are actually mid-flight by checking raw progress value
+        const latestValue = renderValues[renderValues.length - 1];
+        expect(latestValue).toBeGreaterThan(0);
+        expect(latestValue).toBeLessThan(1);
+        // Clear the array to track only renders after disable
+        renderValues = [];
         // Re-render with disabled mid-animation
-        // The derived pattern computes (skip ? 1 : progress) during render,
-        // so it returns 1 immediately without waiting for the effect.
-        // The old pattern (with setState in effect) would show the stale
-        // progress value on the render, then need the effect to run and setState.
         rerender(<Probe enabled={false} />);
-        expect(screen.getByTestId("p")).toHaveTextContent("10");
+        // With derived pattern (skip ? 1 : progress), all renders after disable return 1
+        // With old pattern (setState in effect), first render shows stale mid-flight value
+        expect(renderValues.length).toBeGreaterThan(0);
+        for (const value of renderValues) {
+            expect(value).toBe(1);
+        }
         vi.useRealTimers();
     });
 });
