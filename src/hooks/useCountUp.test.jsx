@@ -49,4 +49,25 @@ describe("useCountUp", () => {
         unmount();
         expect(cancel).toHaveBeenCalled();
     });
+
+    it("returns 1 immediately when disabled mid-animation", () => {
+        vi.useFakeTimers();
+        const { rerender } = render(<Probe enabled={true} />);
+        // Advance to mid-animation (~50% progress)
+        act(() => {
+            vi.advanceTimersByTime(800);
+        });
+        // Verify we are mid-flight
+        const midFlightText = screen.getByTestId("p").textContent;
+        expect(midFlightText).not.toBe("0");
+        expect(midFlightText).not.toBe("10");
+        // Re-render with disabled mid-animation
+        // The derived pattern computes (skip ? 1 : progress) during render,
+        // so it returns 1 immediately without waiting for the effect.
+        // The old pattern (with setState in effect) would show the stale
+        // progress value on the render, then need the effect to run and setState.
+        rerender(<Probe enabled={false} />);
+        expect(screen.getByTestId("p")).toHaveTextContent("10");
+        vi.useRealTimers();
+    });
 });
