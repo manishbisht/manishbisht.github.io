@@ -23,9 +23,7 @@ describe("Contact", () => {
         );
         expect(email).not.toHaveAttribute("target");
 
-        const github = container.querySelector(
-            'a[href="https://github.com/manishbisht"]'
-        );
+        const github = screen.getByRole("link", { name: /GitHub/ });
         expect(github).toHaveAttribute("target", "_blank");
         expect(github).toHaveAttribute(
             "rel",
