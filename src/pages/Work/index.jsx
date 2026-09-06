@@ -9,9 +9,7 @@ export default function WorkPage() {
                 <Link to="/" className={styles.back}>
                     ← Back to portfolio
                 </Link>
-                <div className={styles.eyebrow}>
-                    SELECTED WORK
-                </div>
+                <div className={styles.eyebrow}>SELECTED WORK</div>
                 <h1 className={styles.title}>
                     Architecture, performance,
                     <br />

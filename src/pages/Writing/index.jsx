@@ -10,9 +10,7 @@ export default function WritingPage() {
                     <span className={styles.backArrow}>←</span> Back to
                     portfolio
                 </Link>
-                <div className={styles.eyebrow}>
-                    WRITING
-                </div>
+                <div className={styles.eyebrow}>WRITING</div>
                 <h1 className={styles.title}>
                     Things I&apos;ve thought
                     <br />

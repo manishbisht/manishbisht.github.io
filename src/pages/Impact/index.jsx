@@ -9,9 +9,7 @@ export default function ImpactPage() {
                 <Link to="/" className={styles.back}>
                     ← Back to portfolio
                 </Link>
-                <div className={styles.eyebrow}>
-                    ENGINEERING IMPACT
-                </div>
+                <div className={styles.eyebrow}>ENGINEERING IMPACT</div>
                 <h1 className={styles.title}>
                     Numbers that survived
                     <br />

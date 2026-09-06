@@ -9,9 +9,7 @@ export default function ConsultingPage() {
                 <Link to="/" className={styles.back}>
                     ← Back to portfolio
                 </Link>
-                <div className={styles.eyebrow}>
-                    ENGAGEMENTS
-                </div>
+                <div className={styles.eyebrow}>ENGAGEMENTS</div>
                 <h1 className={styles.title}>
                     Engagements,
                     <br />

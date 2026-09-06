@@ -71,13 +71,7 @@ export const SKILLS = [
     },
     {
         title: "Data & Tooling",
-        items: [
-            "PostgreSQL",
-            "MongoDB",
-            "BigQuery",
-            "Airbyte",
-            "Metabase",
-        ],
+        items: ["PostgreSQL", "MongoDB", "BigQuery", "Airbyte", "Metabase"],
     },
     {
         title: "AI-Assisted Engineering",

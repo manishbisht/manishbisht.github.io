@@ -9,9 +9,7 @@ export default function TestimonialsPage() {
                 <Link to="/" className={styles.back}>
                     ← Back to portfolio
                 </Link>
-                <div className={styles.eyebrow}>
-                    TESTIMONIALS
-                </div>
+                <div className={styles.eyebrow}>TESTIMONIALS</div>
                 <h1 className={styles.title}>
                     People who&apos;ve
                     <br />
