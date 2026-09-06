@@ -11,7 +11,9 @@ const computeCalVer = () => {
         pad(now.getUTCHours()) + pad(now.getUTCMinutes()),
     ].join(".");
 };
-const buildVersion = process.env.VITE_BUILD_VERSION || computeCalVer();
+const buildVersion =
+    process.env.VITE_BUILD_VERSION ||
+    (process.env.VITEST ? "1.0.0" : computeCalVer());
 
 export default defineConfig({
     plugins: [react()],
