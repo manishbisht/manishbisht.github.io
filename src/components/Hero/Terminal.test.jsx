@@ -53,7 +53,7 @@ describe("Hero Terminal", () => {
         vi.useRealTimers();
     });
 
-    it("advertises the roles Manish is open to", () => {
+    it("advertises the roles Manish is open to and consulting availability", () => {
         vi.useFakeTimers();
         render(<Terminal />);
         act(() => {
@@ -70,6 +70,8 @@ describe("Hero Terminal", () => {
         });
         expect(screen.getByText(/open_to/)).toBeVisible();
         expect(screen.getByText(/Applied AI/)).toBeVisible();
+        expect(screen.getByText(/consulting/)).toBeVisible();
+        expect(screen.getByText(/Q3 2026/)).toBeVisible();
         vi.useRealTimers();
     });
 
@@ -98,13 +100,13 @@ describe("Hero Terminal", () => {
         act(() => {
             vi.advanceTimersByTime(600);
         });
+        // Verify timer is scheduled for the next step
+        const timerCountBeforeUnmount = vi.getTimerCount();
+        expect(timerCountBeforeUnmount).toBeGreaterThan(0);
         // Unmount the component
         unmount();
-        // Advance time to when the next timer would fire
-        act(() => {
-            vi.advanceTimersByTime(800);
-        });
-        // No error should occur (React state update warning would fail the test)
+        // Verify all timers have been cleaned up
+        expect(vi.getTimerCount()).toBe(0);
         vi.useRealTimers();
     });
 });
