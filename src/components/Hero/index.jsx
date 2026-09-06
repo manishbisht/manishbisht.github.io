@@ -1,179 +1,141 @@
-import { useState, useEffect } from "react";
+import Card from "../primitives/Card";
+import Chip from "../primitives/Chip";
+import CornerMark from "../primitives/CornerMark";
+import MetricTile from "../primitives/MetricTile";
+import HeroRail from "../HeroRail";
+import ProfileCard from "./ProfileCard";
+import Terminal from "./Terminal";
+import { useCountUp } from "../../hooks/useCountUp";
 import styles from "./style.module.css";
 
-const LINES = [
-    { type: "cmd", text: "whoami" },
-    { type: "out", text: "manishbisht" },
-    { type: "cmd", text: "cat ~/profile.json" },
-    { type: "json" },
-    { type: "cmd", text: "ship --target=production" },
-    { type: "ok", text: "✓ deployed in 2.9s · 0 rollbacks" },
+const ROLES = [
+    { label: "Applied AI", href: "#skills" },
+    { label: "Frontend", href: "#skills" },
+    { label: "Backend & platform", href: "#skills" },
+    { label: "Consulting", href: "#consulting" },
 ];
 
 export default function Hero() {
-    const [step, setStep] = useState(0);
+    const p = useCountUp();
+    const n = (x) => Math.round(x * p);
 
-    useEffect(() => {
-        if (step >= LINES.length) return;
-        const t = setTimeout(
-            () => setStep((s) => s + 1),
-            step === 0 ? 600 : 800
-        );
-        return () => clearTimeout(t);
-    }, [step]);
+    const metrics = [
+        {
+            value: `${n(10)}+ yrs`,
+            label: "shipping to production",
+            bg: "var(--teal)",
+            fg: "var(--tealInk)",
+        },
+        {
+            value: `${n(100)}+`,
+            label: "enterprise customers served",
+            bg: "var(--purple)",
+            fg: "#fff",
+        },
+        {
+            value: `~${n(7)}M`,
+            label: "events / month, event-driven",
+            bg: "var(--yellow)",
+            fg: "var(--yellowInk)",
+        },
+        {
+            value: `−${n(60)}%`,
+            label: "observability cost in 4 weeks",
+            bg: "var(--card2)",
+            fg: "var(--ink)",
+        },
+    ];
 
     return (
-        <section id="top" className={styles.section}>
-            <div className={styles.left}>
-                <div className={styles.statusPill}>
-                    <span className={styles.statusDot} />
-                    Available for selective freelance & consulting · responds in
-                    &lt; 24h
-                </div>
-                <h1 className={styles.title}>
-                    Engineering that
-                    <br />
-                    starts with{" "}
-                    <span className={styles.titleAccent}>the customer.</span>
-                </h1>
-                <p className={styles.lede}>
-                    I work backwards from the customer problem, ship the
-                    smallest thing that solves it, and build the engineering
-                    rigour to make it last.
-                </p>
-                <div className={styles.roleRow}>
-                    <span>STAFF ENGINEER</span>
-                    <span className={styles.dotSep} />
-                    <span>VIDEOVERSE</span>
-                    <span className={styles.dotSep} />
-                    <span>INDIA · IST</span>
-                </div>
-                <div className={styles.ctas}>
-                    <a
-                        href="mailto:hi@manishbisht.me?subject=Let%27s%20Work%20Together"
-                        className={styles.btnPrimary}
-                    >
-                        Get in touch <span className={styles.btnArrow}>↗</span>
-                    </a>
-                    <a
-                        href="https://resume.manishbisht.me"
-                        target="_blank"
-                        rel="noreferrer"
-                        className={styles.btnSec}
-                    >
-                        View Resume{" "}
-                        <span className={styles.btnArrowMuted}>→</span>
-                    </a>
-                    <a
-                        href="https://github.com/manishbisht"
-                        target="_blank"
-                        rel="noreferrer"
-                        className={styles.btnGhost}
-                    >
-                        GitHub ↗
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/manishbisht02"
-                        target="_blank"
-                        rel="noreferrer"
-                        className={styles.btnGhost}
-                    >
-                        LinkedIn ↗
-                    </a>
-                </div>
-            </div>
+        <Card as="section" id="top" radius="section" className={styles.hero}>
+            <HeroRail />
 
-            <div className={styles.terminal}>
-                <div className={styles.termBar}>
-                    <div className={styles.termLights}>
-                        <span
-                            className={`${styles.termLight} ${styles.termLightRed}`}
+            <div className={styles.body}>
+                <ProfileCard />
+
+                <div className={styles.right}>
+                    <h1 className={styles.title}>
+                        Engineering that starts with{" "}
+                        <span className={styles.accent}>the customer.</span>
+                        <CornerMark
+                            size={18}
+                            color="var(--ink)"
+                            opacity={1}
+                            className={styles.titleMark}
                         />
-                        <span
-                            className={`${styles.termLight} ${styles.termLightYellow}`}
-                        />
-                        <span
-                            className={`${styles.termLight} ${styles.termLightGreen}`}
-                        />
+                    </h1>
+
+                    <p className={styles.lede}>
+                        I work backwards from the customer problem, ship the
+                        smallest thing that solves it, and build the engineering
+                        rigour to make it last. A decade across frontend,
+                        backend, and platform — now applying it to AI-assisted
+                        products and workflows.
+                    </p>
+
+                    <div className={styles.row}>
+                        <Terminal />
+                        <div className={styles.metrics}>
+                            {metrics.map((m) => (
+                                <MetricTile key={m.label} {...m} />
+                            ))}
+                        </div>
                     </div>
-                    <span className={styles.termTitle}>~/manish — zsh</span>
-                </div>
-                <div className={styles.termBody}>
-                    {step >= 1 && (
-                        <div>
-                            <span className={styles.prompt}>$</span> whoami
-                        </div>
-                    )}
-                    {step >= 2 && <div>manishbisht</div>}
-                    {step >= 3 && (
-                        <div className={styles.spaced}>
-                            <span className={styles.prompt}>$</span> cat
-                            ~/profile.json
-                        </div>
-                    )}
-                    {step >= 4 && (
-                        <div>
-                            {"{"}
-                            <br />
-                            &nbsp;&nbsp;
-                            <span className={styles.jsonKey}>
-                                &quot;role&quot;
+
+                    <div className={styles.row}>
+                        <Card
+                            tone="dark"
+                            radius="card"
+                            className={styles.roles}
+                        >
+                            <div className={styles.rolesLabel}>
+                                OPEN TO ROLES IN
+                            </div>
+                            <div className={styles.rolesList}>
+                                {ROLES.map((role) => (
+                                    <Chip
+                                        key={role.label}
+                                        as="a"
+                                        variant="pill"
+                                        tone="outline"
+                                        href={role.href}
+                                    >
+                                        {role.label}
+                                    </Chip>
+                                ))}
+                            </div>
+                            <a
+                                href="mailto:hi@manishbisht.me?subject=Consulting%20engagement"
+                                className={styles.talk}
+                            >
+                                Let&apos;s talk ↗
+                            </a>
+                            <CornerMark size={12} color="#fff" opacity={1} />
+                        </Card>
+
+                        <Card
+                            as="a"
+                            href="#consulting"
+                            tone="yellow"
+                            radius="card"
+                            className={styles.banner}
+                        >
+                            <span aria-hidden="true" className={styles.pulse} />
+                            <span className={styles.bannerText}>
+                                <span className={styles.bannerTitle}>
+                                    Open to Applied AI, Frontend, and Backend
+                                    roles
+                                </span>
+                                <span className={styles.bannerSub}>
+                                    Full-time or selective consulting · Q3 2026
+                                    · reply in &lt; 24h · See engagements ↓
+                                </span>
                             </span>
-                            :{" "}
-                            <span className={styles.jsonStr}>
-                                &quot;Staff Engineer&quot;
-                            </span>
-                            ,<br />
-                            &nbsp;&nbsp;
-                            <span className={styles.jsonKey}>
-                                &quot;at&quot;
-                            </span>
-                            :{" "}
-                            <span className={styles.jsonStr}>
-                                &quot;VideoVerse&quot;
-                            </span>
-                            ,<br />
-                            &nbsp;&nbsp;
-                            <span className={styles.jsonKey}>
-                                &quot;stack&quot;
-                            </span>
-                            : [
-                            <span className={styles.jsonStr}>
-                                &quot;React&quot;
-                            </span>
-                            ,{" "}
-                            <span className={styles.jsonStr}>
-                                &quot;TS&quot;
-                            </span>
-                            ,{" "}
-                            <span className={styles.jsonStr}>
-                                &quot;AWS&quot;
-                            </span>
-                            ],
-                            <br />
-                            &nbsp;&nbsp;
-                            <span className={styles.jsonKey}>
-                                &quot;shipped_pct&quot;
-                            </span>
-                            : <span className={styles.jsonNum}>0.98</span>
-                            <br />
-                            {"}"}
-                        </div>
-                    )}
-                    {step >= 5 && (
-                        <div className={styles.spaced}>
-                            <span className={styles.prompt}>$</span> ship
-                            --target=production
-                            <span className={styles.caret} />
-                        </div>
-                    )}
-                    {step >= 6 && (
-                        <div className={styles.termOk}>
-                            ✓ deployed in 2.9s · 0 rollbacks
-                        </div>
-                    )}
+                            <CornerMark size={12} color="#111114" opacity={1} />
+                        </Card>
+                    </div>
                 </div>
             </div>
-        </section>
+        </Card>
     );
 }
