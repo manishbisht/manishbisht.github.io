@@ -25,4 +25,9 @@ describe("MetricTile", () => {
             fontVariantNumeric: "tabular-nums",
         });
     });
+
+    it("renders the corner mark decorator", () => {
+        const { container } = render(<MetricTile value="1" label="l" />);
+        expect(container.querySelector('[aria-hidden="true"]')).not.toBeNull();
+    });
 });
