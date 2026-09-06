@@ -1,257 +1,122 @@
-.wrap {
-    position: relative;
-    background: var(--bg-1);
-    border: 1px solid var(--border-default);
-    border-radius: 24px;
-    padding: 56px 64px;
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-}
-
-.halo {
-    position: absolute;
-    top: -120px;
-    right: -80px;
-    width: 460px;
-    height: 460px;
-    background: radial-gradient(
-        circle,
-        oklch(72% 0.2 252 / 0.18),
-        transparent 60%
-    );
-    filter: blur(40px);
-    pointer-events: none;
-}
-
-.top {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    position: relative;
-    z-index: 1;
-    margin-bottom: 48px;
-}
-
-.eyebrow {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--accent);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    margin-bottom: 18px;
-}
-
-.heading {
-    font-family: var(--font-display);
-    font-size: clamp(36px, 4.5vw, 52px);
-    line-height: 1.05;
-    letter-spacing: -0.03em;
-    font-weight: 500;
-    color: var(--fg-1);
-    margin: 0;
-}
-
-.pillRow {
+.section {
     display: flex;
-    gap: 10px;
-    margin-top: 26px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 36px;
+    padding: clamp(28px, 5vw, 48px) clamp(16px, 4vw, 48px);
 }
 
-.pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 12px 6px 11px;
-    border-radius: 999px;
-    background: var(--bg-2);
-    border: 1px solid var(--border-default);
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--fg-2);
-    letter-spacing: 0.05em;
-}
-
-.pillDot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.lede {
-    font-size: 16px;
-    line-height: 1.65;
-    color: var(--fg-2);
-    max-width: 480px;
-    margin: 0;
-}
-
-.lede + .lede {
-    margin-top: 14px;
-}
-
-.services {
+.head {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.headLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.copy {
+    display: flex;
+    flex-direction: column;
     gap: 14px;
-    position: relative;
-    z-index: 1;
+    padding-top: 34px;
+    color: var(--ink2);
+    font-size: 17px;
+    line-height: 1.55;
+    text-wrap: pretty;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
 }
 
 .service {
-    background: var(--bg-0);
-    border: 1px solid var(--border-subtle);
-    border-radius: 12px;
-    padding: 18px 20px;
-    transition: all 200ms var(--ease-out);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 240px;
+    padding: 26px 26px 22px;
+    transition: transform 0.2s;
 }
 
 .service:hover {
-    border-color: var(--border-default);
-    background: var(--bg-1);
+    transform: translateY(-2px);
 }
 
-.sNum {
+.ord {
     font-family: var(--font-mono);
-    font-size: 10px;
-    color: var(--fg-4);
-    letter-spacing: 0.1em;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    opacity: 0.75;
 }
 
-.sTitle {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--fg-1);
-    letter-spacing: -0.01em;
-    margin: 6px 0 8px;
+.serviceTitle {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
 }
 
-.sDesc {
-    font-size: 13px;
-    line-height: 1.5;
-    color: var(--fg-3);
+.serviceDesc {
     margin: 0;
+    color: inherit;
+    font-size: 15px;
+    line-height: 1.5;
+    opacity: 0.85;
+    text-wrap: pretty;
 }
 
-.sFoot {
-    margin-top: 14px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border-subtle);
+.duration {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid currentColor;
     font-family: var(--font-mono);
     font-size: 11px;
-    color: var(--fg-4);
-    letter-spacing: 0.05em;
-    display: flex;
-    justify-content: space-between;
-}
-
-.sFootVal {
-    color: var(--fg-2);
-}
-
-.ctaRow {
-    margin-top: 40px;
-    padding-top: 32px;
-    border-top: 1px solid var(--border-subtle);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.note {
-    font-size: 13px;
-    color: var(--fg-3);
-    max-width: 520px;
-    line-height: 1.5;
-    margin: 0;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
 }
 
 .cta {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
-    padding: 0 22px;
-    height: 48px;
-    background: var(--fg-1);
-    color: var(--bg-0);
-    border: 1px solid var(--fg-1);
-    border-radius: 12px;
-    font-size: 14.5px;
-    font-weight: 500;
-    cursor: pointer;
-    box-shadow:
-        0 1px 0 0 oklch(100% 0 0 / 0.3) inset,
-        0 12px 28px -10px oklch(72% 0.2 252 / 0.5);
-    transition: all 160ms var(--ease-out);
+    gap: 20px;
+    padding: 24px 28px;
+}
+
+.cta p {
+    max-width: 620px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    text-wrap: pretty;
+}
+
+.ctaBtn {
+    padding: 14px 22px;
+    border-radius: var(--r-pill);
+    background: var(--ink);
+    color: var(--bg);
+    font-size: 15px;
+    font-weight: 600;
     white-space: nowrap;
-    font-family: var(--font-sans);
 }
 
-.cta:hover {
-    background: var(--fg-2);
-}
-
-.ctaArrow {
-    font-family: var(--font-mono);
-}
-
-@media (max-width: 900px) {
-    .wrap {
-        padding: 40px;
-    }
-
-    .top {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-}
-
-@media (max-width: 720px) {
-    .services {
-        grid-template-columns: 1fr;
-    }
-
-    .ctaRow {
-        align-items: stretch;
-        flex-direction: column;
-    }
-
-    .cta {
-        justify-content: center;
-        width: 100%;
-    }
-}
-
-@media (max-width: 640px) {
-    .wrap {
-        border-radius: 16px;
-        padding: 26px 18px;
-    }
-
-    .halo {
-        width: 320px;
-        height: 320px;
-    }
-
-    .heading {
-        font-size: clamp(32px, 10vw, 42px);
-    }
-
-    .pill {
-        max-width: 100%;
-        overflow-wrap: anywhere;
-    }
-
-    .service {
-        padding: 16px;
-    }
-
-    .sFoot {
-        gap: 12px;
-        flex-wrap: wrap;
-    }
+.ctaBtn:hover {
+    background: var(--blue);
+    color: #fff;
 }
