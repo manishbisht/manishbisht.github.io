@@ -30,6 +30,19 @@ export default [
     reactRefresh.configs.vite,
     prettier,
     {
+        files: ["**/*.test.{js,jsx}", "src/test/**/*.{js,jsx}"],
+        languageOptions: {
+            globals: {
+                describe: "readonly",
+                it: "readonly",
+                expect: "readonly",
+                vi: "readonly",
+                beforeEach: "readonly",
+                afterEach: "readonly",
+            },
+        },
+    },
+    {
         rules: {
             "react/prop-types": "off",
         },

@@ -18,4 +18,11 @@ export default defineConfig({
     define: {
         __BUILD_VERSION__: JSON.stringify(buildVersion),
     },
+    test: {
+        globals: true,
+        environment: "jsdom",
+        setupFiles: "./src/test/setup.js",
+        restoreMocks: true,
+        unstubGlobals: true,
+    },
 });

@@ -1,0 +1,32 @@
+.wrap {
+    overflow: hidden;
+    padding: 14px 0;
+    border: 1px solid var(--line);
+    border-radius: var(--r-pill);
+    background: var(--dark);
+    color: #f1f1f3;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+}
+
+.track {
+    display: inline-flex;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+}
+
+.item {
+    display: inline-flex;
+    align-items: center;
+    gap: 22px;
+    padding: 0 22px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--blue);
+}

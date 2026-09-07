@@ -1,3 +1,6 @@
+import Card from "../primitives/Card";
+import Chip from "../primitives/Chip";
+import SectionHead from "../primitives/SectionHead";
 import styles from "./style.module.css";
 
 const MARKDOWN_LINK_RE = /\[([^\]]+)]\(([^)\s]+)\)/g;
@@ -6,7 +9,7 @@ function isAllowedLink(href) {
     return /^(https?:\/\/|mailto:)/i.test(href);
 }
 
-function renderMarkdownLinks(text) {
+function renderBullet(text) {
     const parts = [];
     let lastIndex = 0;
 
@@ -14,18 +17,17 @@ function renderMarkdownLinks(text) {
         const [raw, label, href] = match;
         const index = match.index ?? 0;
 
-        if (index > lastIndex) {
-            parts.push(text.slice(lastIndex, index));
-        }
+        if (index > lastIndex) parts.push(text.slice(lastIndex, index));
 
         if (isAllowedLink(href)) {
+            const external = !href.startsWith("mailto:");
             parts.push(
                 <a
                     key={`${href}-${index}`}
                     href={href}
-                    target={href.startsWith("mailto:") ? undefined : "_blank"}
-                    rel={href.startsWith("mailto:") ? undefined : "noreferrer"}
-                    className={styles.bulletLink}
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noreferrer" : undefined}
+                    className={styles.link}
                 >
                     {label}
                 </a>
@@ -37,100 +39,97 @@ function renderMarkdownLinks(text) {
         lastIndex = index + raw.length;
     }
 
-    if (lastIndex < text.length) {
-        parts.push(text.slice(lastIndex));
-    }
+    if (lastIndex < text.length) parts.push(text.slice(lastIndex));
 
     return parts.length ? parts : text;
 }
 
-function renderBullet(text) {
-    const cta = text.match(/^\[([^\]]+)]\((https?:\/\/[^)\s]+)\)$/);
+export default function Timeline({
+    id,
+    eyebrow,
+    title,
+    lede,
+    items,
+    variant = "default",
+}) {
+    const oss = variant === "oss";
 
-    if (cta) {
-        const [, label, href] = cta;
-        return (
-            <a
-                href={href}
-                target="_blank"
-                rel="noreferrer"
-                className={styles.bulletLink}
-            >
-                {label} ↗
-            </a>
-        );
-    }
-
-    return renderMarkdownLinks(text);
-}
-
-function TimelineItem({ item }) {
     return (
-        <div className={styles.item}>
-            <div
-                className={`${styles.node} ${item.current ? styles.nodeCurrent : ""}`}
+        <Card
+            as="section"
+            id={id}
+            tone={oss ? "dark" : "surface"}
+            radius="section"
+            className={`${styles.section} ${oss ? styles.oss : ""} sectionReveal`}
+        >
+            <SectionHead
+                eyebrow={eyebrow}
+                title={title}
+                lede={lede}
+                accent={oss ? "var(--teal)" : undefined}
             />
-            <div className={`${styles.card} ${styles.cardOpen}`}>
-                <div className={styles.topRow}>
-                    <div>
-                        <h3 className={styles.company}>
-                            {item.company}
-                            {item.current && (
-                                <span className={styles.currentPill}>Now</span>
-                            )}
-                        </h3>
-                        <div className={styles.role}>{item.role}</div>
-                        <div className={styles.loc}>{item.location}</div>
-                    </div>
-                    <div>
-                        <div className={styles.period}>{item.period}</div>
-                        <div className={styles.metricRow}>
-                            {item.metric.delta}{" "}
-                            <span className={styles.metricLabel}>
-                                {item.metric.label}
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.stack}>
-                    {item.stack.map((s) => (
-                        <span key={s} className="tag">
-                            {s}
-                        </span>
-                    ))}
-                </div>
-                <div className={styles.details}>
-                    {item.bullets.map((b, i) => (
-                        <div key={i} className={styles.bullet}>
-                            <span className={styles.bulletDot}>↳</span>
-                            <span>{renderBullet(b)}</span>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
-}
 
-export default function Timeline({ id, eyebrow, title, lede, items }) {
-    return (
-        <section id={id}>
-            <div className="section-head">
-                <div>
-                    <div className="eyebrow">{eyebrow}</div>
-                    <h2>{title}</h2>
-                </div>
-                <p className="lede">{lede}</p>
-            </div>
-            <div className={styles.wrap}>
-                <div className={styles.rail} />
+            <div className={oss ? styles.gridOss : styles.list}>
                 {items.map((item) => (
-                    <TimelineItem
+                    <Card
                         key={`${item.company}-${item.role}-${item.period}`}
-                        item={item}
-                    />
+                        as="article"
+                        tone={oss ? "oss" : "raised"}
+                        radius="card"
+                        className={styles.job}
+                    >
+                        <div className={styles.top}>
+                            <div>
+                                <h3 className={styles.company}>
+                                    {item.company}
+                                    {item.current && (
+                                        <span className={styles.now}>NOW</span>
+                                    )}
+                                </h3>
+                                <div className={styles.role}>{item.role}</div>
+                                {item.location && !oss && (
+                                    <div className={styles.loc}>
+                                        {item.location}
+                                    </div>
+                                )}
+                            </div>
+                            <div className={styles.right}>
+                                <div className={styles.period}>
+                                    {item.period}
+                                </div>
+                                <div className={styles.metric}>
+                                    <span className={styles.delta}>
+                                        {item.metric.delta}
+                                    </span>
+                                    <span className={styles.metricLabel}>
+                                        {item.metric.label}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className={styles.stack}>
+                            {item.stack.map((s) => (
+                                <Chip key={s}>{s}</Chip>
+                            ))}
+                        </div>
+
+                        <ul className={styles.bullets}>
+                            {item.bullets.map((b, i) => (
+                                <li key={i} className={styles.bullet}>
+                                    <span
+                                        aria-hidden="true"
+                                        className={styles.arrow}
+                                    >
+                                        ↳
+                                    </span>
+                                    <span>{renderBullet(b)}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </Card>
                 ))}
             </div>
-        </section>
+        </Card>
     );
 }

@@ -1,83 +1,8 @@
-.pageBg {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.grid {
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(
-        oklch(100% 0 0 / 0.045) 1px,
-        transparent 1px
-    );
-    background-size: 32px 32px;
-    mask-image: radial-gradient(ellipse at 50% 0%, #000 0%, transparent 70%);
-}
-
-.haloA {
-    position: absolute;
-    top: -10%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 900px;
-    height: 540px;
-    background: radial-gradient(
-        ellipse at center,
-        oklch(72% 0.2 252 / 0.18),
-        transparent 60%
-    );
-    filter: blur(40px);
-}
-
-.haloB {
-    position: absolute;
-    top: 30%;
-    right: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(
-        circle,
-        oklch(70% 0.22 305 / 0.1),
-        transparent 60%
-    );
-    filter: blur(40px);
-}
-
 .main {
-    position: relative;
-    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
     max-width: var(--container);
     margin: 0 auto;
-    padding: 0 var(--gutter);
-}
-
-@media (max-width: 900px) {
-    .haloA {
-        width: min(760px, 130vw);
-        height: 420px;
-    }
-
-    .haloB {
-        right: -260px;
-        width: 520px;
-        height: 520px;
-    }
-}
-
-@media (max-width: 640px) {
-    .grid {
-        background-size: 24px 24px;
-    }
-
-    .haloA {
-        top: -160px;
-        width: 150vw;
-        height: 360px;
-    }
-
-    .haloB {
-        display: none;
-    }
+    padding: var(--gutter) var(--gutter) 48px;
 }

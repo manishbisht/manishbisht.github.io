@@ -1,0 +1,24 @@
+.shell {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding: clamp(28px, 5vw, 48px) clamp(16px, 4vw, 48px);
+}
+
+.back {
+    align-self: flex-start;
+    color: var(--ink3);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+}
+
+.back:hover {
+    color: var(--accentInk);
+}
+
+.body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
