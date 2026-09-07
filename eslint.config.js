@@ -30,6 +30,17 @@ export default [
     reactRefresh.configs.vite,
     prettier,
     {
+        // Build scripts are .mjs, which the **/*.{js,jsx} block above never
+        // matches, so they were linted with no globals at all — `process` and
+        // friends read as undefined.
+        files: ["**/*.mjs"],
+        languageOptions: {
+            ecmaVersion: "latest",
+            sourceType: "module",
+            globals: { ...globals.node },
+        },
+    },
+    {
         files: ["**/*.test.{js,jsx}", "src/test/**/*.{js,jsx}"],
         languageOptions: {
             globals: {
