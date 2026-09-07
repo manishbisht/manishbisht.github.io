@@ -1,0 +1,62 @@
+.section {
+    padding: clamp(28px, 5vw, 48px) clamp(16px, 4vw, 48px);
+}
+
+.mark {
+    top: 18px;
+    right: 18px;
+}
+
+.eyebrow {
+    color: var(--accentInk);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+}
+
+.title {
+    margin: 10px 0 8px;
+    font-size: clamp(24px, 3.4vw, 34px);
+    line-height: 1.12;
+}
+
+.lede {
+    max-width: 52ch;
+    margin: 0;
+    color: var(--ink2);
+}
+
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tool {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 18px;
+    border: 1px solid var(--line);
+    border-radius: var(--r-pill);
+    background: var(--card2);
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 500;
+    transition:
+        border-color 0.2s,
+        transform 0.2s;
+}
+
+.tool:hover {
+    border-color: var(--blue);
+    transform: translateY(-1px);
+}
+
+.note {
+    margin: 14px 0 0;
+    color: var(--ink3);
+    font-size: 13px;
+}

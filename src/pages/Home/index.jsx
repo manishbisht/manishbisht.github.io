@@ -5,6 +5,7 @@ import Consulting from "../../components/Consulting";
 import Timeline from "../../components/Timeline";
 import { OPEN_SOURCE, TIMELINE } from "../../components/Timeline/constants";
 import Skills from "../../components/Skills";
+import AskAI from "../../components/AskAI";
 
 export default function Home() {
     return (
@@ -29,6 +30,7 @@ export default function Home() {
                 variant="oss"
             />
             <Skills />
+            <AskAI />
         </>
     );
 }
