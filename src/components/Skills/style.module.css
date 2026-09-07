@@ -11,6 +11,18 @@
     gap: 16px;
 }
 
+/* Nine cards against a nine-entry palette that alternates a neutral at every
+   odd index. In three columns that reads as a checkerboard, which is the
+   point; auto-fill reaching four columns puts every neutral in columns 2 and
+   4 as flat vertical stripes and strands a ninth card alone on its own row.
+   Lock three columns from the width where auto-fill already produces three,
+   so nothing changes below it. */
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
 .cluster {
     display: flex;
     flex-direction: column;
