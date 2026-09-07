@@ -1,10 +1,15 @@
 .rail {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 40;
     display: flex;
-    flex: 0 0 28px;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 36px;
-    padding-top: 12px;
+    width: 44px;
+    transform: translateY(-50%);
 }
 
 .link {

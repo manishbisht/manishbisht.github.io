@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import ThemeToggle from "./components/ThemeToggle";
+import HeroRail from "./components/HeroRail";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -15,6 +16,7 @@ export default function App() {
     return (
         <>
             <ThemeToggle />
+            <HeroRail />
             <main className={styles.main}>
                 <Suspense fallback={null}>
                     <Routes>

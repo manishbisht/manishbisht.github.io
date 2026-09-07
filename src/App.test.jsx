@@ -31,6 +31,15 @@ describe("App", () => {
         );
     });
 
+    it("mounts the section rail as persistent chrome, not inside the hero", () => {
+        renderAt("/writing");
+        const rail = screen.getByRole("navigation", { name: /sections/i });
+        expect(rail).toBeInTheDocument();
+        expect(
+            screen.getByRole("link", { name: "Experience" })
+        ).toHaveAttribute("href", "#experience");
+    });
+
     it("mounts the theme toggle", () => {
         renderAt("/");
         expect(

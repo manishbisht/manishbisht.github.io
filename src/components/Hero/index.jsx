@@ -2,7 +2,6 @@ import Card from "../primitives/Card";
 import Chip from "../primitives/Chip";
 import CornerMark from "../primitives/CornerMark";
 import MetricTile from "../primitives/MetricTile";
-import HeroRail from "../HeroRail";
 import ProfileCard from "./ProfileCard";
 import Terminal from "./Terminal";
 import { useCountUp } from "../../hooks/useCountUp";
@@ -48,8 +47,6 @@ export default function Hero() {
 
     return (
         <Card as="section" id="top" radius="section" className={styles.hero}>
-            <HeroRail />
-
             <div className={styles.body}>
                 <ProfileCard />
 

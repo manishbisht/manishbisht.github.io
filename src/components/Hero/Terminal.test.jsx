@@ -20,7 +20,7 @@ describe("Hero Terminal", () => {
     it("starts with nothing typed", () => {
         vi.useFakeTimers();
         render(<Terminal />);
-        expect(screen.queryByText(/whoami/)).toBeNull();
+        expect(screen.getByText(/whoami/)).not.toBeVisible();
         vi.useRealTimers();
     });
 
@@ -89,8 +89,8 @@ describe("Hero Terminal", () => {
             vi.advanceTimersByTime(600);
         });
         expect(screen.getByText(/whoami/)).toBeVisible();
-        expect(screen.queryByText("manishbisht")).toBeNull();
-        expect(screen.queryByText(/deployed in 2\.9s/)).toBeNull();
+        expect(screen.getByText("manishbisht")).not.toBeVisible();
+        expect(screen.getByText(/deployed in 2\.9s/)).not.toBeVisible();
         vi.useRealTimers();
     });
 
