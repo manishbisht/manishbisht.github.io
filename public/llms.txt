@@ -40,15 +40,17 @@ The home page is one scrolling layout. These are in-page anchors, not routes.
 
 ## Secondary pages
 
-Separate hash routes, not linked from the home page.
+Each is served as a plain HTML page at its own URL, readable without
+JavaScript. The app also reaches the same content through a hash route
+(/#/work and so on), but the URLs below are the canonical ones.
 
-- [Work](https://manishbisht.me/#/work): architecture, performance, and
+- [Work](https://manishbisht.me/work/): architecture, performance, and
   shipping at scale.
-- [Impact](https://manishbisht.me/#/impact): quantified engineering metrics
+- [Impact](https://manishbisht.me/impact/): quantified engineering metrics
   from production systems.
-- [Writing](https://manishbisht.me/#/writing): long-form notes on engineering
+- [Writing](https://manishbisht.me/writing/): long-form notes on engineering
   systems, performance, and scaling a team.
-- [Testimonials](https://manishbisht.me/#/testimonials): verbatim quotes from
+- [Testimonials](https://manishbisht.me/testimonials/): verbatim quotes from
   leads and collaborators.
 
 ## Notes for agents

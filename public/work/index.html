@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Architecture, performance, and shipping at scale. — Manish Bisht</title>
+        <meta name="description" content="Engagements I'd stake a reputation on. Real constraints, real trade-offs, real numbers." />
+        <link rel="canonical" href="https://manishbisht.me/work/" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Architecture, performance, and shipping at scale. — Manish Bisht" />
+        <meta property="og:description" content="Engagements I'd stake a reputation on. Real constraints, real trade-offs, real numbers." />
+        <meta property="og:url" content="https://manishbisht.me/work/" />
+        <meta property="og:image" content="https://manishbisht.me/logo.webp" />
+        <meta name="twitter:card" content="summary" />
+        <link rel="icon" href="/favicon-images/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        />
+        <style>
+            :root {
+                color-scheme: light dark;
+                --bg: light-dark(#e9e9ec, #0e0e11);
+                --card: light-dark(#ffffff, #17171c);
+                --ink: light-dark(#111114, #f1f1f3);
+                --ink2: light-dark(#44444b, #c0c0c8);
+                --ink3: light-dark(#55555c, #a2a2ab);
+                --line: light-dark(#dcdce2, #2a2a33);
+                --blue: light-dark(#3b6fd9, #8fb0f5);
+            }
+            * { box-sizing: border-box; }
+            body {
+                margin: 0;
+                padding: clamp(16px, 4vw, 48px);
+                background: var(--bg);
+                color: var(--ink);
+                font-family: "Space Grotesk", system-ui, sans-serif;
+                line-height: 1.6;
+            }
+            main { max-width: 820px; margin: 0 auto; }
+            .shell {
+                padding: clamp(24px, 5vw, 48px);
+                border: 1px solid var(--line);
+                border-radius: 28px;
+                background: var(--card);
+            }
+            .back { color: var(--blue); font-size: 14px; text-decoration: none; }
+            .back:hover { text-decoration: underline; }
+            .eyebrow {
+                margin-top: 28px;
+                color: var(--blue);
+                font-family: "JetBrains Mono", ui-monospace, monospace;
+                font-size: 12px;
+                letter-spacing: 0.12em;
+            }
+            h1 { margin: 8px 0 12px; font-size: clamp(28px, 5vw, 44px); line-height: 1.1; }
+            .lede { max-width: 60ch; color: var(--ink2); }
+            article {
+                margin-top: 28px;
+                padding-top: 24px;
+                border-top: 1px solid var(--line);
+            }
+            h2 { margin: 0 0 6px; font-size: 21px; }
+            .meta {
+                color: var(--ink3);
+                font-family: "JetBrains Mono", ui-monospace, monospace;
+                font-size: 12px;
+            }
+            blockquote { margin: 0 0 8px; color: var(--ink); font-size: 18px; }
+            ul { margin: 8px 0 0; padding-left: 18px; color: var(--ink2); }
+            .tags { margin-top: 8px; color: var(--ink3); font-size: 13px; }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="shell">
+                <a class="back" href="/">← Back to portfolio</a>
+                <div class="eyebrow">SELECTED WORK</div>
+                <h1>Architecture, performance, and shipping at scale.</h1>
+                <p class="lede">Engagements I'd stake a reputation on. Real constraints, real trade-offs, real numbers.</p>
+            <article>
+                <div class="meta">Performance · 2024 · VideoVerse</div>
+                <h2>Cutting p95 by 38% on a real-time video editor</h2>
+                <p class="lede">Replaced the React DOM-based timeline with a hand-rolled canvas renderer. Backed by an offscreen worker, a custom scheduler, and aggressive memoization of frame extracts.</p>
+                <ul><li>p95: −38%</li><li>TTI: −1.2s</li><li>memory: −44%</li></ul>
+                <div class="tags">React · Canvas · Web Workers · Profiling</div>
+            </article>
+            <article>
+                <div class="meta">Architecture · 2022 · BookMyShow</div>
+                <h2>Re-architecting BookMyShow's checkout for six markets</h2>
+                <p class="lede">Module federation, typed event contracts, idempotency by default. From a coupled monolith serving one market to a federated platform live in six.</p>
+                <ul><li>errors: −94%</li><li>markets: 1 → 6</li><li>MTTR: −81%</li></ul>
+                <div class="tags">Module Federation · TypeScript · Idempotency · Observability</div>
+            </article>
+            <article>
+                <div class="meta">Developer Experience · 2024 · VideoVerse</div>
+                <h2>Building the internal frontend platform — twice</h2>
+                <p class="lede">Spun up the platform team at VideoVerse. Centralized design system, Turbo + Nx pipeline, Playwright + visual regression. CI time from 14m to 3m, DevEx 4.7/5.</p>
+                <ul><li>CI: −79%</li><li>DevEx: 4.7/5</li><li>pkgs: 12</li></ul>
+                <div class="tags">Turbo · Nx · Playwright · Design Systems</div>
+            </article>
+            </div>
+        </main>
+    </body>
+</html>

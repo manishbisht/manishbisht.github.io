@@ -6,13 +6,14 @@
     "scripts": {
         "preinstall": "node -e \"if(!/yarn/.test(process.env.npm_execpath||'')){console.error('\\n\\u2716  This project uses yarn. Please run: yarn install\\n');process.exit(1)}\"",
         "dev": "vite",
-        "build": "vite build",
+        "build": "node scripts/build-static-pages.mjs && vite build",
         "preview": "vite preview",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "test": "vitest run",
         "test:watch": "vitest",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "build:static": "node scripts/build-static-pages.mjs"
     },
     "engines": {
         "node": "26.x",
