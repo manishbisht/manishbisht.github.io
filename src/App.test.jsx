@@ -59,4 +59,18 @@ describe("App", () => {
             screen.findByRole("link", { name: /Back to portfolio/ })
         ).rejects.toThrow();
     });
+
+    it("redirects the retired /consulting URL home rather than stranding it", () => {
+        renderAt("/consulting");
+        expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
+            /Engineering that starts with/
+        );
+    });
+
+    it("redirects any unknown route home", () => {
+        renderAt("/nonexistent-typo-route");
+        expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
+            /Engineering that starts with/
+        );
+    });
 });

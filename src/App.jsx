@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import ThemeToggle from "./components/ThemeToggle";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -26,6 +26,7 @@ export default function App() {
                             path="/testimonials"
                             element={<TestimonialsPage />}
                         />
+                        <Route path="*" element={<Navigate to="/" replace />} />
                     </Routes>
                 </Suspense>
                 <Contact />
