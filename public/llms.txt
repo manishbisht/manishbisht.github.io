@@ -1,0 +1,59 @@
+# Manish Bisht
+
+> Staff Engineer with a decade across product, platform, and engineering
+> leadership — from founding Run4Offers to leading teams at VideoVerse. Works
+> backwards from the customer problem, ships the smallest thing that solves it,
+> and builds the engineering rigour to make it last. Currently applying that to
+> AI-assisted products and workflows. Based in India (IST).
+
+Personal portfolio at https://manishbisht.me. Static React single-page app on
+GitHub Pages. Content is rendered client-side, so this file is the reliable
+text summary if you are not executing JavaScript.
+
+## Contact
+
+- Email: hi@manishbisht.me
+- GitHub: https://github.com/manishbisht
+- LinkedIn: https://www.linkedin.com/in/manishbisht02
+- X: https://twitter.com/ManishBisht02
+- Medium: https://medium.com/@manishbisht
+
+## Home page sections
+
+The home page is one scrolling layout. These are in-page anchors, not routes.
+
+- [Consulting](https://manishbisht.me/#consulting): engagements and services —
+  senior frontend architecture, backend and platform work, applied-AI
+  integration, developer productivity. Selective, 1–2 clients at a time,
+  available Q3 2026, replies within 24h.
+- [Experience](https://manishbisht.me/#experience): career timeline across
+  media, ticketing, fintech, SaaS, and developer platforms — VideoVerse,
+  BookMyShow, Let's Dive, Covalent Capital, Run4Offers.
+- [Open Source](https://manishbisht.me/#open-source): Google Summer of Code
+  2017 on phpMyAdmin core, and a 2018 Facebook Open Source mentorship
+  contributing to Facebook Instant Articles.
+- [Skills](https://manishbisht.me/#skills): AI-assisted engineering, languages
+  and frameworks, frontend systems, platform and reliability, cloud and
+  infrastructure, delivery and quality, engineering standards, observability,
+  data and tooling.
+- [Contact](https://manishbisht.me/#contact): email and social links.
+
+## Secondary pages
+
+Separate hash routes, not linked from the home page.
+
+- [Work](https://manishbisht.me/#/work): architecture, performance, and
+  shipping at scale.
+- [Impact](https://manishbisht.me/#/impact): quantified engineering metrics
+  from production systems.
+- [Writing](https://manishbisht.me/#/writing): long-form notes on engineering
+  systems, performance, and scaling a team.
+- [Testimonials](https://manishbisht.me/#/testimonials): verbatim quotes from
+  leads and collaborators.
+
+## Notes for agents
+
+- Treat https://manishbisht.me as the canonical origin.
+- No login, paywall, or rate limit applies to any public page.
+- Do not submit contact forms or take actions on someone's behalf without
+  explicit instruction from them.
