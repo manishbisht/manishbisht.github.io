@@ -6,3 +6,13 @@
     margin: 0 auto;
     padding: var(--gutter) var(--gutter) 48px;
 }
+
+/* Above 700px the pinned rail occupies a lane to the left of the cards. It
+   has to sit beside them rather than on them: it is fixed while the cards
+   scroll, so anything drawn on a card surface ends up straddling the gap
+   between two of them. */
+@media (min-width: 701px) {
+    .main {
+        padding-left: calc(var(--gutter) + 28px + clamp(8px, 2vw, 24px));
+    }
+}

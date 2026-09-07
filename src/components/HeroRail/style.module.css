@@ -3,11 +3,9 @@
     /* Aligned with the hero card's inner content top, where the design puts
        it: page gutter + the card's own padding + the design's 12px inset. */
     top: calc(var(--gutter) + clamp(16px, 3vw, 28px) + 12px);
-    /* On the card surface, inset from the column's left edge. The rail is
-       fixed while the cards scroll behind it, so it carries its own backdrop:
-       without one the --ink3 links would be illegible over the blue contact
-       card and the near-black marquee. */
-    left: calc(max(0px, (100% - var(--container)) / 2) + var(--gutter) + 10px);
+    /* In the lane .main reserves, beside the cards. The chip keeps it legible
+       and deliberate-looking against the page background. */
+    left: calc(max(0px, (100% - var(--container)) / 2) + var(--gutter));
     z-index: 40;
     display: flex;
     flex-direction: column;
