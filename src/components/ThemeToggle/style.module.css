@@ -1,7 +1,12 @@
 .toggle {
     position: fixed;
     top: 16px;
-    right: 16px;
+    /* Mirror of HeroRail: sit immediately outside the content column's right
+       edge so the toggle tracks the page instead of the screen corner once
+       --container caps the width. 36px is this button's own width; the max()
+       floor keeps it at the viewport edge while the column is uncapped.
+       A percentage, not 100vw — on a fixed element it excludes the scrollbar. */
+    right: max(16px, calc((100% - var(--container)) / 2 - 36px));
     z-index: 50;
     display: inline-flex;
     align-items: center;
