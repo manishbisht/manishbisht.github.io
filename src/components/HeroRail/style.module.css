@@ -31,8 +31,28 @@
     color: var(--ink);
 }
 
+/* Below the desktop breakpoint the rail leaves the fixed lane and becomes a
+   horizontal row in the flow, directly under the hero. Links unrotate to read
+   normally and the row scrolls sideways if it outgrows the viewport, so
+   navigation exists on phones instead of being hidden entirely. */
 @media (max-width: 700px) {
     .rail {
+        position: static;
+        flex-direction: row;
+        gap: 20px;
+        width: auto;
+        overflow-x: auto;
+        padding: 2px 2px 6px;
+        scrollbar-width: none;
+    }
+
+    .rail::-webkit-scrollbar {
         display: none;
+    }
+
+    .link {
+        flex: 0 0 auto;
+        writing-mode: horizontal-tb;
+        transform: none;
     }
 }

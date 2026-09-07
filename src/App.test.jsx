@@ -31,13 +31,24 @@ describe("App", () => {
         );
     });
 
-    it("mounts the section rail as persistent chrome, not inside the hero", () => {
-        renderAt("/writing");
-        const rail = screen.getByRole("navigation", { name: /sections/i });
-        expect(rail).toBeInTheDocument();
+    it("mounts the section rail on the home page", () => {
+        renderAt("/");
+        expect(
+            screen.getByRole("navigation", { name: /sections/i })
+        ).toBeInTheDocument();
         expect(
             screen.getByRole("link", { name: "Experience" })
         ).toHaveAttribute("href", "#experience");
+    });
+
+    // The rail links to home-page sections, so it would be dead on a route
+    // that has none. Secondary pages navigate with PageShell's back link.
+    it("leaves the section rail off the secondary pages", async () => {
+        renderAt("/writing");
+        await screen.findByRole("heading", { level: 1 });
+        expect(
+            screen.queryByRole("navigation", { name: /sections/i })
+        ).toBeNull();
     });
 
     it("mounts the theme toggle", () => {

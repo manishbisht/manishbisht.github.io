@@ -1,4 +1,5 @@
 import Hero from "../../components/Hero";
+import HeroRail from "../../components/HeroRail";
 import Marquee from "../../components/Marquee";
 import Consulting from "../../components/Consulting";
 import Timeline from "../../components/Timeline";
@@ -9,6 +10,7 @@ export default function Home() {
     return (
         <>
             <Hero />
+            <HeroRail />
             <Marquee />
             <Consulting />
             <Timeline
