@@ -1,7 +1,12 @@
 .rail {
     position: fixed;
     top: 50%;
-    left: 0;
+    /* Sit just outside the content column rather than at the screen edge, so
+       the rail stays next to the page instead of stranded in the margin once
+       --container caps the width. Collapses to 0 while the viewport is
+       narrower than the cap. Percentages on a fixed element resolve against
+       the viewport minus scrollbar, which 100vw would not. */
+    left: max(0px, calc((100% - var(--container)) / 2 - 44px));
     z-index: 40;
     display: flex;
     flex-direction: column;

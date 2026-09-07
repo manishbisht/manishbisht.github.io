@@ -58,7 +58,7 @@
     --termNum: #f7c55e;
 
     /* Layout */
-    --container: none;
+    --container: 1600px;
     --gutter: clamp(12px, 2vw, 20px);
     --gap: clamp(12px, 2vw, 20px);
 
