@@ -6,17 +6,3 @@
     margin: 0 auto;
     padding: var(--gutter) var(--gutter) 48px;
 }
-
-/* Above 700px a fixed HeroRail occupies the left edge, so the page reserves a
-   lane for it. Declared after .main because that rule sets the `padding`
-   shorthand, which would otherwise override a padding-left set earlier. */
-@media (min-width: 701px) {
-    .main {
-        /* gutter + the rail's 28px column + the same clamp the hero uses
-           between its own columns, so the rail keeps the breathing room it
-           had as a flex child instead of butting against the card. */
-        padding-left: calc(
-            var(--gutter) + 28px + clamp(8px, 2vw, 24px)
-        );
-    }
-}
