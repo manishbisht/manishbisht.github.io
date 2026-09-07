@@ -1,11 +1,7 @@
 .toggle {
     position: fixed;
     top: 16px;
-    /* Mirror of HeroRail: inset from the content column's right edge by the
-       same gutter the rail is inset from its left, so the two fixtures sit
-       symmetrically inside the page rather than out in the margins.
-       Percentages on a fixed element exclude the scrollbar; 100vw would not. */
-    right: calc(max(0px, (100% - var(--container)) / 2) + var(--gutter));
+    right: 16px;
     z-index: 50;
     display: inline-flex;
     align-items: center;

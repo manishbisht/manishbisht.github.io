@@ -12,6 +12,6 @@
    shorthand, which would otherwise override a padding-left set earlier. */
 @media (min-width: 701px) {
     .main {
-        padding-left: calc(var(--gutter) + 44px);
+        padding-left: calc(var(--gutter) + 28px);
     }
 }

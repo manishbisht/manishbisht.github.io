@@ -1,8 +1,8 @@
 .rail {
     position: fixed;
-    /* Flush with the top of the content column, so the rail reads as a label
-       column beside the hero card rather than floating at mid-screen. */
-    top: var(--gutter);
+    /* Aligned with the hero card's inner content top, where the design puts
+       it: page gutter + the card's own padding + the design's 12px inset. */
+    top: calc(var(--gutter) + clamp(16px, 3vw, 28px) + 12px);
     /* Sit INSIDE the content column, filling the lane .main reserves for it,
        so the rail reads as part of the page rather than floating in the
        margin. Tracks the column once --container caps the width. Percentages
@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: flex-start;
     gap: 36px;
-    width: 44px;
+    width: 28px;
 }
 
 .link {
