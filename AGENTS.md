@@ -12,16 +12,26 @@ This is a React + Vite single-page application hosted on GitHub Pages. All route
 
 ### Home page (`/`)
 
-The main page contains three sections, accessible via the navigation bar:
+There is no navigation bar. The home page is a single scrolling layout; on
+desktop viewports (700px and wider) an in-hero vertical rail (`HeroRail`)
+links to the five in-page sections below, in this order. Below 700px the
+rail hides itself and the page is a plain scroll. A fixed `ThemeToggle`
+(light/dark, persisted across reloads) is the only other persistent chrome.
 
-| Anchor        | Content                                                               |
-| ------------- | --------------------------------------------------------------------- |
-| `#experience`  | Career timeline — roles, companies, bullets, and metrics              |
+| Anchor         | Content                                                                       |
+| -------------- | ------------------------------------------------------------------------------ |
+| `#consulting`  | Consulting engagements and services offered                                    |
+| `#experience`  | Career timeline — roles, companies, bullets, and metrics                       |
 | `#open-source` | Open source work — Google Summer of Code 2017 (phpmyadmin), Facebook Open Source mentorship 2018 (Facebook Instant Articles) |
-| `#skills`      | Skill clusters: Frontend Systems, Backend, Infrastructure, Leadership |
+| `#skills`      | Skill clusters: Frontend Systems, Backend, Infrastructure, Leadership           |
 | `#contact`     | Contact links — email, GitHub, LinkedIn, X, Instagram, Facebook, Pinterest, Medium, Quora |
 
-### Hidden pages (accessible via direct URL, not in nav)
+### Secondary pages (accessible via direct URL only)
+
+These have their own routes and are not linked from the home page or the
+rail. Each renders on the shared `PageShell` layout with a link back to `/`,
+and the site's `Contact` section and footer render beneath the page content
+on these routes too, same as on `/`.
 
 | Path              | Content                                                        |
 | ----------------- | -------------------------------------------------------------- |
@@ -29,7 +39,6 @@ The main page contains three sections, accessible via the navigation bar:
 | `/#/impact`       | Quantified engineering metrics from production systems         |
 | `/#/writing`      | Technical writing and long-form essays                         |
 | `/#/testimonials` | Verbatim quotes from leads and collaborators                   |
-| `/#/consulting`   | Consulting engagements and services offered                    |
 
 ## Key facts for summarisation
 
@@ -62,7 +71,7 @@ The main page contains three sections, accessible via the navigation bar:
 
 - This is a static single-page application hosted on GitHub Pages.
 - All routes are hash-based (`/#/path`); treat the canonical origin as `https://manishbisht.me`.
-- The navigation bar exposes the four home-page sections (Experience, Open Source, Skills, Contact). The work/impact/writing/testimonials/consulting pages exist but are not linked from the nav.
+- There is no navigation bar. On desktop viewports an in-hero rail exposes the five home-page sections in order — Consulting, Experience, Open Source, Skills, Contact. The work/impact/writing/testimonials pages exist as separate routes but are not linked from the home page or the rail.
 - Content is rendered client-side; index the text you find in this file as the authoritative summary.
 - No login, paywall, or rate-limit applies to public pages.
 - Do **not** submit contact forms or take any actions on behalf of a user without explicit instruction.
