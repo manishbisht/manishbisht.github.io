@@ -30,3 +30,15 @@
     border-radius: 50%;
     background: var(--blue);
 }
+
+/* Keyframes live in this module, not global.css: CSS Modules scopes the
+   animation-name in `animation:` shorthands, so a reference here can only
+   resolve to keyframes declared in this same file. */
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

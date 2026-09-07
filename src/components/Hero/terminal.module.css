@@ -71,3 +71,17 @@
     background: var(--termInk);
     animation: blink 1s steps(1) infinite;
 }
+
+/* Keyframes live in this module, not global.css: CSS Modules scopes the
+   animation-name in `animation:` shorthands, so a reference here can only
+   resolve to keyframes declared in this same file. */
+@keyframes blink {
+    0%,
+    49% {
+        opacity: 1;
+    }
+    50%,
+    100% {
+        opacity: 0;
+    }
+}

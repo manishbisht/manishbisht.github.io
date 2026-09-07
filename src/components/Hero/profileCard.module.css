@@ -153,3 +153,16 @@
         display: none;
     }
 }
+
+/* Keyframes live in this module, not global.css: CSS Modules scopes the
+   animation-name in `animation:` shorthands, so a reference here can only
+   resolve to keyframes declared in this same file. */
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0) rotate(-6deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(4deg);
+    }
+}

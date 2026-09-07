@@ -58,16 +58,23 @@ describe("token layer", () => {
         expect(css).toMatch(/@supports \(animation-timeline: view\(\)\)/);
     });
 
-    it("defines every keyframe the design uses", () => {
-        for (const name of [
-            "rise",
-            "reveal",
-            "marquee",
-            "float",
-            "blink",
-            "pulse",
-        ]) {
-            expect(css).toMatch(new RegExp(`@keyframes ${name}\\b`));
+    // Only keyframes driven by rules in THIS file belong here. Animations used
+    // from a *.module.css must declare their keyframes in that module: CSS
+    // Modules hashes the animation name, so a reference there cannot reach a
+    // globally-declared @keyframes. See animation-scoping.test.js, which
+    // enforces the module side of that rule.
+    it("defines the keyframes its own rules drive", () => {
+        expect(css).toMatch(/@keyframes reveal\b/);
+        expect(css).toMatch(/animation:\s*reveal\b/);
+    });
+
+    it("does not keep keyframes that only css modules reference", () => {
+        for (const name of ["marquee", "float", "blink", "pulse"]) {
+            expect(
+                css,
+                `@keyframes ${name} is only used from a css module, where a ` +
+                    `global declaration is unreachable — it must live in that module.`
+            ).not.toMatch(new RegExp(`@keyframes ${name}\\b`));
         }
     });
 

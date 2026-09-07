@@ -156,46 +156,6 @@ a:hover {
     }
 }
 
-@keyframes marquee {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-@keyframes float {
-    0%,
-    100% {
-        transform: translateY(0) rotate(-6deg);
-    }
-    50% {
-        transform: translateY(-8px) rotate(4deg);
-    }
-}
-
-@keyframes blink {
-    0%,
-    49% {
-        opacity: 1;
-    }
-    50%,
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes pulse {
-    0%,
-    100% {
-        box-shadow: 0 0 0 0 rgba(47, 178, 122, 0.5);
-    }
-    70% {
-        box-shadow: 0 0 0 8px rgba(47, 178, 122, 0);
-    }
-}
-
 /* Scroll-driven section reveal. Guarded so that browsers without
    animation-timeline render sections fully visible rather than
    holding them at opacity: 0 forever. */

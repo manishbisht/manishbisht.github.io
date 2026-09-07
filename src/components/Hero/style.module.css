@@ -150,3 +150,16 @@
         flex-basis: 100%;
     }
 }
+
+/* Keyframes live in this module, not global.css: CSS Modules scopes the
+   animation-name in `animation:` shorthands, so a reference here can only
+   resolve to keyframes declared in this same file. */
+@keyframes pulse {
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(47, 178, 122, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(47, 178, 122, 0);
+    }
+}
