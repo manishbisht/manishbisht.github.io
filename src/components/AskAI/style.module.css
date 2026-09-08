@@ -55,8 +55,3 @@
     transform: translateY(-1px);
 }
 
-.note {
-    margin: 14px 0 0;
-    color: var(--ink3);
-    font-size: 13px;
-}
