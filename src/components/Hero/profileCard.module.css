@@ -83,12 +83,21 @@
 }
 
 .email {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     width: fit-content;
     padding-bottom: 6px;
     border-bottom: 1px dashed var(--navy);
     color: var(--navy);
     font-size: 15px;
     font-weight: 600;
+}
+
+.emailIcon {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
 }
 
 .email:hover {

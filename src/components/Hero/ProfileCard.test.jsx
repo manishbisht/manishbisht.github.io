@@ -25,6 +25,13 @@ describe("Hero ProfileCard", () => {
         );
     });
 
+    it("draws the email icon as an inline SVG, not a raw glyph", () => {
+        render(<ProfileCard />);
+        const email = screen.getByRole("link", { name: /hi@manishbisht\.me/ });
+        expect(email.querySelector("svg")).not.toBeNull();
+        expect(email.textContent).not.toContain("✉");
+    });
+
     it("opens external profiles safely in a new tab", () => {
         render(<ProfileCard />);
         for (const name of ["Resume", "GitHub", "LinkedIn"]) {

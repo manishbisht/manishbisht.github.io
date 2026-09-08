@@ -48,7 +48,20 @@ export default function ProfileCard() {
                 </div>
 
                 <a href={MAIL} className={styles.email}>
-                    hi@manishbisht.me <span aria-hidden="true">✉</span>
+                    hi@manishbisht.me
+                    <svg
+                        aria-hidden="true"
+                        className={styles.emailIcon}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    >
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <path d="m2 7 10 6 10-6" />
+                    </svg>
                 </a>
 
                 <div className={styles.ctas}>
