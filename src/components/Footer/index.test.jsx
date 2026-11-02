@@ -11,7 +11,10 @@ describe("Footer", () => {
     it("shows the brand", () => {
         render(<Footer />);
         expect(screen.getByText("Manish Bisht")).toBeVisible();
-        expect(screen.getByAltText("")).toHaveAttribute("src", "/logo.webp");
+        expect(screen.getByAltText("")).toHaveAttribute(
+            "src",
+            "/avatar-56.webp"
+        );
     });
 
     it("shows the current year", () => {

@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className={styles.wrap}>
             <div className={styles.brand}>
                 <img
-                    src="/logo.webp"
+                    src="/avatar-56.webp"
                     alt=""
                     width="28"
                     height="28"

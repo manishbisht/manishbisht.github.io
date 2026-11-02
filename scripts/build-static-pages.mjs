@@ -41,8 +41,12 @@ const layout = ({ slug, eyebrow, title, lede, body }) => `<!doctype html>
         <meta property="og:title" content="${esc(title)} — Manish Bisht" />
         <meta property="og:description" content="${esc(lede)}" />
         <meta property="og:url" content="${ORIGIN}/${slug}/" />
-        <meta property="og:image" content="${ORIGIN}/logo.webp" />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:image" content="${ORIGIN}/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Manish Bisht" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="${ORIGIN}/og-image.jpg" />
         <link rel="icon" href="/favicon-images/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

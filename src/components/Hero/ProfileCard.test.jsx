@@ -13,7 +13,7 @@ describe("Hero ProfileCard", () => {
         render(<ProfileCard />);
         expect(screen.getByAltText("Manish Bisht")).toHaveAttribute(
             "src",
-            "/logo.webp"
+            "/avatar-260.webp"
         );
     });
 

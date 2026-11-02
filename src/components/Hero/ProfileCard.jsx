@@ -20,10 +20,13 @@ export default function ProfileCard() {
             <div className={styles.avatarWrap}>
                 <div className={styles.avatarRing}>
                     <img
-                        src="/logo.webp"
+                        src="/avatar-260.webp"
+                        srcSet="/avatar-260.webp 260w, /avatar-520.webp 520w"
+                        sizes="260px"
                         alt="Manish Bisht"
                         width="260"
                         height="260"
+                        fetchPriority="high"
                         className={styles.avatar}
                     />
                 </div>

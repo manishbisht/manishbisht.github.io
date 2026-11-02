@@ -58,7 +58,6 @@
     font-family: var(--font-mono);
     font-size: 12px;
     letter-spacing: 0.12em;
-    opacity: 0.75;
 }
 
 .serviceTitle {
@@ -73,7 +72,6 @@
     color: inherit;
     font-size: 15px;
     line-height: 1.5;
-    opacity: 0.85;
     text-wrap: pretty;
 }
 
@@ -82,11 +80,10 @@
     justify-content: space-between;
     margin-top: auto;
     padding-top: 14px;
-    border-top: 1px solid currentColor;
+    border-top: 1px solid color-mix(in srgb, currentColor 35%, transparent);
     font-family: var(--font-mono);
     font-size: 11px;
     letter-spacing: 0.1em;
-    opacity: 0.8;
 }
 
 .cta {
