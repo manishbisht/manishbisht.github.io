@@ -30,4 +30,18 @@ describe("MetricTile", () => {
         const { container } = render(<MetricTile value="1" label="l" />);
         expect(container.querySelector('[aria-hidden="true"]')).not.toBeNull();
     });
+
+    it("gives assistive tech the settled value while the number animates", () => {
+        render(<MetricTile value="3+ yrs" finalValue="10+ yrs" label="l" />);
+        expect(screen.getByText("3+ yrs")).toHaveAttribute(
+            "aria-hidden",
+            "true"
+        );
+        expect(screen.getByText("10+ yrs")).toBeInTheDocument();
+    });
+
+    it("does not duplicate the value once it has settled", () => {
+        render(<MetricTile value="10+ yrs" finalValue="10+ yrs" label="l" />);
+        expect(screen.getAllByText("10+ yrs")).toHaveLength(1);
+    });
 });

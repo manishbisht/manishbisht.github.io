@@ -6,7 +6,7 @@
     "scripts": {
         "preinstall": "node -e \"if(!/yarn/.test(process.env.npm_execpath||'')){console.error('\\n\\u2716  This project uses yarn. Please run: yarn install\\n');process.exit(1)}\"",
         "dev": "vite",
-        "build": "node scripts/build-static-pages.mjs && vite build",
+        "build": "node scripts/build-static-pages.mjs && vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.mjs",
         "preview": "vite preview",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",

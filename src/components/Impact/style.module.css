@@ -64,7 +64,7 @@
 }
 
 .deltaSuccess {
-    color: var(--green);
+    color: var(--successInk);
 }
 
 .deltaInfo {

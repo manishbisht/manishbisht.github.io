@@ -61,7 +61,7 @@
 .now {
     padding: 4px 9px;
     border-radius: var(--r-pill);
-    background: var(--green);
+    background: var(--greenDeep);
     color: #fff;
     font-family: var(--font-mono);
     font-size: 11px;

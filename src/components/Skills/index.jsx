@@ -13,7 +13,7 @@ const PALETTE = [
     "raised",
     "dark",
     "raised",
-    "blue",
+    "blueDeep",
 ];
 
 export default function Skills() {

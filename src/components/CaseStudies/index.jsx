@@ -1,7 +1,7 @@
 import { CASE_STUDIES } from "./constants";
 import styles from "./style.module.css";
 
-function CaseStudyCard({ cs }) {
+function CaseStudyCard({ cs, headingLevel: Heading = "h3" }) {
     return (
         <article className={styles.card}>
             <div>
@@ -10,7 +10,7 @@ function CaseStudyCard({ cs }) {
                     <span className={styles.dot}>·</span>
                     <span className={styles.company}>{cs.company}</span>
                 </div>
-                <h3 className={styles.title}>{cs.title}</h3>
+                <Heading className={styles.title}>{cs.title}</Heading>
                 <p className={styles.summary}>{cs.summary}</p>
                 <div className={styles.tags}>
                     {cs.tags.map((t) => (
@@ -37,18 +37,23 @@ function CaseStudyCard({ cs }) {
     );
 }
 
-function CaseStudiesList() {
+function CaseStudiesList({ headingLevel }) {
     return (
         <div className={styles.list}>
             {CASE_STUDIES.map((cs) => (
-                <CaseStudyCard key={cs.id} cs={cs} />
+                <CaseStudyCard
+                    key={cs.id}
+                    cs={cs}
+                    headingLevel={headingLevel}
+                />
             ))}
         </div>
     );
 }
 
 export default function CaseStudies({ standalone = false }) {
-    if (standalone) return <CaseStudiesList />;
+    // Standalone, the cards sit directly under the page's h1.
+    if (standalone) return <CaseStudiesList headingLevel="h2" />;
     return (
         <section id="work">
             <div className="section-head">

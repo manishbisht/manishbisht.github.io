@@ -22,7 +22,7 @@ export default function Footer() {
                 {BUILD_VERSION}
             </div>
 
-            <div className={styles.legal}>
+            <div className={styles.legal} suppressHydrationWarning>
                 © {new Date().getFullYear()} · Made with ❤️ in India
             </div>
         </footer>

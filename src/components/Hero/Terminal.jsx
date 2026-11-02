@@ -1,13 +1,9 @@
 import { useEffect, useState } from "react";
+import { useReducedMotion } from "../../hooks/useMediaQuery";
 import Card from "../primitives/Card";
 import styles from "./terminal.module.css";
 
 const STEPS = 6;
-
-function prefersReducedMotion() {
-    if (typeof window === "undefined" || !window.matchMedia) return false;
-    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
 
 function Line({ show, className, children }) {
     // visibility (not conditional rendering) so every line occupies its final
@@ -31,8 +27,9 @@ function Str({ children }) {
 }
 
 export default function Terminal() {
-    const instant = prefersReducedMotion();
-    const [step, setStep] = useState(instant ? STEPS : 0);
+    const instant = useReducedMotion();
+    const [rawStep, setStep] = useState(0);
+    const step = instant ? STEPS : rawStep;
 
     useEffect(() => {
         if (instant || step >= STEPS) return undefined;

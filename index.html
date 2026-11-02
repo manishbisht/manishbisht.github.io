@@ -47,6 +47,17 @@
         />
 
         <link rel="canonical" href="https://manishbisht.me/" />
+        <link
+            rel="alternate"
+            type="text/plain"
+            href="/llms.txt"
+            title="Plain-text summary for AI agents (llms.txt)"
+        />
+        <meta name="author" content="Manish Bisht" />
+        <meta
+            name="robots"
+            content="index, follow, max-snippet:-1, max-image-preview:large"
+        />
         <meta property="og:type" content="website" />
         <meta
             property="og:title"
@@ -79,30 +90,85 @@
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
-                "@type": "Person",
-                "name": "Manish Bisht",
-                "url": "https://manishbisht.me",
-                "image": "https://manishbisht.me/logo.webp",
-                "email": "hi@manishbisht.me",
-                "jobTitle": "Staff Engineer",
-                "description": "Staff Engineer with a decade across product, platform, and engineering leadership, from founding Run4Offers to leading VideoVerse teams.",
-                "nationality": "Indian",
-                "worksFor": {
-                    "@type": "Organization",
-                    "name": "VideoVerse"
-                },
-                "alumniOf": {
-                    "@type": "CollegeOrUniversity",
-                    "name": "Swami Keshvanand Institute of Technology Management & Gramothan"
-                },
-                "sameAs": [
-                    "https://github.com/manishbisht",
-                    "https://www.linkedin.com/in/manishbisht02",
-                    "https://twitter.com/ManishBisht02",
-                    "https://www.instagram.com/manishbisht02",
-                    "https://fb.com/imanishbisht",
-                    "https://www.pinterest.com/imanishbisht",
-                    "https://medium.com/@manishbisht"
+                "@graph": [
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://manishbisht.me/#website",
+                        "url": "https://manishbisht.me/",
+                        "name": "Manish Bisht",
+                        "inLanguage": "en",
+                        "publisher": { "@id": "https://manishbisht.me/#person" }
+                    },
+                    {
+                        "@type": "ProfilePage",
+                        "@id": "https://manishbisht.me/#profile",
+                        "url": "https://manishbisht.me/",
+                        "name": "Manish Bisht — Staff Engineer, Product & Platform Engineering",
+                        "isPartOf": {
+                            "@id": "https://manishbisht.me/#website"
+                        },
+                        "mainEntity": {
+                            "@id": "https://manishbisht.me/#person"
+                        }
+                    },
+                    {
+                        "@type": "Person",
+                        "@id": "https://manishbisht.me/#person",
+                        "name": "Manish Bisht",
+                        "url": "https://manishbisht.me/",
+                        "image": "https://manishbisht.me/logo.webp",
+                        "email": "mailto:hi@manishbisht.me",
+                        "jobTitle": "Staff Engineer",
+                        "description": "Staff Engineer with a decade across product, frontend, backend, and platform engineering, from founding Run4Offers to leading teams at VideoVerse. Works backwards from the customer problem and now applies that to AI-assisted products and workflows.",
+                        "nationality": "Indian",
+                        "homeLocation": {
+                            "@type": "Country",
+                            "name": "India"
+                        },
+                        "worksFor": {
+                            "@type": "Organization",
+                            "name": "VideoVerse"
+                        },
+                        "alumniOf": {
+                            "@type": "CollegeOrUniversity",
+                            "name": "Swami Keshvanand Institute of Technology Management & Gramothan"
+                        },
+                        "knowsAbout": [
+                            "Software engineering",
+                            "Frontend architecture",
+                            "React",
+                            "TypeScript",
+                            "Module federation",
+                            "Design systems",
+                            "Web performance",
+                            "Core Web Vitals",
+                            "CI/CD",
+                            "Monorepo tooling",
+                            "Turborepo",
+                            "Nx",
+                            "Applied AI",
+                            "Large language models",
+                            "Retrieval-augmented generation",
+                            "Model Context Protocol",
+                            "Agentic workflows",
+                            "Engineering leadership"
+                        ],
+                        "award": [
+                            "Google Summer of Code 2017 (phpMyAdmin)",
+                            "Facebook Open Source mentorship 2018 (Facebook Instant Articles)"
+                        ],
+                        "sameAs": [
+                            "https://github.com/manishbisht",
+                            "https://www.linkedin.com/in/manishbisht02",
+                            "https://twitter.com/ManishBisht02",
+                            "https://www.instagram.com/manishbisht02",
+                            "https://fb.com/imanishbisht",
+                            "https://www.pinterest.com/imanishbisht",
+                            "https://medium.com/@manishbisht",
+                            "https://www.quora.com/profile/Manish-Bisht-39",
+                            "https://resume.manishbisht.me"
+                        ]
+                    }
                 ]
             }
         </script>

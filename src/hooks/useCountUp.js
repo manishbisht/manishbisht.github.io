@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
+import { useReducedMotion } from "./useMediaQuery";
 
 const DURATION = 1600;
 
-function prefersReducedMotion() {
-    if (typeof window === "undefined" || !window.matchMedia) return false;
-    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
-
 export function useCountUp(enabled = true) {
-    const skip = !enabled || prefersReducedMotion();
+    const reduced = useReducedMotion();
+    const skip = !enabled || reduced;
     const [progress, setProgress] = useState(0);
 
     useEffect(() => {

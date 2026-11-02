@@ -17,28 +17,29 @@ const ROLES = [
 export default function Hero() {
     const p = useCountUp();
     const n = (x) => Math.round(x * p);
+    const fmt = (f) => ({ value: f(n), finalValue: f((x) => x) });
 
     const metrics = [
         {
-            value: `${n(10)}+ yrs`,
+            ...fmt((k) => `${k(10)}+ yrs`),
             label: "shipping to production",
             bg: "var(--teal)",
             fg: "var(--tealInk)",
         },
         {
-            value: `${n(100)}+`,
+            ...fmt((k) => `${k(100)}+`),
             label: "enterprise customers served",
             bg: "var(--purple)",
             fg: "#fff",
         },
         {
-            value: `~${n(7)}M`,
+            ...fmt((k) => `~${k(7)}M`),
             label: "events / month, event-driven",
             bg: "var(--yellow)",
             fg: "var(--yellowInk)",
         },
         {
-            value: `−${n(60)}%`,
+            ...fmt((k) => `−${k(60)}%`),
             label: "observability cost in 4 weeks",
             bg: "var(--card2)",
             fg: "var(--ink)",

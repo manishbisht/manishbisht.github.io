@@ -19,16 +19,18 @@
     --ink2: light-dark(#44444b, #c0c0c8);
     --ink3: #55555c;
     --ink3: light-dark(#55555c, #a2a2ab);
-    --muted: #77777f;
-    --muted: light-dark(#77777f, #8a8a93);
+    --muted: #636369;
+    --muted: light-dark(#636369, #8a8a93);
     --line: #e2e2e6;
     --line: light-dark(#e2e2e6, #2e2e36);
     --chip: #f1f1f3;
     --chip: light-dark(#f1f1f3, #2a2a33);
     --chipInk: #44444b;
     --chipInk: light-dark(#44444b, #d0d0d6);
-    --accentInk: #3b6fd9;
-    --accentInk: light-dark(#3b6fd9, #8fb0f5);
+    --successInk: #1a7a50;
+    --successInk: light-dark(#1a7a50, #5fd3a0);
+    --accentInk: #3065cf;
+    --accentInk: light-dark(#3065cf, #8fb0f5);
     --accentSoft: #eef3ff;
     --accentSoft: light-dark(#eef3ff, #1b2440);
     --dark: #111114;
@@ -41,14 +43,16 @@
     /* Fixed brand colours — identical in both themes. These sit on
        coloured cards where surface and ink are chosen as a pair. */
     --blue: #5b8def;
+    --blueDeep: #3b6fd9;
     --navy: #0f1f44;
     --teal: #a9dcd3;
     --tealInk: #1f3a36;
-    --purple: #8b74d6;
+    --purple: #7259c9;
     --purpleInk: #f0ebff;
     --yellow: #f7c55e;
     --yellowInk: #5a4410;
     --green: #2fb27a;
+    --greenDeep: #1d8656;
 
     /* Terminal ramp */
     --termBg: var(--dark);

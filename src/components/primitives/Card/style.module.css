@@ -43,6 +43,13 @@
     color: #fff;
 }
 
+/* Deeper blue for cards that carry white text, which fails contrast on
+   the brighter brand blue. */
+.blueDeep {
+    background: var(--blueDeep);
+    color: #fff;
+}
+
 .teal {
     background: var(--teal);
     color: var(--tealInk);
@@ -56,4 +63,25 @@
 .yellow {
     background: var(--yellow);
     color: var(--yellowInk);
+}
+
+/* Dark cards stay dark in both themes, so text inside them uses the dark
+   theme's ink ramp. Without this, light mode resolves headings and ledes to
+   near-black on a near-black card. */
+.dark,
+.oss {
+    --ink: #f1f1f3;
+    --ink2: #c0c0c8;
+    --ink3: #a2a2ab;
+    --muted: #8a8a93;
+}
+
+/* Coloured cards pair a fixed surface with a fixed ink; headings follow that
+   ink instead of the theme's. */
+.blue,
+.blueDeep,
+.teal,
+.purple,
+.yellow {
+    --ink: currentColor;
 }

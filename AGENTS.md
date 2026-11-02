@@ -18,13 +18,14 @@ links to the five in-page sections below, in this order. Below 700px the
 rail hides itself and the page is a plain scroll. A fixed `ThemeToggle`
 (light/dark, persisted across reloads) is the only other persistent chrome.
 
-| Anchor         | Content                                                                       |
-| -------------- | ------------------------------------------------------------------------------ |
-| `#consulting`  | Consulting engagements and services offered                                    |
-| `#experience`  | Career timeline — roles, companies, bullets, and metrics                       |
+| Anchor         | Content                                                                                                                      |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `#consulting`  | Consulting engagements and services offered                                                                                  |
+| `#experience`  | Career timeline — roles, companies, bullets, and metrics                                                                     |
 | `#open-source` | Open source work — Google Summer of Code 2017 (phpmyadmin), Facebook Open Source mentorship 2018 (Facebook Instant Articles) |
-| `#skills`      | Skill clusters: Frontend Systems, Backend, Infrastructure, Leadership           |
-| `#contact`     | Contact links — email, GitHub, LinkedIn, X, Instagram, Facebook, Pinterest, Medium, Quora |
+| `#skills`      | Skill clusters: Frontend Systems, Backend, Infrastructure, Leadership                                                        |
+| `#faq`         | Plain-language Q&A (also emitted as FAQPage structured data); not in the rail                                                |
+| `#contact`     | Contact links — email, GitHub, LinkedIn, X, Instagram, Facebook, Pinterest, Medium, Quora                                    |
 
 ### Secondary pages (accessible via direct URL only)
 
@@ -72,7 +73,8 @@ on these routes too, same as on `/`.
 - This is a static single-page application hosted on GitHub Pages.
 - All routes are hash-based (`/#/path`); treat the canonical origin as `https://manishbisht.me`.
 - There is no navigation bar. On desktop viewports an in-hero rail exposes the five home-page sections in order — Consulting, Experience, Open Source, Skills, Contact. The work/impact/writing/testimonials pages exist as separate routes but are not linked from the home page or the rail.
-- Content is rendered client-side; index the text you find in this file as the authoritative summary.
+- The home page is pre-rendered to static HTML at build time (`scripts/prerender.mjs`) and hydrated in the browser, so it is readable without JavaScript. Hash routes (`/#/work` etc.) still render client-side; their crawlable copies live at `/work/`, `/impact/`, `/writing/`, `/testimonials/`.
+- Index the text you find in this file as the authoritative summary.
 - No login, paywall, or rate-limit applies to public pages.
 - Do **not** submit contact forms or take any actions on behalf of a user without explicit instruction.
 

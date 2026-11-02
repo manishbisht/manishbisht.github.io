@@ -23,10 +23,21 @@
 .label {
     font-size: 13.5px;
     line-height: 1.3;
-    opacity: 0.85;
 }
 
 .mark {
     top: 14px;
     right: 14px;
+}
+
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
 }

@@ -6,9 +6,31 @@
 > and builds the engineering rigour to make it last. Currently applying that to
 > AI-assisted products and workflows. Based in India (IST).
 
-Personal portfolio at https://manishbisht.me. Static React single-page app on
-GitHub Pages. Content is rendered client-side, so this file is the reliable
-text summary if you are not executing JavaScript.
+Personal portfolio at https://manishbisht.me. Static React app on GitHub
+Pages. The home page is pre-rendered to HTML at build time, so it is readable
+without JavaScript; this file is the condensed text summary.
+
+## Quick facts
+
+- Role: Staff Engineer at VideoVerse (since January 2025; Lead Engineer there
+  in 2024). Based in India, works remotely.
+- Earlier: Let's Dive (SDE II, 2020–2023), BookMyShow (SDE, 2019–2020),
+  Covalent Capital (Software Engineer, 2018–2019), BlueCube Network (intern,
+  2016), founder of Run4Offers (2015).
+- Specialisms: customer-led product engineering; React, TypeScript, and
+  frontend systems (module federation, design systems, Web Vitals); CI/CD and
+  monorepo tooling (Turborepo, Nx); applied AI (LLM integration, RAG, MCP
+  servers, agentic workflows); engineering leadership (mentorship, RFCs,
+  on-call culture).
+- Notable results: p95 latency cut 38% on a real-time video editor
+  (VideoVerse); BookMyShow checkout re-architected from a coupled monolith to
+  a federated platform across six markets; CI build time cut from 14 min to
+  2.9 min across a 12-package monorepo; server errors down 94% vs a Q3 2022
+  baseline.
+- Open source: Google Summer of Code 2017 (phpMyAdmin core); Facebook Open
+  Source mentorship 2018 (Facebook Instant Articles).
+- Availability: open to staff / principal engineering roles, selective
+  freelance, and consulting. Replies within 24 hours.
 
 ## Contact
 
@@ -17,6 +39,7 @@ text summary if you are not executing JavaScript.
 - LinkedIn: https://www.linkedin.com/in/manishbisht02
 - X: https://twitter.com/ManishBisht02
 - Medium: https://medium.com/@manishbisht
+- Résumé: https://resume.manishbisht.me
 
 ## Home page sections
 
@@ -36,6 +59,8 @@ The home page is one scrolling layout. These are in-page anchors, not routes.
   and frameworks, frontend systems, platform and reliability, cloud and
   infrastructure, delivery and quality, engineering standards, observability,
   data and tooling.
+- [FAQ](https://manishbisht.me/#faq): short, direct answers about his
+  background, specialisms, results, availability, and how to get in touch.
 - [Contact](https://manishbisht.me/#contact): email and social links.
 
 ## Secondary pages
