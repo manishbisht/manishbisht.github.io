@@ -93,7 +93,7 @@ describe("Chip", () => {
     it("applies dot background color", () => {
         const { container } = render(<Chip dot="#FF0000">Status</Chip>);
         const dot = container.querySelector("[data-dot]");
-        expect(dot).toHaveStyle("background: #FF0000");
+        expect(dot).toHaveStyle({ backgroundColor: "#FF0000" });
     });
 
     it("renders as span by default", () => {

@@ -14,7 +14,7 @@ describe("MetricTile", () => {
             <MetricTile value="1" label="l" bg="#A9DCD3" fg="#111114" />
         );
         expect(container.firstChild).toHaveStyle({
-            background: "#A9DCD3",
+            backgroundColor: "#A9DCD3",
             color: "#111114",
         });
     });

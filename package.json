@@ -22,9 +22,9 @@
     },
     "dependencies": {
         "@microsoft/clarity": "^1.0.2",
-        "react": "^19.2.6",
-        "react-dom": "^19.2.6",
-        "react-router-dom": "^7.15.1"
+        "react": "~19.2.9",
+        "react-dom": "~19.2.9",
+        "react-router-dom": "^7.18.5"
     },
     "devDependencies": {
         "@eslint/js": "^9",
