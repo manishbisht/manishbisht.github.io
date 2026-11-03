@@ -71,7 +71,7 @@ describe("Hero Terminal", () => {
         expect(screen.getByText(/open_to/)).toBeVisible();
         expect(screen.getByText(/Applied AI/)).toBeVisible();
         expect(screen.getByText(/consulting/)).toBeVisible();
-        expect(screen.getByText(/Q3 2026/)).toBeVisible();
+        expect(screen.getByText(/available/)).toBeVisible();
         vi.useRealTimers();
     });
 

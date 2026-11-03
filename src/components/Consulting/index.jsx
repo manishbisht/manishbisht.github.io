@@ -8,7 +8,7 @@ import styles from "./style.module.css";
 const TONES = ["dark", "teal", "purple", "yellow"];
 
 const STATUS = [
-    { label: "Available Q3 2026", dot: "var(--green)" },
+    { label: "Taking new engagements", dot: "var(--green)" },
     { label: "1–2 clients at a time", dot: "var(--muted)" },
     { label: "Remote · IST friendly", dot: "var(--muted)" },
 ];

@@ -4,19 +4,19 @@
 export const FAQ = [
     {
         q: "Who is Manish Bisht?",
-        a: "Manish Bisht is a Staff Engineer at VideoVerse based in India, with a decade of experience across product, frontend, backend, and platform engineering. He works backwards from the customer problem, ships the smallest thing that solves it, and builds the engineering rigour to make it last.",
+        a: "Manish Bisht is a Staff Engineer at VideoVerse, based in India, with a decade of experience across product, frontend, backend, and platform engineering. He works across distributed systems, media infrastructure, and developer tooling, defining architecture under ambiguity and building reliable, observable, high-velocity platforms.",
     },
     {
         q: "Where has Manish Bisht worked?",
-        a: "VideoVerse (Staff Engineer since January 2025, Lead Engineer in 2024), Let's Dive (Software Development Engineer II, 2020–2023), BookMyShow (Software Development Engineer, 2019–2020), and Covalent Capital (Software Engineer, 2018–2019). Earlier he interned at BlueCube Network and founded Run4Offers in 2015.",
+        a: "VideoVerse (Staff Engineer since January 2025, Lead Engineer in 2024), Let's Dive (founding engineer and SDE II, 2020–2023, acquired by VideoVerse), BookMyShow (Software Development Engineer, 2019–2020), and Covalent Capital (Software Engineer, 2018–2019). Earlier he interned at BlueCube Network and founded Run4Offers in 2015. He holds a B.Tech in Information Technology from Swami Keshvanand Institute of Technology.",
     },
     {
         q: "What does Manish Bisht specialise in?",
-        a: "Customer-led product engineering; React, TypeScript, and frontend systems such as module federation, design systems, and Web Vitals performance; CI/CD and monorepo tooling (Turborepo, Nx); applied AI including LLM integration, RAG, MCP servers, and agentic workflows; and engineering leadership through mentorship, RFCs, and on-call culture.",
+        a: "Platform and distributed systems (microservices, event-driven architecture on SNS/SQS, serverless on AWS Lambda and Cloud Run); observability and incident response (Datadog, Last9, tracing, PagerDuty, SLOs); CI/CD, release engineering, and developer productivity (Playwright, SonarQube, feature flags); React, TypeScript, and Node.js; and AI-assisted engineering workflows.",
     },
     {
         q: "What are some of his notable results?",
-        a: "He cut p95 latency 38% on a real-time video editor at VideoVerse, re-architected BookMyShow checkout from a coupled monolith into a federated platform across six markets, reduced CI build time from 14 minutes to 2.9 minutes across a 12-package monorepo, and drove server errors down 94% against a Q3 2022 baseline.",
+        a: "At VideoVerse he cut incident acknowledgment time from 20–30 minutes to under 2 minutes across 30+ services, reduced observability cost by about 60% by migrating from Datadog to Last9, moved a ~20-engineer team from biweekly to daily production releases, and led a V2 platform modernisation serving 100+ enterprise customers and 550K+ clips a month. At BookMyShow he reduced mobile server errors by 94%.",
     },
     {
         q: "What open source work has he done?",

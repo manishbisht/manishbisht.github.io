@@ -125,8 +125,8 @@ export default function Hero() {
                                     roles
                                 </span>
                                 <span className={styles.bannerSub}>
-                                    Full-time or selective consulting · Q3 2026
-                                    · reply in &lt; 24h · See engagements ↓
+                                    Full-time or selective consulting · reply in
+                                    &lt; 24h · See engagements ↓
                                 </span>
                             </span>
                             <CornerMark size={12} color="#111114" opacity={1} />

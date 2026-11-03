@@ -44,7 +44,7 @@ describe("App", () => {
     // The rail links to home-page sections, so it would be dead on a route
     // that has none. Secondary pages navigate with PageShell's back link.
     it("leaves the section rail off the secondary pages", async () => {
-        renderAt("/writing");
+        renderAt("/work");
         await screen.findByRole("heading", { level: 1 });
         expect(
             screen.queryByRole("navigation", { name: /sections/i })
@@ -59,7 +59,7 @@ describe("App", () => {
     });
 
     it("renders contact and footer on every route", () => {
-        renderAt("/writing");
+        renderAt("/work");
         expect(
             screen.getByRole("heading", { level: 2, name: /Let's Work/ })
         ).toBeInTheDocument();
@@ -67,10 +67,10 @@ describe("App", () => {
     });
 
     it("resolves a lazy route's content once awaited", async () => {
-        renderAt("/writing");
+        renderAt("/work");
         expect(
             await screen.findByRole("heading", { level: 1 })
-        ).toHaveTextContent(/Things I.ve thought/);
+        ).toHaveTextContent(/Architecture, performance/);
     });
 
     it("no longer routes /consulting to a page, even once lazy routes have had a chance to resolve", async () => {

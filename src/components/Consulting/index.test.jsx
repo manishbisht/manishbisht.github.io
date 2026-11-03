@@ -32,7 +32,7 @@ describe("Consulting section", () => {
 
     it("states availability and that full-time is open too", () => {
         render(<Consulting />);
-        expect(screen.getByText(/Available Q3 2026/)).toBeVisible();
+        expect(screen.getByText(/Taking new engagements/)).toBeVisible();
         expect(
             screen.getByText(/open to the right full-time role/)
         ).toBeVisible();

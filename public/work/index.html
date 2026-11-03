@@ -85,25 +85,39 @@
                 <h1>Architecture, performance, and shipping at scale.</h1>
                 <p class="lede">Engagements I'd stake a reputation on. Real constraints, real trade-offs, real numbers.</p>
             <article>
-                <div class="meta">Performance · 2024 · VideoVerse</div>
-                <h2>Cutting p95 by 38% on a real-time video editor</h2>
-                <p class="lede">Replaced the React DOM-based timeline with a hand-rolled canvas renderer. Backed by an offscreen worker, a custom scheduler, and aggressive memoization of frame extracts.</p>
-                <ul><li>p95: −38%</li><li>TTI: −1.2s</li><li>memory: −44%</li></ul>
-                <div class="tags">React · Canvas · Web Workers · Profiling</div>
+                <div class="meta">Architecture · VideoVerse</div>
+                <h2>Modernising a media platform without a day of downtime</h2>
+                <p class="lede">Led the V2 modernisation of a platform serving 100+ enterprise customers and 550K+ clips a month. Migrated 40+ routes and decomposed the monolith into ~5 microservices and 20+ serverless workloads, so teams release independently with zero downtime.</p>
+                <ul><li>routes migrated: 40+</li><li>microservices: ~5</li><li>serverless workloads: 20+</li></ul>
+                <div class="tags">Microservices · Serverless · AWS Lambda · Cloud Run</div>
             </article>
             <article>
-                <div class="meta">Architecture · 2022 · BookMyShow</div>
-                <h2>Re-architecting BookMyShow's checkout for six markets</h2>
-                <p class="lede">Module federation, typed event contracts, idempotency by default. From a coupled monolith serving one market to a federated platform live in six.</p>
-                <ul><li>errors: −94%</li><li>markets: 1 → 6</li><li>MTTR: −81%</li></ul>
-                <div class="tags">Module Federation · TypeScript · Idempotency · Observability</div>
+                <div class="meta">Distributed systems · VideoVerse</div>
+                <h2>An event-driven backbone for ~7M media events a month</h2>
+                <p class="lede">Designed an SNS/SQS event-driven architecture for media lifecycle events and scaled distribution across 50K+ monthly workflows and 10+ integrations, with retries and failure isolation so one customer's failure stays theirs.</p>
+                <ul><li>events / month: ~7M</li><li>enterprise customers: 100+</li><li>integrations: 10+</li></ul>
+                <div class="tags">SNS/SQS · Event-Driven Architecture · Reliability</div>
             </article>
             <article>
-                <div class="meta">Developer Experience · 2024 · VideoVerse</div>
-                <h2>Building the internal frontend platform — twice</h2>
-                <p class="lede">Spun up the platform team at VideoVerse. Centralized design system, Turbo + Nx pipeline, Playwright + visual regression. CI time from 14m to 3m, DevEx 4.7/5.</p>
-                <ul><li>CI: −79%</li><li>DevEx: 4.7/5</li><li>pkgs: 12</li></ul>
-                <div class="tags">Turbo · Nx · Playwright · Design Systems</div>
+                <div class="meta">Observability · VideoVerse</div>
+                <h2>From 30-minute pages to 2-minute acknowledgments</h2>
+                <p class="lede">Defined observability and incident-response standards across 30+ services: APM, tracing, synthetics, and PagerDuty. Then led the Datadog to Last9 migration that cut observability cost by about 60%.</p>
+                <ul><li>ack time (was 20–30m): &lt;2 min</li><li>observability cost: −60%</li><li>services covered: 30+</li></ul>
+                <div class="tags">Datadog · Last9 · PagerDuty · Distributed Tracing</div>
+            </article>
+            <article>
+                <div class="meta">Developer productivity · VideoVerse</div>
+                <h2>From biweekly deploys to daily production releases</h2>
+                <p class="lede">Redesigned CI/CD and release governance for a ~20-engineer team with automated quality gates, progressive rollouts, and post-deploy validation. Standardised tooling (Prettier, ESLint, SonarQube, GitLeaks), scaled Playwright automation, introduced AI-assisted workflows, and brought onboarding under a week.</p>
+                <ul><li>releases (was biweekly): daily</li><li>engineers: ~20</li><li>onboarding: &lt;1 week</li></ul>
+                <div class="tags">CI/CD · Playwright · Release Engineering · AI-assisted</div>
+            </article>
+            <article>
+                <div class="meta">Reliability · BookMyShow</div>
+                <h2>94% fewer mobile server errors at BookMyShow</h2>
+                <p class="lede">Modernised authentication and mobile onboarding with React-based login, OTP flows, and PhonePe SSO. Cut mobile server errors by 94%, migrated routing from Nginx to HAProxy, and strengthened session security.</p>
+                <ul><li>mobile server errors: −94%</li></ul>
+                <div class="tags">ReactJS · OTP · PhonePe SSO · HAProxy</div>
             </article>
             </div>
         </main>

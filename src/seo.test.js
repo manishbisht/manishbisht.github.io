@@ -64,7 +64,7 @@ describe("discoverability files", () => {
     // crawler. These static pages are what make that content indexable, and
     // they are generated from the same constants the components render, so
     // they cannot drift. Regenerate with `yarn build:static`.
-    it.each(["work", "impact", "writing", "testimonials"])(
+    it.each(["work", "impact"])(
         "serves a static, JS-free page at /%s/",
         (slug) => {
             const html = read(`public/${slug}/index.html`);
@@ -79,24 +79,17 @@ describe("discoverability files", () => {
         }
     );
 
-    it.each(["work", "impact", "writing", "testimonials"])(
-        "lists /%s/ in the sitemap",
-        (slug) => {
-            expect(read("public/sitemap.xml")).toContain(
-                `<loc>${ORIGIN}/${slug}/</loc>`
-            );
-        }
-    );
+    it.each(["work", "impact"])("lists /%s/ in the sitemap", (slug) => {
+        expect(read("public/sitemap.xml")).toContain(
+            `<loc>${ORIGIN}/${slug}/</loc>`
+        );
+    });
 
     it("carries real content into the static pages, not just chrome", () => {
-        expect(read("public/testimonials/index.html")).toContain(
-            "Vinayak Hegde"
-        );
-        expect(read("public/writing/index.html")).toContain(
-            "The frontend platform is a product"
-        );
         expect(read("public/work/index.html")).toContain("VideoVerse");
-        expect(read("public/impact/index.html")).toContain("p95 latency");
+        expect(read("public/impact/index.html")).toContain(
+            "incident acknowledgment"
+        );
     });
 
     it("declares a canonical origin in index.html", () => {

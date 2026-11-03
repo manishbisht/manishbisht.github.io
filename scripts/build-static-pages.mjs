@@ -16,8 +16,6 @@ import { fileURLToPath } from "node:url";
 
 import { CASE_STUDIES } from "../src/components/CaseStudies/constants.js";
 import { IMPACT } from "../src/components/Impact/constants.js";
-import { WRITING } from "../src/components/Writing/constants.js";
-import { TESTIMONIALS } from "../src/components/Testimonials/constants.js";
 
 const ORIGIN = "https://manishbisht.me";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -148,31 +146,7 @@ const pages = [
         body: IMPACT.map(
             (m) => `            <article>
                 <h2>${esc(m.value)}${esc(m.unit)} — ${esc(m.label)}</h2>
-                <div class="meta">${esc(m.delta)} · ${esc(m.sub)}</div>
-            </article>`
-        ).join("\n"),
-    },
-    {
-        slug: "writing",
-        eyebrow: "WRITING",
-        title: "Things I've thought hard about.",
-        lede: "Long-form notes on engineering systems, performance, and what it actually means to scale a team.",
-        body: WRITING.map(
-            (p) => `            <article>
-                <h2>${esc(p.title)}</h2>
-                <div class="meta">${esc(p.date)} · ${esc(p.eyebrow)} · ${esc(p.tag)}</div>
-            </article>`
-        ).join("\n"),
-    },
-    {
-        slug: "testimonials",
-        eyebrow: "TESTIMONIALS",
-        title: "People who've shipped with me.",
-        lede: "No marketing copy — quotes lifted verbatim from references and reviews.",
-        body: TESTIMONIALS.map(
-            (t) => `            <article>
-                <blockquote>“${esc(t.quote)}”</blockquote>
-                <div class="meta">${esc(t.name)} · ${esc(t.role)}</div>
+                <div class="meta">${esc(m.note)} · ${esc(m.sub)}</div>
             </article>`
         ).join("\n"),
     },

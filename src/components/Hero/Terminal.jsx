@@ -70,9 +70,9 @@ export default function Terminal() {
                 <Str>Frontend</Str>, <Str>Backend</Str>],
                 <br />
                 &nbsp;&nbsp;<Key>consulting</Key>: {"{ "}
-                <Key>available</Key>: <Str>Q3 2026</Str>, <Key>clients</Key>:{" "}
-                <span className={styles.num}>2</span>, <Key>reply</Key>:{" "}
-                <Str>&lt;24h</Str> {"}"},
+                <Key>available</Key>: <span className={styles.num}>true</span>,{" "}
+                <Key>clients</Key>: <span className={styles.num}>2</span>,{" "}
+                <Key>reply</Key>: <Str>&lt;24h</Str> {"}"},
                 <br />
                 &nbsp;&nbsp;<Key>shipped_pct</Key>:{" "}
                 <span className={styles.num}>0.98</span>

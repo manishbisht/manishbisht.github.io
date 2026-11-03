@@ -1,49 +1,70 @@
+// Every claim here comes from Manish's CV (May 2026). Keep it that way: these
+// pages are crawled and quoted by AI answer engines.
 export const CASE_STUDIES = [
     {
-        id: "videoverse-editor",
-        eyebrow: "Performance · 2024",
-        title: "Cutting p95 by 38% on a real-time video editor",
+        id: "videoverse-v2",
+        eyebrow: "Architecture",
+        title: "Modernising a media platform without a day of downtime",
         summary:
-            "Replaced the React DOM-based timeline with a hand-rolled canvas renderer. Backed by an offscreen worker, a custom scheduler, and aggressive memoization of frame extracts.",
+            "Led the V2 modernisation of a platform serving 100+ enterprise customers and 550K+ clips a month. Migrated 40+ routes and decomposed the monolith into ~5 microservices and 20+ serverless workloads, so teams release independently with zero downtime.",
         metrics: [
-            { k: "p95", v: "−38%" },
-            { k: "TTI", v: "−1.2s" },
-            { k: "memory", v: "−44%" },
+            { k: "routes migrated", v: "40+" },
+            { k: "microservices", v: "~5" },
+            { k: "serverless workloads", v: "20+" },
         ],
-        tags: ["React", "Canvas", "Web Workers", "Profiling"],
+        tags: ["Microservices", "Serverless", "AWS Lambda", "Cloud Run"],
         company: "VideoVerse",
     },
     {
-        id: "bms-checkout",
-        eyebrow: "Architecture · 2022",
-        title: "Re-architecting BookMyShow's checkout for six markets",
+        id: "videoverse-events",
+        eyebrow: "Distributed systems",
+        title: "An event-driven backbone for ~7M media events a month",
         summary:
-            "Module federation, typed event contracts, idempotency by default. From a coupled monolith serving one market to a federated platform live in six.",
+            "Designed an SNS/SQS event-driven architecture for media lifecycle events and scaled distribution across 50K+ monthly workflows and 10+ integrations, with retries and failure isolation so one customer's failure stays theirs.",
         metrics: [
-            { k: "errors", v: "−94%" },
-            { k: "markets", v: "1 → 6" },
-            { k: "MTTR", v: "−81%" },
+            { k: "events / month", v: "~7M" },
+            { k: "enterprise customers", v: "100+" },
+            { k: "integrations", v: "10+" },
         ],
-        tags: [
-            "Module Federation",
-            "TypeScript",
-            "Idempotency",
-            "Observability",
+        tags: ["SNS/SQS", "Event-Driven Architecture", "Reliability"],
+        company: "VideoVerse",
+    },
+    {
+        id: "videoverse-observability",
+        eyebrow: "Observability",
+        title: "From 30-minute pages to 2-minute acknowledgments",
+        summary:
+            "Defined observability and incident-response standards across 30+ services: APM, tracing, synthetics, and PagerDuty. Then led the Datadog to Last9 migration that cut observability cost by about 60%.",
+        metrics: [
+            { k: "ack time (was 20–30m)", v: "<2 min" },
+            { k: "observability cost", v: "−60%" },
+            { k: "services covered", v: "30+" },
         ],
+        tags: ["Datadog", "Last9", "PagerDuty", "Distributed Tracing"],
+        company: "VideoVerse",
+    },
+    {
+        id: "videoverse-releases",
+        eyebrow: "Developer productivity",
+        title: "From biweekly deploys to daily production releases",
+        summary:
+            "Redesigned CI/CD and release governance for a ~20-engineer team with automated quality gates, progressive rollouts, and post-deploy validation. Standardised tooling (Prettier, ESLint, SonarQube, GitLeaks), scaled Playwright automation, introduced AI-assisted workflows, and brought onboarding under a week.",
+        metrics: [
+            { k: "releases (was biweekly)", v: "daily" },
+            { k: "engineers", v: "~20" },
+            { k: "onboarding", v: "<1 week" },
+        ],
+        tags: ["CI/CD", "Playwright", "Release Engineering", "AI-assisted"],
+        company: "VideoVerse",
+    },
+    {
+        id: "bms-auth",
+        eyebrow: "Reliability",
+        title: "94% fewer mobile server errors at BookMyShow",
+        summary:
+            "Modernised authentication and mobile onboarding with React-based login, OTP flows, and PhonePe SSO. Cut mobile server errors by 94%, migrated routing from Nginx to HAProxy, and strengthened session security.",
+        metrics: [{ k: "mobile server errors", v: "−94%" }],
+        tags: ["ReactJS", "OTP", "PhonePe SSO", "HAProxy"],
         company: "BookMyShow",
-    },
-    {
-        id: "devx-platform",
-        eyebrow: "Developer Experience · 2024",
-        title: "Building the internal frontend platform — twice",
-        summary:
-            "Spun up the platform team at VideoVerse. Centralized design system, Turbo + Nx pipeline, Playwright + visual regression. CI time from 14m to 3m, DevEx 4.7/5.",
-        metrics: [
-            { k: "CI", v: "−79%" },
-            { k: "DevEx", v: "4.7/5" },
-            { k: "pkgs", v: "12" },
-        ],
-        tags: ["Turbo", "Nx", "Playwright", "Design Systems"],
-        company: "VideoVerse",
     },
 ];

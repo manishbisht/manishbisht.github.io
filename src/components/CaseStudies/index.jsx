@@ -27,12 +27,7 @@ function CaseStudyCard({ cs, headingLevel: Heading = "h3" }) {
                         <span className={styles.metricV}>{m.v}</span>
                     </div>
                 ))}
-                <hr className="hairline" style={{ margin: "2px 0" }} />
-                <div className={styles.readMore}>
-                    Read case study <span>→</span>
-                </div>
             </div>
-            <span className={styles.arrow}>↗</span>
         </article>
     );
 }
@@ -65,8 +60,8 @@ export default function CaseStudies({ standalone = false }) {
                     </h2>
                 </div>
                 <p className="lede">
-                    Three engagements I&apos;d put on the homepage. The rest
-                    live on the writing page.
+                    Platform, reliability, and delivery work, with the numbers
+                    behind it.
                 </p>
             </div>
             <CaseStudiesList />

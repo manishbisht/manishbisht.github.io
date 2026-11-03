@@ -14,19 +14,24 @@ without JavaScript; this file is the condensed text summary.
 
 - Role: Staff Engineer at VideoVerse (since January 2025; Lead Engineer there
   in 2024). Based in India, works remotely.
-- Earlier: Let's Dive (SDE II, 2020–2023), BookMyShow (SDE, 2019–2020),
+- Earlier: Let's Dive (founding engineer, SDE II, 2020–2023; acquired by VideoVerse), BookMyShow (SDE, 2019–2020),
   Covalent Capital (Software Engineer, 2018–2019), BlueCube Network (intern,
   2016), founder of Run4Offers (2015).
-- Specialisms: customer-led product engineering; React, TypeScript, and
-  frontend systems (module federation, design systems, Web Vitals); CI/CD and
-  monorepo tooling (Turborepo, Nx); applied AI (LLM integration, RAG, MCP
-  servers, agentic workflows); engineering leadership (mentorship, RFCs,
-  on-call culture).
-- Notable results: p95 latency cut 38% on a real-time video editor
-  (VideoVerse); BookMyShow checkout re-architected from a coupled monolith to
-  a federated platform across six markets; CI build time cut from 14 min to
-  2.9 min across a 12-package monorepo; server errors down 94% vs a Q3 2022
-  baseline.
+- Specialisms: platform and distributed systems (microservices, event-driven
+  architecture on SNS/SQS, serverless on AWS Lambda and Cloud Run);
+  observability and incident response (Datadog, Last9, tracing, PagerDuty);
+  CI/CD, release engineering, and developer productivity (Playwright,
+  SonarQube, feature flags); React, TypeScript, Node.js; AI-assisted
+  engineering workflows.
+- Notable results (VideoVerse unless noted): incident acknowledgment cut from
+  20–30 min to under 2 min across 30+ services; ~60% observability cost
+  reduction (Datadog → Last9); biweekly → daily production releases for a
+  ~20-engineer team; V2 platform modernisation serving 100+ enterprise
+  customers and 550K+ clips/month; ~7M media lifecycle events/month on an
+  SNS/SQS architecture; mobile server errors down 94% (BookMyShow); production
+  build size down 85% (Covalent Capital).
+- Education: B.Tech in Information Technology, Swami Keshvanand Institute of
+  Technology (2014–2018).
 - Open source: Google Summer of Code 2017 (phpMyAdmin core); Facebook Open
   Source mentorship 2018 (Facebook Instant Articles).
 - Availability: open to staff / principal engineering roles, selective
@@ -73,10 +78,6 @@ JavaScript. The app also reaches the same content through a hash route
   shipping at scale.
 - [Impact](https://manishbisht.me/impact/): quantified engineering metrics
   from production systems.
-- [Writing](https://manishbisht.me/writing/): long-form notes on engineering
-  systems, performance, and scaling a team.
-- [Testimonials](https://manishbisht.me/testimonials/): verbatim quotes from
-  leads and collaborators.
 
 ## Notes for agents
 

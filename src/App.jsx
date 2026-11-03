@@ -6,10 +6,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import styles from "./App.module.css";
 
-const WritingPage = lazy(() => import("./pages/Writing"));
 const ImpactPage = lazy(() => import("./pages/Impact"));
 const WorkPage = lazy(() => import("./pages/Work"));
-const TestimonialsPage = lazy(() => import("./pages/Testimonials"));
 
 export default function App() {
     return (
@@ -19,13 +17,8 @@ export default function App() {
                 <Suspense fallback={null}>
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/writing" element={<WritingPage />} />
                         <Route path="/impact" element={<ImpactPage />} />
                         <Route path="/work" element={<WorkPage />} />
-                        <Route
-                            path="/testimonials"
-                            element={<TestimonialsPage />}
-                        />
                         <Route path="*" element={<Navigate to="/" replace />} />
                     </Routes>
                 </Suspense>
