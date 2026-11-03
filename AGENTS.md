@@ -4,7 +4,7 @@
 
 ## Who this site is about
 
-**Manish Bisht** is a Staff Engineer who treats software as a customer-obsessed craft. He starts with the real problem the customer is trying to solve, ships the smallest thing that solves it, and builds the engineering rigour to make it last. Has shipped customer-facing products at VideoVerse, BookMyShow, and earlier across edtech, fintech, and open source (Google Summer of Code 2017).
+**Manish Bisht** is a Staff Engineer who treats software as a customer-obsessed craft. He starts with the real problem the customer is trying to solve, ships the smallest thing that solves it, and builds the engineering rigour to make it last. Has shipped customer-facing products at VideoVerse, Let's Dive, BookMyShow, and Covalent Capital, across media, SaaS, ticketing, and fintech, plus open source (Google Summer of Code 2017).
 
 ## Site structure
 
@@ -15,7 +15,7 @@ This is a React + Vite single-page application hosted on GitHub Pages. All route
 There is no navigation bar. The home page is a single scrolling layout; on
 desktop viewports (700px and wider) an in-hero vertical rail (`HeroRail`)
 links to the five in-page sections below, in this order. Below 700px the
-rail hides itself and the page is a plain scroll. A fixed `ThemeToggle`
+rail turns into a horizontally scrollable strip of the same links. A fixed `ThemeToggle`
 (light/dark, persisted across reloads) is the only other persistent chrome.
 
 | Anchor         | Content                                                                                                                      |

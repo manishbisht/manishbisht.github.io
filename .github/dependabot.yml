@@ -1,0 +1,34 @@
+version: 2
+updates:
+  # One weekly PR for all npm updates instead of one PR per package, so
+  # updates don't conflict with each other over yarn.lock.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      npm-minor-and-patch:
+        update-types: [minor, patch]
+      npm-security:
+        applies-to: security-updates
+        patterns: ["*"]
+    ignore:
+      # 19.3 adds ~8.5 KB gzipped and fixes no advisory; revisit deliberately.
+      - dependency-name: react
+        update-types: [version-update:semver-minor]
+      - dependency-name: react-dom
+        update-types: [version-update:semver-minor]
+      # eslint-plugin-react does not support ESLint 10 yet.
+      - dependency-name: eslint
+        update-types: [version-update:semver-major]
+      - dependency-name: "@eslint/js"
+        update-types: [version-update:semver-major]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ["*"]
